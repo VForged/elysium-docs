@@ -7,11 +7,11 @@ sidebar_position: 3
 While Elysium strives to be compatible with Ethereum’s Web3 API and EVM, there are some important Elysium differences
 that developers should know and understand in terms of the Ethereum API JSON-RPC support.
 
-The Elysium team has collaborated closely with Parity on developing Frontier. Frontier is the Ethereum compatibility
+The Elysium team has used Frontier for add EVM compatibility. Frontier is the Ethereum compatibility
 layer for Substrate based chains, and it is what allows developers to run unmodified Ethereum DApps.
 
 Nevertheless, not all of the Ethereum JSON RPC methods are supported, and some of the supported ones return default
-values (those related to Ethereum’s PoW consensus mechanism in particular). This guide will outline some of these main
+values (those related to Ethereum’s PoA consensus mechanism in particular). This guide will outline some of these main
 differences around Ethereum RPC support and what to expect when using Elysium for the first time.
 
 ### Basic Ethereum JSON RPC Methods
