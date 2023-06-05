@@ -14,7 +14,7 @@ are retrieved.
 You can reference the Substrate API Sidecar page for information on installing and running your own Sidecar service
 instance, as well as more details on how to decode Sidecar blocks for Elysium transactions.
 
-Note that the information on this page assumes you are running version 14.1.1 of the Substrate Sidecar REST API.
+Note that the information on this page assumes you are running latest version of the Substrate Sidecar REST API.
 
 ### Substrate API Transaction Fees
 
@@ -110,15 +110,15 @@ The minimum gas price for each network is as follows:
 
 | Network                  | Value    |
 |--------------------------|----------|
-| Elysium Chain (Mainnet)  | 100 Gwei |
-| Atlantis Chain (Testnet) | 0.1 Gwei |
+| Elysium (Mainnet)  | 100 Gwei |
+| Atlantis (Testnet) | 0.1 Gwei |
 
 To calculate the dynamic base fee, the following calculation is used:
 
 | Network                  | Value                                              |
 |--------------------------|----------------------------------------------------|
-| Elysium Chain (Mainnet)  | BaseFee = NextFeeMultiplier * 100000000000 / 10^18 |
-| Atlantis Chain (Testnet) | BaseFee = NextFeeMultiplier * 100000000 / 10^18    |
+| Elysium (Mainnet)  | BaseFee = NextFeeMultiplier * 100000000000 / 10^18 |
+| Atlantis (Testnet) | BaseFee = NextFeeMultiplier * 100000000 / 10^18    |
 
 The value of NextFeeMultiplier can be retrieved from the Substrate Sidecar API, via the following endpoint:
 
