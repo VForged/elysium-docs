@@ -26,28 +26,28 @@ To get started developing on Elysium, it’s important to be aware of the variou
 When working with developer tools, depending on the tool, you might need to configure Elysium to interact with the
 network. To do so, you can use the following information:
 
-#### Testnet
+#### Atlantis (Testnet)
 
 | Variable       | Value	                            | 
 |----------------|-----------------------------------|
 | Chain ID       | 1338                              | 
-| Public RPC URL | https://rpc.atlantischain.network |
-| Public WSS URL | wss://ws.atlantischain.network    |
+| RPC URL | https://rpc.atlantischain.network |
+| WS URL | wss://ws.atlantischain.network    |
 
 #### Mainnet
 
 | Variable       | Value	                        | 
 |----------------|-------------------------------|
 | Chain ID       | 1339                          | 
-| Public RPC URL | https://rpc.elysiumchain.tech |
-| Public WSS URL | wss://ws.elysiumchain.tech    |
+| RPC URL | https://rpc.elysiumchain.tech |
+| WS URL | wss://ws.elysiumchain.tech    |
 
 ## Block Explorers
 
 Elysium provides EVM-based explorer which ones used query the Ethereum API. All EVM-based transactions are accessible
 via the Ethereum API. For more information on each explorer, please check out the Block Explorers page.
 
-#### Testnet
+#### Atlantis (Testnet)
 
 | Block Explorer | Value	                                   | 
 |----------------|------------------------------------------|
@@ -63,15 +63,15 @@ via the Ethereum API. For more information on each explorer, please check out th
 
 ## Funding Accounts
 
-To get started developing on one of the TestNet, you’ll need to fund your account with DEV tokens to send transactions.
-Please note that DEV tokens have no real value and are for testing purposes only.
+To get started developing on Atlantis (Testnet), you’ll need to fund your account with DEV LAVA tokens to send transactions.
+Please note that DEV LAVA tokens have no real value and are for testing purposes only.
 
-MainNet tokens are only available for those people who are using Bridge & move their assets from Polygon to Elysium.
+MainNet tokens are only available for those people who are using Bridge & have moved their assets from other chains to Elysium using Elysium Bridge (https://bridge.elysiumchain.tech/).
 
 | Network | URL	                                                                                              | 
 |---------|---------------------------------------------------------------------------------------------------|
-| Testnet | The https://faucet.atlantischain.network/ website. The faucet dispenses 1 DEV LAVA every 24 hours | 
-| Mainnet | The https://faucet.elysiumchain.tech/ website. The faucet dispenses 3 LAVA                        |
+| Atlantis | The https://faucet.atlantischain.network/ website. The faucet dispenses 1 DEV LAVA every 24 hours | 
+| Elysium | The https://faucet.elysiumchain.tech/ website. The faucet dispenses 3 LAVA                        |
 
 ## Development Tools
 
