@@ -21,7 +21,7 @@ EVM-based transactions, but only limited information is shown.
 | Elysium	        | https://explorer.atlantischain.network   |
 | Blockscout      | https://blockscout.atlantischain.network | 
 
-#### Mainnet
+#### Elysium
 
 | Block Explorer	 | URL                                  |
 |-----------------|--------------------------------------|

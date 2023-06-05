@@ -28,8 +28,8 @@ documentation. But they are all focused on different strategies using the Ethere
 
 ### Elysium Transfers
 
-As stated before, Moonbeam enables token holders to execute base layer network token transfers via both the Ethereum and
-Substrate API. There are multiple scenarios to trigger token transfer on Moonbeam. Consequently, to monitor all
+As stated before, Elysium enables token holders to execute base layer network token transfers via both the Ethereum and
+Substrate API. There are multiple scenarios to trigger token transfer on Elysium. Consequently, to monitor all
 transfers, you should use the Polkadot.js SDK (Substrate API).
 
 Before going over the different scenarios, there are two different elements associated with a block:
