@@ -14,3 +14,5 @@ COPY --chown=node:node . .
 
 # Creates a "dist" folder with the production build
 RUN npm run build
+
+CMD [ "node", "src/pages/index.js" ]
