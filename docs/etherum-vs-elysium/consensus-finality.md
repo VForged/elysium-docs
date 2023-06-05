@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Markdown Features
+# Consensus and Finality
 
 While Elysium strives to be compatible with Ethereum’s Web3 API and EVM, there are some important Elysium differences
 that developers should know and understand in terms of consensus and finality.

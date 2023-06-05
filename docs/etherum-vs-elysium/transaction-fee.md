@@ -1,7 +1,6 @@
 ---
 sidebar_position: 5
 ---
-
 # Transaction Fees
 
 Similar to the Ethereum and Substrate APIs for sending transfers on Elysium, the Substrate and EVM layers on Elysium
@@ -61,7 +60,7 @@ The object mappings are summarized as follows:
 |--------------------|-----------------------------------------------------------|
 | Fee paying account | extrinsics[extrinsic_number].events[event_number].data[0] |
 | Total fees paid    | extrinsics[extrinsic_number].events[event_number].data[1] | 
-| Tip	               | extrinsics[extrinsic_number].events[event_number].data[2] |
+| Tip                   | extrinsics[extrinsic_number].events[event_number].data[2] |
 
 The transaction fee related information can be retrieved under the event of the relevant extrinsic where the method
 field is set to:
@@ -80,16 +79,46 @@ extrinsics[extrinsic_number].events[event_number].data[1]
 
 To calculate the fee incurred on a Elysium transaction sent via the Ethereum API, the following formula can be used:
 
+#### EIP 1559
+```
+GasPrice = BaseFee + MaxPriorityFeePerGas < MaxFeePerGas ?
+            BaseFee + MaxPriorityFeePerGas :
+            MaxFeePerGas;
+Transaction Fee = (GasPrice * TransactionWeight) / 25000
+```
 
+#### Legacy
+```
+Transaction Fee = (GasPrice * TransactionWeight) / 25000
+```
+
+#### EIP-2930
+```
+Transaction Fee = (GasPrice * TransactionWeight) / 25000
+```
 
 The following sections describe in more detail each of the components needed to calculate the transaction fee.
 
-#### Base Fee
+### Base Fee
 
 The BaseFee is the minimum amount charged to send a transaction and is a value set by the network itself. It was
 introduced in EIP-1559. Elysium has its own dynamic fee mechanism for calculating the base fee, which is adjusted based
 on block congestion. As of runtime 2300, the dynamic fee mechanism has been rolled out to all of the Elysium-based
 networks.
+
+The minimum gas price for each network is as follows:
+
+| Network                  | Value    |
+|--------------------------|----------|
+| Elysium Chain (Mainnet)  | 100 Gwei |
+| Atlantis Chain (Testnet) | 0.1 Gwei |
+
+To calculate the dynamic base fee, the following calculation is used:
+
+| Network                  | Value                                              |
+|--------------------------|----------------------------------------------------|
+| Elysium Chain (Mainnet)  | BaseFee = NextFeeMultiplier * 100000000000 / 10^18 |
+| Atlantis Chain (Testnet) | BaseFee = NextFeeMultiplier * 100000000 / 10^18    |
 
 The value of NextFeeMultiplier can be retrieved from the Substrate Sidecar API, via the following endpoint:
 
@@ -143,4 +172,206 @@ The data for an Ethereum transaction in a particular block can be extracted from
 
 ```
 GET /blocks/{blockId}
+```
+
+The paths to the relevant values have also truncated and reproduced below:
+
+#### EIP 1559
+| EVM Field            | Block JSON Field                                                           |
+|----------------------|----------------------------------------------------------------------------|
+| MaxFeePerGas         | extrinsics[extrinsic_number].args.transaction.eip1559.maxFeePerGas         |
+| MaxPriorityFeePerGas | extrinsics[extrinsic_number].args.transaction.eip1559.maxPriorityFeePerGas |
+
+#### Legacy
+| EVM Field | Block JSON Field                                              |
+|-----------|---------------------------------------------------------------|
+| GasPrice  | extrinsics[extrinsic_number].args.transaction.legacy.gasPrice |
+
+#### EIP-2930
+| EVM Field | Block JSON Field                                               |
+|-----------|----------------------------------------------------------------|
+| GasPrice  | extrinsics[extrinsic_number].args.transaction.eip2930.gasPrice |
+
+### Transaction Weight
+
+TransactionWeight is a Substrate mechanism used to measure the execution time a given transaction takes to be executed within a block. For all transactions types, TransactionWeight can be retrieved under the event of the relevant extrinsic where the method field is set to:
+
+```
+pallet: "system", method: "ExtrinsicSuccess"
+```
+And then TransactionWeight is mapped to the following field of the block JSON object:
+```
+extrinsics[extrinsic_number].events[event_number].data[0].weight
+```
+
+### Key Differences with Ethereum
+
+As seen in the sections above, there are some key differences between the transaction fee model on Moonbeam and the one on Ethereum that developers should be mindful of when developing on Moonbeam:
+
+- The dynamic fee mechanism resembles that of EIP-1559 but the implementation is different
+- The amount of gas used in Moonbeam's transaction fee model is mapped from the transaction's Substrate extrinsic weight value via a fixed factor of 25000. This value is then multiplied with the unit gas price to calculate the transaction fee. This fee model means it can potentially be significantly cheaper to send transactions such as basic balance transfers via the Ethereum API than the Substrate API
+
+### Fee History Endpoint
+Moonbeam networks implement the eth_feeHistory JSON-RPC endpoint as a part of the support for EIP-1559.
+
+`eth_feeHistory` returns a collection of historical gas information from which you can reference and calculate what to set for the `MaxFeePerGas` and `MaxPriorityFeePerGas` fields when submitting EIP-1559 transactions.
+
+### Sample Code for Calculating Transaction Fees
+
+The following code snippet uses the Axios HTTP client to query the Sidecar endpoint /blocks/head for the latest finalized block. It then calculates the transaction fees of all transactions in the block according to the transaction type (for Ethereum API: legacy, EIP-1559 or EIP-2930 standards, and for Substrate API), as well as calculating the total transaction fees in the block.
+
+The following code sample is for demo purposes only and should not be used without modification and further testing in a production environment.
+
+You can use the following snippet for any Moonbeam-based network, but you'll need to modify the baseFee accordingly. You can refer back to the Base Fee section to get the calculation for each network.
+
+```
+const axios = require('axios');
+
+// This script calculates the transaction fees of all transactions in a block
+// according to the transaction type (for Ethereum API: legacy, EIP-1559 or
+// EIP-2930 standards, and Substrate API) using the dynamic fee mechanism.
+// It also calculates the total fees in the block
+
+// Endpoint to retrieve the latest block
+const endpointBlock = 'http://127.0.0.1:8080/blocks/head';
+// Endpoint to retrieve the latest nextFeeMultiplier
+const endpointPallet =
+  'http://127.0.0.1:8080/pallets/transaction-payment/storage/nextFeeMultiplier?at=';
+// Endpoint to retrieve the node client's information
+const endpointNodeVersion = 'http://127.0.0.1:8080/node/version';
+
+// Define the minimum base fee for each network
+const baseFee = {
+  moonbeam: 125000000000n,
+  moonriver: 1250000000n,
+  moonbase: 125000000n
+}
+
+async function main() {
+  try {
+    // Create a variable to sum the transaction fees in the whole block
+    let totalFees = 0n;
+
+    // Find which Moonbeam network the Sidecar is pointing to
+    const response_client = await axios.get(endpointNodeVersion);
+    const network = response_client.data.clientImplName;
+
+    // Retrieve the block from the Sidecar endpoint
+    const response_block = await axios.get(endpointBlock);
+    // Retrieve the block height of the current block
+    console.log('Block Height: ' + response_block.data.number);
+
+    // Find the block's nextFeeMultiplier
+    const response_pallet = await axios.get(
+      endpointPallet + response_block.data.number
+    );
+
+    // Iterate through all extrinsics in the block
+    response_block.data.extrinsics.forEach((extrinsic) => {
+      // Create an object to store transaction information
+      let transactionData = new Object();
+      // Set the network field
+      transactionData['network'] = network;
+
+      // Filter for Ethereum Transfers
+      if (
+        extrinsic.method.pallet === 'ethereum' &&
+        extrinsic.method.method === 'transact'
+      ) {
+        // Iterate through the events to get non type specific parameters
+        extrinsic.events.forEach((event) => {
+          if (
+            event.method.pallet === 'ethereum' &&
+            event.method.method === 'Executed'
+          ) {
+            // Get Transaction Hash
+            transactionData['hash'] = event.data[2];
+          }
+          if (
+            event.method.pallet === 'system' &&
+            event.method.method === 'ExtrinsicSuccess'
+          ) {
+            // Add correction weight if needed to Transaction Weight!
+            transactionData['weight'] = BigInt(event.data[0].weight.refTime);
+          }
+        });
+
+        // Get the transaction type and type specific parameters and compute the
+        // transaction fee
+        if (extrinsic.args.transaction.legacy) {
+          transactionData['txType'] = 'legacy';
+          transactionData['gasPrice'] = BigInt(
+            extrinsic.args.transaction.legacy.gasPrice
+          );
+          transactionData['txFee'] =
+            (transactionData['gasPrice'] * transactionData['weight']) / 25000n;
+        } else if (extrinsic.args.transaction.eip1559) {
+          transactionData['txType'] = 'eip1599';
+          transactionData['maxFeePerGas'] = BigInt(
+            extrinsic.args.transaction.eip1559.maxFeePerGas
+          );
+          transactionData['maxPriorityFeePerGas'] = BigInt(
+            extrinsic.args.transaction.eip1559.maxPriorityFeePerGas
+          );
+          // Update based on the network you're getting tx fees for
+          transactionData['baseFee'] =
+            (BigInt(response_pallet.data.value) * baseFee.moonbeam) /
+            BigInt('1000000000000000000');
+
+          // Gas price dependes on the MaxFeePerGas and MaxPriorityFeePerGas set
+          transactionData['gasPrice'] =
+            transactionData['baseFee'] +
+              transactionData['maxPriorityFeePerGas'] <
+            transactionData['maxFeePerGas']
+              ? transactionData['baseFee'] +
+                transactionData['maxPriorityFeePerGas']
+              : transactionData['maxFeePerGas'];
+
+          transactionData['txFee'] =
+            (transactionData['gasPrice'] * transactionData['weight']) / 25000n;
+        } else if (extrinsic.args.transaction.eip2930) {
+          transactionData['txType'] = 'eip2930';
+          transactionData['gasPrice'] = BigInt(
+            extrinsic.args.transaction.eip2930.gasPrice
+          );
+          transactionData['txFee'] =
+            (transactionData['gasPrice'] * transactionData['weight']) / 25000n;
+        }
+
+        // Increment totalFees
+        totalFees += transactionData['txFee'];
+
+        // Display the tx information to console
+        console.log(transactionData);
+      }
+      // Filter for Substrate transactions, check if the extrinsic has a
+      // 'TransactionFeePaid' event
+      else {
+        extrinsic.events.forEach((event) => {
+          if (
+            event.method.pallet === 'transactionPayment' &&
+            event.method.method === 'TransactionFeePaid'
+          ) {
+            transactionData['txType'] = 'substrate';
+            transactionData['txFee'] = event.data[1];
+            transactionData['tip'] = event.data[1];
+          }
+          if (
+            event.method.pallet === 'system' &&
+            event.method.method === 'ExtrinsicSuccess'
+          ) {
+            transactionData['weight'] = event.data[0].weight.refTime;
+          }
+        });
+      }
+    });
+
+    // Output the total amount of fees in the block
+    console.log('Total fees in block: ' + totalFees);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+main();
 ```
