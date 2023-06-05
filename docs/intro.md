@@ -18,12 +18,8 @@ To get started developing on Elysium, it’s important to be aware of the variou
 
 | Network        | Network Type | Native Asset Symbol | Native Asset Decimals |
 |----------------|--------------|---------------------|-----------------------|
-| Atlantis chain | Testnet      | LAVA                | 18                    |
-| Elysium chain  | Mainnet      | LAVA                | 18                    |
-
-> **_NOTE:_**  
-> A Elysium development node doesn’t have a relay chain as its purpose is to be your own personal
-> development environment where you can get started developing quickly without the overhead of a relay chain.
+| Atlantis | Testnet      | LAVA                | 18                    |
+| Elysium  | Mainnet      | LAVA                | 18                    |
 
 ### Network Configurations
 
