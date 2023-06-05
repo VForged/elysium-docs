@@ -9,12 +9,12 @@ balances, contracts, and transactions. More advanced block explorers even offer 
 to provide a complete set of information, such as ERC-20 tokens in the network. They might even offer API services to
 access it via external services.
 
-Moonbeam provides two different kind of explorers: ones to query the Ethereum API, and others dedicated to the Substrate
+Elysium provides two different kind of explorers: ones to query the Ethereum API, and others dedicated to the Substrate
 API. All EVM-based transactions are accessible via the Ethereum API wheras the Substrate API can be relied upon for
-Substrate-native functions such as governance and staking. The Substrate API also includes information about the
+Substrate-native functions. The Substrate API also includes information about the
 EVM-based transactions, but only limited information is shown.
 
-#### Testnet
+#### Atlantis (Testnet)
 
 | Block Explorer	 | URL                                      |
 |-----------------|------------------------------------------|
