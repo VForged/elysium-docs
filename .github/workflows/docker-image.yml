@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         node-version: [ 18.x ]
-      steps:
+    steps:
         - name: Checkout
           uses: actions/checkout@v3
 
@@ -25,7 +25,7 @@ jobs:
           id: meta
           uses: docker/metadata-action@v4
           with:
-            images: slmnvaival/elysium-docs
+            images: vaival/elysium-docs
             tags: |
               type=semver,pattern={{version}}
 
