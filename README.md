@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Quick Start Guide
 
 Elysium is a fully Ethereum-compatible smart contract platform on Polkadot. As such, you can interact with Elysium via
