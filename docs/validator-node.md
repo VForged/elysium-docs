@@ -33,21 +33,20 @@ This line prints Peer ID and Node Key. Please share Peer ID with Elysium team & 
 version: '2'
 
 services:
-validator:
-container_name: elysium
-image: vaival/elysium-node
+elysium_testnet:
+container_name: elysium_testnet
+image: vaival/elysium:latest
 ports:
 - 30333:30333 # p2p port
 - 9933:9933 # rpc port
 - 9944:9944 # ws port
 volumes:
-- /my/local/folder:/validator
+- /my/local/folder:/data
 command: [
-"--name", "ValidatorNode",
+"--name", "ElysiumDocker",
 "--ws-external",
 "--rpc-external",
-"--rpc-cors", "all",
-"--node-key", "00a9254b8f0a732cc50924308211adbae2879a986529ccb7a080a3e86f954b5e",
+"--rpc-cors", "all"
 ]
 ```
 
