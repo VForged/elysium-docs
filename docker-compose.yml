@@ -5,4 +5,4 @@ services:
     container_name: elysium_docs
     image: vaival/elysium-docs:latest
     ports:
-      - 3000:3003
+      - 3000:3000
