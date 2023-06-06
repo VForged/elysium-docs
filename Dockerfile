@@ -1,4 +1,4 @@
-FROM node:20-alpine
+FROM node:16-alpine
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -8,11 +8,12 @@ COPY --chown=node:node package*.json ./
 
 # Install app dependencies
 RUN npm ci --only=production && npm cache clean --force
+
 # Bundle app source
 COPY --chown=node:node . .
 
 # Creates a "dist" folder with the production build
 RUN npm run build
-EXPOSE 3000
+EXPOSE 3003
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "serve"]
