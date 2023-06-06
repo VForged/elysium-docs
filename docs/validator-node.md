@@ -1,5 +1,69 @@
 # Validator Node
 
+A blockchain validator is a node on a blockchain network that is responsible for verifying transactions on the network.
+— Validators are an essential component of a blockchain network, helping to ensure its security, accuracy, and
+reliability
+
+## How To Become a Elysium Validator
+
+A blockchain validator is a node on a blockchain network that is responsible for verifying transactions on the network.
+— Validators are an essential component of a blockchain network, helping to ensure its security, accuracy, and
+reliability
+
+- Install the subkey on your dev machine by following the link Install subkey.
+- Once you have built the subkey go to `target -> release` folder and Run the command to generate peer id.
+
+```
+subkey generate-node-key
+```
+
+This line prints Peer ID and Node Key. Please share Peer ID with Elysium team & use Node Key in validator.
+
+#### Peer ID
+
+```12xx3KxxXXeu6XXXxkgxjXCLyMu7bpdXXXXXXXXVYMY7H75MxXXa```
+
+#### Node Key
+
+```    00a9254b8f0a732cc50920000000adbae0079a986529cc00a080a3e86f954b5e    ```
+
+- Run the docker image following these codes.
+
+```angular2html
+version: '2'
+
+services:
+validator:
+container_name: elysium
+image: vaival/elysium-node
+ports:
+- 30333:30333 # p2p port
+- 9933:9933 # rpc port
+- 9944:9944 # ws port
+volumes:
+- /my/local/folder:/validator
+command: [
+"--name", "ValidatorNode",
+"--ws-external",
+"--rpc-external",
+"--rpc-cors", "all",
+"--node-key", "00a9254b8f0a732cc50924308211adbae2879a986529ccb7a080a3e86f954b5e",
+]
+```
+
+- Generate wallet for funds `subkey generate` & This line output:
+
+```
+Secret phrase:       bread tongue spell stadium clean grief coin rent spend total practice document
+Secret seed:       0xd5836897dc77e6c87e5cc268abaaa9c661bcf19aea9f0f50a1e149d21ce31eb7
+Public key (hex):  0xb6a8b4b6bf796991065035093d3265e314c3fe89e75ccb623985e57b0c2e0c30
+Account ID:       0xb6a8b4b6bf796991065035093d3265e314c3fe89e75ccb623985e57b0c2e0c30
+Public key (SS58): 5GCCgshTQCfGkXy6kAkFDW1TZXAdsbCNZJ9Uz2c7ViBnwcVg
+SS58 Address:      5GCCgshTQCfGkXy6kAkFDW1TZXAdsbCNZJ9Uz2c7ViBnwcVg
+```
+
+Please share Public key (SS58) with Elysium team for funds transfer.
+
 ## The easiest way using Docker
 
 The easiest/faster option to run Polkadot in Docker is to use the latest release images. These are small images that use
