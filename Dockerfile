@@ -14,6 +14,6 @@ COPY --chown=node:node . .
 
 # Creates a "dist" folder with the production build
 RUN npm run build
-EXPOSE 3003
+EXPOSE 3000
 
 CMD ["npm", "run", "serve"]
