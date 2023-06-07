@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-// const lightCodeTheme = require('prism-react-renderer/themes/github');
-// const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -11,7 +11,7 @@ const config = {
     favicon: 'https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium-icon-512x512.png',
 
     // Set the production url of your site here
-    url: 'https://your-docusaurus-test-site.com',
+    url: 'http://blog.elysiumchain.tech',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/',
@@ -31,24 +31,26 @@ const config = {
         defaultLocale: 'en',
         locales: ['en'],
     },
-
     presets: [
         [
             'classic',
             /** @type {import('@docusaurus/preset-classic').Options} */
-            ({
-                docs: {
-                    sidebarPath: require.resolve('./sidebars.js'),
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
-                    editUrl: 'https://github.com/BloxBytes/elysium-docs/tree/master/',
-                },
-                theme: {
-                    customCss: require.resolve('./src/css/custom.css'),
-                },
-            }),
+            (
+                {
+                    docs: {
+                        sidebarPath: require.resolve('./sidebars.js'),
+                        // Please change this to your repo.
+                        // Remove this to remove the "edit this page" links.
+                        editUrl: 'https://github.com/BloxBytes/elysium-docs/tree/master/',
+                    },
+                    theme: {
+                        customCss: require.resolve('./src/css/custom.css'),
+                    },
+                }
+            )
         ],
     ],
+    themes: ['docusaurus-theme-search-typesense'],
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
@@ -59,57 +61,74 @@ const config = {
             colorMode: {
                 defaultMode: 'dark',
             },
-/*
             footer: {
-                // style: 'dark',
-                // // items: [
-                // //     {
-                // //         title: 'Docs',
-                // //         items: [
-                // //             {
-                // //                 label: 'Tutorial',
-                // //                 to: '/docs/intro',
-                // //             },
-                // //         ],
-                // //     },
-                // //     {
-                // //         title: 'Community',
-                // //         items: [
-                // //             {
-                // //                 label: 'Stack Overflow',
-                // //                 href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-                // //             },
-                // //             {
-                // //                 label: 'Discord',
-                // //                 href: 'https://discordapp.com/invite/docusaurus',
-                // //             },
-                // //             {
-                // //                 label: 'Twitter',
-                // //                 href: 'https://twitter.com/docusaurus',
-                // //             },
-                // //         ],
-                // //     },
-                // //     {
-                // //         title: 'More',
-                // //         items: [
-                // //             {
-                // //                 label: 'Blog',
-                // //                 to: '/blog',
-                // //             },
-                // //             {
-                // //                 label: 'GitHub',
-                // //                 href: 'https://github.com/BloxBytes/elysium-docs',
-                // //             },
-                // //         ],
-                // //     },
-                // // ],
-                // copyright: `Copyright © ${new Date().getFullYear()} Elysium Documentation.`,
+                style: 'dark',
+                // items: [
+                //     {
+                //         title: 'Docs',
+                //         items: [
+                //             {
+                //                 label: 'Tutorial',
+                //                 to: '/docs/intro',
+                //             },
+                //         ],
+                //     },
+                //     {
+                //         title: 'Community',
+                //         items: [
+                //             {
+                //                 label: 'Stack Overflow',
+                //                 href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                //             },
+                //             {
+                //                 label: 'Discord',
+                //                 href: 'https://discordapp.com/invite/docusaurus',
+                //             },
+                //             {
+                //                 label: 'Twitter',
+                //                 href: 'https://twitter.com/docusaurus',
+                //             },
+                //         ],
+                //     },
+                //     {
+                //         title: 'More',
+                //         items: [
+                //             {
+                //                 label: 'Blog',
+                //                 to: '/blog',
+                //             },
+                //             {
+                //                 label: 'GitHub',
+                //                 href: 'https://github.com/BloxBytes/elysium-docs',
+                //             },
+                //         ],
+                //     },
+                // ],
+                copyright: `Copyright © ${new Date().getFullYear()} Elysium Documentation.`,
             },
-*/
-            // prism: {
-            //     theme: lightCodeTheme,
-            //     darkTheme: darkCodeTheme,
-            // },
+            prism: {
+                theme: lightCodeTheme,
+                darkTheme: darkCodeTheme,
+            },
+            typesense: {
+                // Replace this with the name of your index/collection.
+                // It should match the "index_name" entry in the scraper's "config.json" file.
+                typesenseCollectionName: 'elysium-2',
+                typesenseServerConfig: {
+                    nodes: [
+                        {
+                            host: 'typesense.vulcanforged.com',
+                            port: '',
+                            protocol: 'https',
+                        },
+                    ],
+                    apiKey: 'A0a4QJEb0kS9yrW',
+                },
+                // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
+                typesenseSearchParameters: {},
+                // Optional
+                contextualSearch: true,
+            },
         }),
 };
 
