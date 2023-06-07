@@ -1,9 +1,3 @@
----
-title: subkey
-description: Provides command-line reference information for using the subkey program to generate and manage keys.
-keywords:
----
-
 The `subkey` program is a key generation and management utility that is included in the Substrate repository.
 You can use the `subkey` program to perform the following tasks:
 
