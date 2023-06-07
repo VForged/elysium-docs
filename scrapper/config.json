@@ -1,0 +1,23 @@
+{
+  "index_name": "elysium-2",
+  "start_urls": [
+    "http://localhost:3000"
+  ],
+  "selectors": {
+    "lvl0": {
+      "selector": "(//ul[contains(@class,'menu__list')]//a[contains(@class, 'menu__link menu__link--sublist menu__link--active')]/text() | //nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
+      "type": "xpath",
+      "global": true,
+      "default_value": "Documentation"
+    },
+    "lvl1": "article h1, header h1",
+    "lvl2": "article h2",
+    "lvl3": "article h3",
+    "lvl4": "article h4",
+    "lvl5": "article h5, article td:first-child",
+    "lvl6": "article h6",
+    "lvl7": "header h2",
+    "lvl8": "header h3",
+    "text": "article p, article li, article td:last-child"
+  }
+}

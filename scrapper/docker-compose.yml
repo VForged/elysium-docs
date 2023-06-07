@@ -1,0 +1,27 @@
+version: '3.4'
+services:
+  typesense_scrapper:
+    image: typesense/docsearch-scraper:0.6.0
+    restart: on-failure
+    environment:
+      TYPESENSE_API_KEY: A0a4QJEb0kS9yrW
+      TYPESENSE_HOST: typesense.vulcanforged.com
+      TYPESENSE_PORT: 443
+      TYPESENSE_PROTOCOL: https
+      CONFIG: "{\"index_name\":\"elysium-2\",\"start_urls\":[\"https://docs.elysiumchain.tech\"],\"sitemap_urls\":[\"https://docs.elysiumchain.tech/sitemap.xml\"],\"sitemap_alternate_links\":true,\"stop_urls\":[\"/tests\"],\"selectors\":{\"lvl0\":{\"selector\":\"(//ul[contains(@class,'menu__list')]//a[contains(@class,'menu__linkmenu__link--sublistmenu__link--active')]/text()|//nav[contains(@class,'navbar')]//a[contains(@class,'navbar__link--active')]/text())[last()]\",\"type\":\"xpath\",\"global\":true,\"default_value\":\"Documentation\"},\"lvl1\":\"articleh1,headerh1\",\"lvl2\":\"articleh2\",\"lvl3\":\"articleh3\",\"lvl4\":\"articleh4\",\"lvl5\":\"articleh5,articletd:first-child\",\"lvl6\":\"articleh6\",\"lvl7\":\"headerh2\",\"lvl8\":\"headerh3\",\"text\":\"articlep,articleli,articletd:last-child\"},\"strip_chars\":\".,;:#\",\"custom_settings\":{\"separatorsToIndex\":\"_\",\"attributesForFaceting\":[\"language\",\"version\",\"type\",\"docusaurus_tag\"],\"attributesToRetrieve\":[\"hierarchy\",\"content\",\"anchor\",\"url\",\"url_without_anchor\",\"type\"]},\"conversation_id\":[\"833762294\"],\"nb_hits\":46250}"
+
+#networks:
+#  default:
+#    external:
+#      name: search_default
+#networks:
+#  network1:
+#    driver: custom-driver-1
+#    external: true
+
+
+
+
+
+
+
