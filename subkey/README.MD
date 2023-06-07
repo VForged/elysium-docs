@@ -63,6 +63,7 @@ To generate a random key pair for peer-to-peer communication run a command simil
 ```bash
 subkey generate-node-key 
 ```
+The command displays output similar to the following:
 
 ```text
 12D3KooWGdw55Xcg5N2jcFzA5eAscjKmpopyntsk8MdgiGCXpodK
