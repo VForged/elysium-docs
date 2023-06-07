@@ -29,9 +29,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-
-nav{display: none}
-
+nav{display: none!important}
 /*Custom classes */
 a{
   text-decoration: none!important;
@@ -119,6 +117,7 @@ background-color: #140533;
 }
 #header nav{
   background: transparent;
+  display: flex!important;
 }
 header .navbar .navbar-brand {
   max-width: 195px;
