@@ -56,8 +56,7 @@ const config = {
         ({
             // Replace with your project's social card
             image: 'img/docusaurus-social-card.jpg',
-            navbar: {
-            },
+            navbar: {},
             colorMode: {
                 defaultMode: 'dark',
             },
@@ -106,10 +105,10 @@ const config = {
                 // ],
                 copyright: `Copyright © ${new Date().getFullYear()} Elysium Documentation.`,
             },
-            prism: {
-                theme: lightCodeTheme,
-                darkTheme: darkCodeTheme,
-            },
+            // prism: {
+            //     // theme: lightCodeTheme,
+            //     darkTheme: darkCodeTheme,
+            // },
             typesense: {
                 // Replace this with the name of your index/collection.
                 // It should match the "index_name" entry in the scraper's "config.json" file.
