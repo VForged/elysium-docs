@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+// const lightCodeTheme = require('prism-react-renderer/themes/github');
+// const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -49,81 +49,67 @@ const config = {
             }),
         ],
     ],
-
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             // Replace with your project's social card
             image: 'img/docusaurus-social-card.jpg',
             navbar: {
-                title: 'Elysium docs',
-                logo: {
-                    alt: 'Elysium docs',
-                    src: 'https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium-icon-512x512.png',
-                },
-                items: [
-                    {
-                        type: 'docSidebar',
-                        sidebarId: 'tutorialSidebar',
-                        position: 'left',
-                        label: 'Developer Documentation',
-                    },
-                    {
-                        href: 'https://github.com/BloxBytes/elysium-docs/',
-                        label: 'GitHub',
-                        position: 'right',
-                    },
-                ],
             },
+            colorMode: {
+                defaultMode: 'dark',
+            },
+/*
             footer: {
-                style: 'dark',
-                // items: [
-                //     {
-                //         title: 'Docs',
-                //         items: [
-                //             {
-                //                 label: 'Tutorial',
-                //                 to: '/docs/intro',
-                //             },
-                //         ],
-                //     },
-                //     {
-                //         title: 'Community',
-                //         items: [
-                //             {
-                //                 label: 'Stack Overflow',
-                //                 href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-                //             },
-                //             {
-                //                 label: 'Discord',
-                //                 href: 'https://discordapp.com/invite/docusaurus',
-                //             },
-                //             {
-                //                 label: 'Twitter',
-                //                 href: 'https://twitter.com/docusaurus',
-                //             },
-                //         ],
-                //     },
-                //     {
-                //         title: 'More',
-                //         items: [
-                //             {
-                //                 label: 'Blog',
-                //                 to: '/blog',
-                //             },
-                //             {
-                //                 label: 'GitHub',
-                //                 href: 'https://github.com/BloxBytes/elysium-docs',
-                //             },
-                //         ],
-                //     },
-                // ],
-                copyright: `Copyright © ${new Date().getFullYear()} Elysium Documentation.`,
+                // style: 'dark',
+                // // items: [
+                // //     {
+                // //         title: 'Docs',
+                // //         items: [
+                // //             {
+                // //                 label: 'Tutorial',
+                // //                 to: '/docs/intro',
+                // //             },
+                // //         ],
+                // //     },
+                // //     {
+                // //         title: 'Community',
+                // //         items: [
+                // //             {
+                // //                 label: 'Stack Overflow',
+                // //                 href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                // //             },
+                // //             {
+                // //                 label: 'Discord',
+                // //                 href: 'https://discordapp.com/invite/docusaurus',
+                // //             },
+                // //             {
+                // //                 label: 'Twitter',
+                // //                 href: 'https://twitter.com/docusaurus',
+                // //             },
+                // //         ],
+                // //     },
+                // //     {
+                // //         title: 'More',
+                // //         items: [
+                // //             {
+                // //                 label: 'Blog',
+                // //                 to: '/blog',
+                // //             },
+                // //             {
+                // //                 label: 'GitHub',
+                // //                 href: 'https://github.com/BloxBytes/elysium-docs',
+                // //             },
+                // //         ],
+                // //     },
+                // // ],
+                // copyright: `Copyright © ${new Date().getFullYear()} Elysium Documentation.`,
             },
-            prism: {
-                theme: lightCodeTheme,
-                darkTheme: darkCodeTheme,
-            },
+*/
+            // prism: {
+            //     theme: lightCodeTheme,
+            //     darkTheme: darkCodeTheme,
+            // },
         }),
 };
 

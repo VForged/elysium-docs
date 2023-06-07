@@ -5,17 +5,17 @@
  */
 
 /* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #140533;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-}
+/*:root {*/
+/*  --ifm-color-primary: #140533;*/
+/*  --ifm-color-primary-dark: #29784c;*/
+/*  --ifm-color-primary-darker: #277148;*/
+/*  --ifm-color-primary-darkest: #205d3b;*/
+/*  --ifm-color-primary-light: #33925d;*/
+/*  --ifm-color-primary-lighter: #359962;*/
+/*  --ifm-color-primary-lightest: #3cad6e;*/
+/*  --ifm-code-font-size: 95%;*/
+/*  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);*/
+/*}*/
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
@@ -27,4 +27,291 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+
+nav{display: none}
+
+/*Custom classes */
+a{
+  text-decoration: none!important;
+}
+
+.RobotoLight {
+  font-family: "Roboto Light";
+}
+.Fsize_13 {
+  font-size: 13px;
+}
+.Fsize_48 {
+  font-size: 48px;
+}
+.GreyColor {
+  color: #ada7b7;
+}
+.opacity-50 {
+  opacity: 0.5 !important;
+}
+.Fsize_14 {
+  font-size: 14px;
+}
+.ArchivoBold {
+  font-family: "Archivo Bold";
+}
+.text-white{
+  color: #fff;
+}
+.BtnGreen {
+  background-color: #1E0E3E99!important;
+  color: #fff!important;
+  border: 1px solid #3B2864;
+}
+.BtnGreen:hover {
+  background-color: #9fc131!important;
+  color: #fff!important;;
+}
+.clients {
+  margin-top: 120px;
+}
+.RadialGradient {
+  position: relative; }
+.RadialGradient:before {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  content: "";
+  max-width: 626px;
+  width: 100%;
+  height: 569px;
+  left: -100px;
+  /*transform: matrix(0, 1, -1, 0, 0, 0);*/
+  background: transparent -webkit-radial-gradient(50% 50%, closest-side, #fa45c1 0%, #cb389d 21%, #571843 67%, #000000 100%) 0% 0% no-repeat padding-box;
+  background: transparent -o-radial-gradient(50% 50%, closest-side, #fa45c1 0%, #cb389d 21%, #571843 67%, #000000 100%) 0% 0% no-repeat padding-box;
+  background: transparent radial-gradient(closest-side at 50% 50%, #fa45c1 0%, #cb389d 21%, #571843 67%, #000000 100%) 0% 0% no-repeat padding-box;
+  mix-blend-mode: color-dodge;
+  opacity: 0.42;
+  z-index: 0; }
+.RadialGradient.top-minus:before {
+  top: -250px; }
+.RadialGradient.left-minus:before {
+  left: -250px; }
+
+.my-body{
+background-color: #140533;
+  min-height: 100vh;
+}
+.header-layout{
+  background: transparent url('../.././static/images/BG.png') 0% 0% no-repeat padding-box;
+}
+
+.coming-soon {
+  background-color: #9fc13199;
+  border: 1px solid #9fc131;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 10px;
+  padding: 6px 12px;
+}
+#header{
+  padding-block: 8px;
+}
+#header nav{
+  background: transparent;
+}
+header .navbar .navbar-brand {
+  max-width: 195px;
+}
+
+header .navbar .navbar-collapse ul {
+  font-size: 16px;
+}
+
+header .navbar .navbar-collapse ul .nav-item .nav-link {
+  padding: 0;
+  letter-spacing: 0.28px;
+  color: #fff;
+}
+ header .navbar .navbar-collapse ul .nav-item .nav-link:focus,
+header .navbar .navbar-collapse ul .nav-item .nav-link:hover,
+header .navbar .navbar-collapse ul .nav-item .nav-link.active {
+  color: #9fc131;
+}
+
+ header .navbar .navbar-collapse ul .nav-item .nav-link::after {
+  display: none;
+}
+
+[data-theme='dark']  header .navbar .navbar-collapse ul .nav-item .dropdown-toggle {
+  line-height: 65px;
+}
+
+[data-theme='dark'] header .navbar .navbar-collapse ul .nav-item .dropdown-menu {
+  background: #140533;
+  border-radius: 8px;
+  width: 464px;
+  padding: 16px;
+  border: 0;
+  margin-left: -40px;
+  margin-top: 60px;
+}
+
+[data-theme='dark']  header .navbar .navbar-collapse ul .nav-item .dropdown-menu li {
+  margin-bottom: 8px;
+}
+
+[data-theme='dark']  header .navbar .navbar-collapse ul .nav-item .dropdown-menu li .dropdown-item {
+  color: #fff;
+  border-radius: 8px;
+  padding: 16px 22px;
+  white-space: normal;
+}
+
+[data-theme='dark']  header .navbar .navbar-collapse ul .nav-item .dropdown-menu li .dropdown-item .Fsize_22 {
+  width: 30px;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+
+[data-theme='dark']  header .navbar .navbar-collapse ul .nav-item .dropdown-menu li .dropdown-item .coming-soon {
+  position: relative;
+  top: -5px;
+}
+
+[data-theme='dark']  header .navbar .navbar-collapse ul .nav-item .dropdown-menu li .dropdown-item:hover,
+header .navbar .navbar-collapse ul .nav-item .dropdown-menu li .dropdown-item:focus,
+header .navbar .navbar-collapse ul .nav-item .dropdown-menu li .dropdown-item:active {
+  background-color: rgba(48, 28, 80, 0.3);
+}
+
+[data-theme='dark']  header .navbar .navbar-collapse ul .nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+[data-theme='dark']  header .navbar .navbar-collapse ul .nav-item:focus,
+header .navbar .navbar-collapse ul .nav-item:hover,
+header .navbar .navbar-collapse ul .nav-item.active {
+  color: #9fc131;
+}
+[data-theme='dark'] header .navbar .navbar-collapse ul {
+  font-size: 16px;
+  z-index: 12;
+}
+
+/*Search Section*/
+
+
+[data-theme='dark']  .searchSectoin .input-group{
+  background: #1E0E3E99 0% 0% no-repeat padding-box;
+  border: 1px solid #3B2864;
+  border-radius: 8px 0px 0px 8px;
+}
+[data-theme='dark'] .searchSectoin .input-group input{
+ background: transparent;
+  border: none;
+  padding-block: 12px;
+  color: #fff;
+}
+[data-theme='dark']  .searchSectoin .input-group button{
+  padding: 8px;
+  padding-inline:15px;
+  border: 1px solid #3B2864;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+[data-theme='dark']  .searchSectoin .input-group .input-group-text{
+ background: transparent;
+  border: none;
+}
+[data-theme='dark']  .searchSectoin p{
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+}
+[data-theme='dark']  .cardsection{
+  margin-top: 120px;
+}
+[data-theme='dark']  .cardsection .card{
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #1E0E3E 0% 0% no-repeat padding-box;
+  border: 1px solid #3B2864;
+  border-radius: 16px;
+  color: #fff;
+}
+[data-theme='dark']  .cardsection .card img{
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ max-height: 130px;
+ max-width: 130px;
+  object-fit: contain;
+}
+[data-theme='dark']  .cardsection .card ul{
+  padding-left: 0;
+ margin-left: 0;}
+[data-theme='dark']  .cardsection .card ul li{
+ list-style: none;
+  color: #9FC131;
+}
+[data-theme='dark']  .KnowledgeSection{
+  margin-top: 120px;
+}
+[data-theme='dark']  .KnowledgeSection .card{
+  position: relative;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /*background: #1E0E3E 0% 0% no-repeat padding-box;*/
+  border: 1px solid #3B2864;
+  border-radius: 16px;
+  color: #fff;
+  margin-bottom: 20px;
+  background: transparent radial-gradient(closest-side at -15% 50%, #FF16CB 0%, #24144600 100%) 0% 0% no-repeat padding-box
+  /*background: -webkit-gradient(linear, left top, right top, from(rgba(173, 45, 181, 0.6)), to(#372a51));*/
+  /*background: -webkit-linear-gradient(left, rgba(173, 45, 181, 0.6), #372a51);*/
+  /*background: -o-linear-gradient(left, rgba(173, 45, 181, 0.6), #372a51);*/
+  /*background: linear-gradient(to right, rgba(173, 45, 181, 0.6), #372a51);*/
+}
+[data-theme='dark'] .KnowledgeSection .card:before {
+  background: transparent url('../../static/images/gbg.png') 0% 0% no-repeat padding-box;
+  mix-blend-mode: color-dodge;
+  opacity: 0.7;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+[data-theme='dark'] .KnowledgeSection .card img{
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  object-fit: contain;
+}
+[data-theme='dark']  .KnowledgeSection .card .card-title{
+ text-align: center;
+  font-size: 24px;
+}
+[data-theme='dark']  .KnowledgeSection .card .card-text{
+ text-align: center;
+}
+
+[data-theme='dark']  #footer a {
+  color: #9ea5b4;
+  text-decoration: none;
+}
+[data-theme='dark']  footer .coming-soon {
+  font-size: 8px;
+  padding: 2px 2px;
 }
