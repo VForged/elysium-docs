@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from '@docusaurus/Link';
 import Logo from '../../../static/images/Footer Group 2.png'
 import {InputGroup,InputGroupText,Input,CardBody,Card,CardSubtitle,CardLink,CardTitle ,CardText} from 'reactstrap'
 export default function MyCard({image,title,description,list}){
@@ -22,7 +23,7 @@ export default function MyCard({image,title,description,list}){
                     {list.map((link,i)=>{
                         return(
 
-                                <li> {link}</li>
+                            <li><Link to={'docs/intro'}> {link}</Link></li>
 
 
                             )

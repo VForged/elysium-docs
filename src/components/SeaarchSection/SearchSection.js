@@ -20,22 +20,12 @@ export default function SearchSection() {
             <section className={'searchSectoin clients'}>
                 <div className="container">
                     <div className="row">
-                        <div className="col-5 mx-auto">
-                            <h2 className={'RadialGradient top-minus text-capitalize text-white text-center Fsize_48 ArchivoLight pb-3 text-shadow'}>Elysium <span
+                        <div className="col-6 mx-auto d-flex flex-column">
+                            <h2 className={'RadialGradient top-minus text-capitalize  text-center Fsize_48 ArchivoLight pb-3 text-shadow'}>Elysium <span
                                 className={"ArchivoBold"}>Documentation</span></h2>
-                            <p className={'pb-3'}>Elysium documentation includes conceptual, procedural, and reference
+                            <p className={'pb-3 ArchivoExtraLight'}>Elysium documentation includes conceptual, procedural, and reference
                                 information for blockchain builders and parachain project teams</p>
-                        </div>
-                        <div className="col-8 mx-auto">
-                            <InputGroup>
-                                <InputGroupText>
-                                    <img src={SearchIcon}/>
-                                </InputGroupText>
-                                {/*<InstantSearch></InstantSearch>*/}
-
-                                <Input placeholder="and..."/>
-                                <button className={'btn BtnGreen'}>Search</button>
-                            </InputGroup>
+                            <button className="btn-docs-primary mx-auto">SEARCH DOCUMENTATION</button>
                         </div>
                     </div>
                 </div>

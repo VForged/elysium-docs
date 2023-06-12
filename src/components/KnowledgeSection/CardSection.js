@@ -60,7 +60,7 @@ export default function CardSection(){
                         <div className="col-12">
                             <div className="row">
                                 <div className="col-6 mx-auto">
-                                    <h2 className={'RadialGradient top-minus text-capitalize text-white text-center Fsize_48 ArchivoLight pb-3 text-shadow'}>Knowledge  <span className={"ArchivoBold"}>Base</span></h2>
+                                    <h2 className={'RadialGradient top-minus text-capitalize  text-center Fsize_48 ArchivoLight pb-3 text-shadow'}>Knowledge  <span className={"ArchivoBold"}>Base</span></h2>
                                 </div>
                             </div>
                         </div>

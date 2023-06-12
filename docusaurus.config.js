@@ -56,7 +56,24 @@ const config = {
         ({
             // Replace with your project's social card
             image: 'img/docusaurus-social-card.jpg',
-            navbar: {},
+            navbar: {
+                logo: {
+                    alt: 'Elysium Logo',
+                    src: 'https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium/Elysium-Docs-light.svg',
+                    srcDark: 'https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium/Elysium-Docs-dark.svg',
+                    target: '_self',
+                    width: 250,
+                    height: 100,
+                    className: 'custom-navbar-logo-class',
+                },
+                items:[
+                    {
+                        position: 'left',
+                        href:'/',
+                        label: 'Home',
+                    },
+                ]
+            },
             colorMode: {
                 defaultMode: 'dark',
             },
@@ -109,6 +126,36 @@ const config = {
             //     // theme: lightCodeTheme,
             //     darkTheme: darkCodeTheme,
             // },
+            algolia: {
+                // The application ID provided by Algolia
+                appId: 'YOUR_APP_ID',
+
+                // Public API key: it is safe to commit it
+                apiKey: 'YOUR_SEARCH_API_KEY',
+
+                indexName: 'YOUR_INDEX_NAME',
+
+                // Optional: see doc section below
+                contextualSearch: true,
+
+                // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+                externalUrlRegex: 'external\\.com|domain\\.com',
+
+                // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+                replaceSearchResultPathname: {
+                    from: '/docs/', // or as RegExp: /\/docs\//
+                    to: '/',
+                },
+
+                // Optional: Algolia search parameters
+                searchParameters: {},
+
+                // Optional: path for search page that enabled by default (`false` to disable it)
+                searchPagePath: 'search',
+                className:'mysearchBox'
+
+                //... other Algolia params
+            },
             typesense: {
                 // Replace this with the name of your index/collection.
                 // It should match the "index_name" entry in the scraper's "config.json" file.
@@ -116,12 +163,12 @@ const config = {
                 typesenseServerConfig: {
                     nodes: [
                         {
-                            host: 'typesense.vulcanforged.com',
-                            port: '',
+                            host: 'ju51mscqx64of8vbp-1.a1.typesense.net',
+                            port: '443',
                             protocol: 'https',
                         },
                     ],
-                    apiKey: 'A0a4QJEb0kS9yrW',
+                    apiKey: 'wm1JKX8PRiSVa2afB5MgZM677ntJujZo',
                 },
                 // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
                 typesenseSearchParameters: {},
