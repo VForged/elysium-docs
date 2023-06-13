@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'Elysium Documentation',
-    tagline: `Elysium documentation includes \n conceptual, procedural, and reference \n information for blockchain builders and parachain project teams`,
+    tagline: `Dive into some of the key differences between Elysium, an Ethereum compatibile blockchain, and Ethereum itself..`,
     favicon: 'https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium-icon-512x512.png',
 
     // Set the production url of your site here
@@ -50,7 +50,7 @@ const config = {
             )
         ],
     ],
-    themes: ['docusaurus-theme-search-typesense'],
+    // themes: ['@docusaurus/theme-search-algolia'],
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
@@ -128,31 +128,38 @@ const config = {
             // },
             algolia: {
                 // The application ID provided by Algolia
-                appId: 'YOUR_APP_ID',
-
+                appId: 'KEGVM1MJGE',
                 // Public API key: it is safe to commit it
-                apiKey: 'YOUR_SEARCH_API_KEY',
-
-                indexName: 'YOUR_INDEX_NAME',
-
+                apiKey: '4dd917c759135e39c0e54e94fabcd021',
+                indexName: 'elysiumchain',
                 // Optional: see doc section below
                 contextualSearch: true,
-
-                // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-                externalUrlRegex: 'external\\.com|domain\\.com',
-
-                // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-                replaceSearchResultPathname: {
-                    from: '/docs/', // or as RegExp: /\/docs\//
-                    to: '/',
-                },
-
-                // Optional: Algolia search parameters
-                searchParameters: {},
-
-                // Optional: path for search page that enabled by default (`false` to disable it)
-                searchPagePath: 'search',
-                className:'mysearchBox'
+                // The application ID provided by Algolia
+                // appId: 'YOUR_APP_ID',
+                //
+                // // Public API key: it is safe to commit it
+                // apiKey: 'YOUR_SEARCH_API_KEY',
+                //
+                // indexName: 'YOUR_INDEX_NAME',
+                //
+                // // Optional: see doc section below
+                // contextualSearch: true,
+                //
+                // // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+                // externalUrlRegex: 'external\\.com|domain\\.com',
+                //
+                // // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+                // replaceSearchResultPathname: {
+                //     from: '/docs/', // or as RegExp: /\/docs\//
+                //     to: '/',
+                // },
+                //
+                // // Optional: Algolia search parameters
+                // searchParameters: {},
+                //
+                // // Optional: path for search page that enabled by default (`false` to disable it)
+                // searchPagePath: 'search',
+                // className:'mysearchBox'
 
                 //... other Algolia params
             },
@@ -168,7 +175,7 @@ const config = {
                             protocol: 'https',
                         },
                     ],
-                    apiKey: 'wm1JKX8PRiSVa2afB5MgZM677ntJujZo',
+                    apiKey: 'A0a4QJEb0kS9yrW',
                 },
                 // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
                 typesenseSearchParameters: {},
