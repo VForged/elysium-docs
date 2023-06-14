@@ -4,52 +4,48 @@ import Cards from '../Cards/Card'
 import Rocket from '../../../static/images/card-rocket.png'
 import Community from '../../../static/images/card-community.png'
 import Refrence from '../../../static/images/card-refrence.png'
-export default function CardSection(){
-    const data=[
+
+export default function CardSection() {
+    const data = [
         {
-            image:Rocket ,
-            title:'Concepts',
-            description:'Learn the fundamental concepts and terminology to start building your blockchain using the Elysium framework.',
-            list:[
-                "Build a local blockchain",
-                "Build a local blockchain",
-                "Build a local blockchain",
+            image: Rocket,
+            title: 'Learning About Elysium',
+            description: 'Dive into the Elysium and learn what makes this approach to Ethereum compatability so compelling.',
+            list: [
+                "Elysium network overview"
             ]
-        } ,
+        },
         {
-            image:Community,
-            title:'Tutorials',
-            description:'If you learn best by doing, start with the tutorials for first hand experience building your own blockchain from a template.',
-            list:[
-                "Build a local blockchain",
-                "Simulate a network",
-                "Build a local blockchain",
+            image: Community,
+            title: 'Operating a Node',
+            description: 'Everything you need to know about running a node on Elysium, how to become a collator, and more.',
+            list: [
+                "How to set up a Elysium-based node"
             ]
-        }  ,
+        },
         {
-            image:Refrence,
-            title:'References',
-            description:'For a deeper dive into the source code and how a blockchain built from core components written in Rust, explore the documentation.',
-            list:[
-                "Rust API",
-                "Rust for Substrate",
-                "Command-line tools",
+            image: Refrence,
+            title: 'Building on Elysium',
+            description: 'Learn how to build a new application or deploy existing Solidity smart contracts to Elysium.',
+            list: [
+                "Building with Elysium",
             ]
         }
     ]
 
-    return(
+    return (
         <>
             <section className="cardsection">
                 <div className="container">
                     <div className="row">
                         {
-                            data.map((data,i)=>{
+                            data.map((data, i) => {
                                 return (
                                     <div className="col-4">
-                                        <Cards image={data.image} title={data.title} description={data.description} list={data.list}/>
+                                        <Cards image={data.image} title={data.title} description={data.description}
+                                               list={data.list}/>
                                     </div>
-                                    )
+                                )
 
                             })
                         }

@@ -42,8 +42,9 @@ export default function Home() {
     return (
         <div className={'my-body'}>
             <Layout
-                title={`${siteConfig.title}`}
-                description="Description will go into a meta tag in <head />">
+                title={``}
+                description="Everything you need to know to get started developing, deploying, and interacting with smart contracts on Elysium."
+            >
                 {/*<HomepageHeader/>*/}
                 <div className={"header-layout"}>
                     <Header />
