@@ -80,6 +80,10 @@ a{
   white-space: nowrap;
   line-height: 1;
   border: 1px solid transparent;
+  z-index: 2000;
+}
+.btn-docs-primary a{
+  color: #fff;
 }
 .text-white{
   color: #fff;
@@ -274,10 +278,22 @@ header .navbar .navbar-collapse ul .nav-item.active {
 [data-theme='dark'] .navbar__inner .DocSearch-Search-Icon{
  fill: none;
 }
+[data-theme='dark'] .navbar__inner .navbar__items .navbar__brand .navbar__logo{
+  height: 100%!important;
+}
+[data-theme='dark'] .navbar__inner .navbar__items .navbar__brand .navbar__logo img{
+  max-height: 50px!important;
+}
 /*Light theme*/
 /* Search Section*/
 [data-theme='light'] .navbar__inner{
   padding-right: 100px!important;
+}
+[data-theme='light'] .navbar__inner .navbar__items .navbar__brand .navbar__logo{
+ height: 100%!important;
+}
+[data-theme='light'] .navbar__inner .navbar__items .navbar__brand .navbar__logo img{
+ max-height: 50px!important;
 }
 [data-theme='light']  .searchSectoin p{
   color: #140533;
@@ -381,7 +397,7 @@ header .navbar .navbar-collapse ul .nav-item.active {
 }
 
 [data-theme='light']  #footer a {
-  color: #9ea5b4;
+  color: #574380;
   text-decoration: none;
 }
 [data-theme='light']  #footer h6 {
@@ -544,6 +560,7 @@ header .navbar .navbar-collapse ul .nav-item.active {
 }
 .myDropDown button {background: none!important;border:none!important;}
 [data-theme='light'] .myDropDown button {background: none!important;border:none!important;}
+
 .myDropDown .dropdown-menu{
   background: #1E0E3E;
 }
@@ -585,39 +602,6 @@ header .navbar .navbar-collapse ul .nav-item.active {
   background-repeat: no-repeat;
   object-fit: contain;
 }
-
-/*.dark-bg-dropdown li .dropdown-item .store {*/
-/*  background-image: url("../public/Images/store.png");*/
-/*}*/
-
-/*.dark-bg-dropdown li .dropdown-item .shuttle {*/
-/*  background-image: url("../public/Images/shuttle.png");*/
-/*}*/
-
-/*.dark-bg-dropdown li .dropdown-item .scaner {*/
-/*  background-image: url("../public/Images/barcode-scanner.png");*/
-/*}*/
-
-/*.dark-bg-dropdown li .dropdown-item .swap {*/
-/*  background-image: url("../public/Images/swap.png");*/
-/*}*/
-
-/*.dark-bg-dropdown li .dropdown-item .bridge {*/
-/*  background-image: url("../public/Images/bridges.png");*/
-/*}*/
-
-/*.dark-bg-dropdown li .dropdown-item .cloud-wallet {*/
-/*  background-image: url("../public/Images/cloud-wallet.png");*/
-/*}*/
-
-/*.dark-bg-dropdown li .dropdown-item .faucet {*/
-/*  background-image: url("../public/Images/faucet.png");*/
-/*}*/
-
-/*.dark-bg-dropdown li .dropdown-item .globe {*/
-/*  background-image: url("../public/Images/globe.png");*/
-/*}*/
-
 .dark-bg-dropdown li .dropdown-item:hover {
   background-color: transparent;
 }
@@ -628,5 +612,44 @@ header .navbar .navbar-collapse ul .nav-item.active {
 
 .dark-bg-dropdown li .dropdown-item:hover .icon {
   filter: invert(30%) sepia(66%) saturate(446%) hue-rotate(33deg) brightness(95%) contrast(89%);
+}
+
+.my-searchBtn{
+  margin: auto;
+}
+.my-searchBtn .DocSearch-Button{
+ background: #9FC131;
+  content: "SEARCH DOCUMENTATION";
+  position: relative;
+  border: none!important;
+  box-shadow:none;
+  color: #140533;
+  outline: none!important;
+  height: 56px!important;
+}
+
+.my-searchBtn .DocSearch-Button:hover{
+  background: #9FC131;
+  box-shadow:none;
+  color: #140533;
+  outline: none!important;
+  border: none!important;
+}
+.my-searchBtn .DocSearch-Button:focus{
+  background: #9FC131;
+  box-shadow:none;
+  color: #140533;
+  outline: none!important;
+  border: none!important;
+}
+
+.my-searchBtn .DocSearch-Button::before{
+  content: "SEARCH DOCUMENTATION";
+  position: absolute;
+  color: #140533;
+  width: 100%;
+}
+.my-searchBtn .DocSearch-Button span{
+  display: none;
 }
 

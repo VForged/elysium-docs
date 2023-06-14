@@ -1,22 +1,19 @@
-import React from 'react'
-import Logo from '../../../static/images/logo.png'
-import SearchIcon from '../../../static/images/Search.png'
-import {ReactComponent as Eventicon} from '../../../static/images/icon-events.svg'
-import {InputGroup, InputGroupText, Input} from 'reactstrap'
-// import TypesenseInstantsearchAdapter from "typesense-instantsearch-adapter";
-// import {InstantSearch} from "react-instantsearch-dom";
+import React,{useState} from 'react';
+import { useThemeConfig } from '@docusaurus/theme-common';
+import algoliasearch from 'algoliasearch/lite';
+import { InstantSearch, SearchBox } from 'react-instantsearch-hooks-web';
+import { DocSearch } from '@docsearch/react';
 
 
-// const typesenseInstantSearchAdapter = new TypesenseInstantsearchAdapter({
-//     server: {
-//         apiKey: '',
-//         nodes: [],
-//     }
-// });
+
 export default function SearchSection() {
-
+    const { algolia } = useThemeConfig();
+    const { appId, apiKey, indexName } = algolia;
+    const searchClient = algoliasearch(appId, apiKey);
     return (
         <>
+
+
             <section className={'searchSectoin clients'}>
                 <div className="container">
                     <div className="row">
@@ -25,7 +22,13 @@ export default function SearchSection() {
                                 className={"ArchivoBold"}>Documentation</span></h2>
                             <p className={'pb-3 ArchivoExtraLight'}>Elysium documentation includes conceptual, procedural, and reference
                                 information for blockchain builders and parachain project teams</p>
-                            <button className="btn-docs-primary mx-auto">SEARCH DOCUMENTATION</button>
+                            <div className={'my-searchBtn'}>
+                                <DocSearch
+                                    appId={appId}
+                                    indexName={indexName}
+                                    apiKey={apiKey}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>

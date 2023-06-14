@@ -51,15 +51,15 @@ export default function Footer(){
                                     <h6 className="mb-2 mb-md-3">LEARN</h6>
                                     <ul className="list-unstyled mb-0 ">
                                         <li className="py-1"><a href="javascript:void(0);">
-                                            <span className="opacity-50">About</span> <span
+                                            <span className="">About</span> <span
                                             className="coming-soon ms-1 text-uppercase d-inline-block">Coming soon</span></a>
                                         </li>
-                                        <li className="py-1"><a href="javascript:void(0);"><span className="opacity-50">How it Works</span>
+                                        <li className="py-1"><a href="javascript:void(0);"><span className="">How it Works</span>
                                             <span
                                                 className="coming-soon ms-1 text-uppercase d-inline-block">Coming soon</span></a>
                                         </li>
                                         <li className="py-1"><a href="javascript:void(0);"><span
-                                            className="opacity-50">Support</span> <span
+                                            className="">Support</span> <span
                                             className="coming-soon ms-1 text-uppercase d-inline-block">Coming soon</span></a>
                                         </li>
                                         <li className="py-1"><a
@@ -76,16 +76,16 @@ export default function Footer(){
                                         <li className="py-1"><a target="_blank"
                                                                 href="https://bridge.elysiumchain.tech/">Bridge</a>
                                         </li>
-                                        <li className="py-1"><a href="javascript:void(0);"><span className="opacity-50">Agora Marketplace</span>
+                                        <li className="py-1"><a href="javascript:void(0);"><span className="">Agora Marketplace</span>
                                             <span
                                                 className="coming-soon ms-1 text-uppercase d-inline-block">Coming soon</span></a>
                                         </li>
-                                        <li className="py-1"><a href="javascript:void(0);"><span className="opacity-50">Elysium Cloudwallet</span>
+                                        <li className="py-1"><a href="javascript:void(0);"><span className="">Elysium Cloudwallet</span>
                                             <span
                                                 className="coming-soon ms-1 text-uppercase d-inline-block">Coming soon</span></a>
                                         </li>
                                         <li className="py-1"><a href="javascript:void(0);"><span
-                                            className="opacity-50">Launchpad</span> <span
+                                            className="">Launchpad</span> <span
                                             className="coming-soon ms-1 text-uppercase d-inline-block">Coming soon</span></a>
                                         </li>
                                         <li className="py-1"><a target="_blank"
@@ -97,7 +97,7 @@ export default function Footer(){
                                     <h6 className="mb-2 mb-md-3">DEVELOP</h6>
                                     <ul className="list-unstyled mb-0">
                                         <li className="py-1"><a href="javascript:void(0);"><span
-                                            className="opacity-50">Documentation</span> <span
+                                            className="">Documentation</span> <span
                                             className="coming-soon ms-1 text-uppercase d-inline-block">Coming soon</span></a>
                                         </li>
                                         <li className="py-1"><a target="_blank" href="https://faucet.atlantischain.network/"
@@ -105,7 +105,7 @@ export default function Footer(){
                                         <li className="py-1"><a target="_blank"
                                                                 href="https://explorer.elysiumchain.tech/">Scan</a>
                                         </li>
-                                        <li className="py-1"><a href="javascript:void(0);"><span className="opacity-50">Launch Your Project</span>
+                                        <li className="py-1"><a href="javascript:void(0);"><span className="">Launch Your Project</span>
                                             <span
                                                 className="coming-soon ms-1 text-uppercase d-inline-block">Coming soon</span></a>
                                         </li>
@@ -116,7 +116,7 @@ export default function Footer(){
                                     <ul className="list-unstyled mb-0">
                                         <li className="py-1"><a target="_blank"
                                                                 href="https://vulcanforged.com/vulcon/index">Events</a></li>
-                                        <li className="py-1"><a href="javascript:void(0);"><span className="opacity-50">Become a Validator</span>
+                                        <li className="py-1"><a href="javascript:void(0);"><span className="">Become a Validator</span>
                                             <span
                                                 className="coming-soon ms-1 text-uppercase d-inline-block">Coming soon</span></a>
                                         </li>
@@ -124,7 +124,7 @@ export default function Footer(){
                                                                 href="https://twitter.com/Elysium_VF">Twitter</a></li>
                                         <li className="py-1"><a target="_blank"
                                                                 href="https://discord.gg/vulcan-forged">Discord</a></li>
-                                        <li className="py-1"><a href="javascript:void(0);"><span className="opacity-50">Brand Assets</span>
+                                        <li className="py-1"><a href="javascript:void(0);"><span className="">Brand Assets</span>
                                             <span
                                                 className="coming-soon ms-1 text-uppercase d-inline-block">Coming soon</span></a>
                                         </li>

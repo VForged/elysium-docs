@@ -46,8 +46,8 @@ export default function Home() {
                 description="Description will go into a meta tag in <head />">
                 {/*<HomepageHeader/>*/}
                 <div className={"header-layout"}>
-                    <Header/>
-                    <SearchSection/>
+                    <Header />
+                    <SearchSection />
                     <CardSection/>
                     <KnowledgeSection/>
                     {/*<main>*/}
