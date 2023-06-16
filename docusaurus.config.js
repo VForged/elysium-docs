@@ -75,7 +75,7 @@ const config = {
                 ]
             },
             colorMode: {
-                defaultMode: 'dark',
+                defaultMode: 'light',
             },
             // footer: {
             //     style: 'dark',

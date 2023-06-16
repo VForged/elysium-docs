@@ -36,7 +36,6 @@ import KnowledgeSection from '../components/KnowledgeSection/CardSection'
 //         </header>
 //     );
 // }
-
 export default function Home() {
     const {siteConfig} = useDocusaurusContext();
     return (
@@ -57,7 +56,6 @@ export default function Home() {
                 </div>
                 <Footer/>
             </Layout>
-
         </div>
 
     );
