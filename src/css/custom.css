@@ -277,25 +277,25 @@ header .navbar .navbar-collapse ul .nav-item.active {
   background: #1E0E3E 0% 0% no-repeat padding-box;
   padding-right: 100px!important;
 }
-[data-theme='dark'] .navbar__inner .toggleButton_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module{
+[data-theme='dark'] .navbar__inner button[class^='toggleButton_'],button[class*=' toggleButton_']{
   border:1px solid #ADA7B7 ;
 }
-[data-theme='dark'] .navbar__inner .toggleButton_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module .darkToggleIcon_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module path{
+[data-theme='dark'] .navbar__inner button[class^='toggleButton_'],button[class*=' toggleButton_'] svg path{
  fill: #fff;
 }
-[data-theme='dark'] .navbar__inner .searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module .DocSearch-Button{
- border: 1px solid #ADA7B7;
-}
+/*[data-theme='dark'] .navbar__inner div[class^='searchBox_'], div[class*=' searchBox_'] .DocSearch-Button{*/
+/* border: 1px solid #ADA7B7;*/
+/*}*/
 [data-theme='dark'] .navbar__inner .DocSearch-Search-Icon{
  fill: none;
 }
-[data-theme='dark'] .navbar__inner .searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module .DocSearch-Button .DocSearch-Button-Keys{
+[data-theme='dark'] .navbar__inner div[class^='searchBox_'] .DocSearch-Button .DocSearch-Button-Keys{
   display: none!important;
 }
-[data-theme='dark'] .navbar__inner .searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module .DocSearch-Button .DocSearch-Button-Keys{
+[data-theme='dark'] .navbar__inner div[class^='searchBox_'] .DocSearch-Button .DocSearch-Button-Keys{
   display: none!important;
 }
-[data-theme='dark'] .navbar__inner .searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module .DocSearch-Button {
+[data-theme='dark'] .navbar__inner div[class^='searchBox_'] .DocSearch-Button {
   background: transparent!important;
 }
 
@@ -316,18 +316,21 @@ header .navbar .navbar-collapse ul .nav-item.active {
 [data-theme='light'] .navbar__inner .navbar__items .navbar__brand .navbar__logo img{
  max-height: 50px!important;
 }
-[data-theme='light'] .navbar__inner .searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module .DocSearch-Button{
+[data-theme='light'] .navbar__inner button[class^='toggleButton_'],button[class*=' toggleButton_'] svg path{
+  fill: #ADA7B7;
+}
+[data-theme='light'] .navbar__inner div[class^='searchBox_'] .DocSearch-Button{
   border: 1px solid #ADA7B7!important;
 }
 
-[data-theme='light'] .navbar__inner .searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module .DocSearch-Button .DocSearch-Button-Keys{
+[data-theme='light'] .navbar__inner div[class^='searchBox_'] .DocSearch-Button .DocSearch-Button-Keys{
   display: none!important;
 }
-[data-theme='light'] .navbar__inner .searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module .DocSearch-Button{
+[data-theme='light'] .navbar__inner div[class^='searchBox_'] .DocSearch-Button{
   background:#fff!important;
 }
 
-[data-theme='light'] .navbar__inner .searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module .DocSearch-Button .DocSearch-Search-Icon path{
+[data-theme='light'] .navbar__inner div[class^='searchBox_'] .DocSearch-Button .DocSearch-Search-Icon path{
   color: #ADA7B7!important;
 }
 
@@ -691,22 +694,22 @@ header .navbar .navbar-collapse ul .nav-item.active {
 }
 
 /*Detail Wrapper*/
-[data-theme='dark'] .main-wrapper .docPage_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-styles-module{
+[data-theme='dark'] .main-wrapper  div[class^='docPage_']{
   background: #1E0E3E 0% 0% no-repeat padding-box;
 }
-[data-theme='dark'] .main-wrapper .docMainContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Main-styles-module{
+[data-theme='dark'] .main-wrapper main[class^='docPage_']{
    background: #1E0E3E 0% 0% no-repeat padding-box;
 }
-[data-theme='dark'] .docSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Sidebar-styles-module{
+[data-theme='dark'] .theme-doc-sidebar-container{
   background: #1E0E3E 0% 0% no-repeat padding-box;
 }
-[data-theme='dark'] .docItemContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module .theme-doc-markdown{
+[data-theme='dark'] div[class^='docItemContainer_']  .theme-doc-markdown{
   color: #fff;
 }
-[data-theme='dark'] .toggleButton_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module .darkToggleIcon_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module svg path{
-  fill: #fff!important;
+[data-theme='dark']  [class^="toggleButton_"]  svg path{
+  fill: red!important;
 }
-[data-theme='dark'] .title_node_modules-\@docusaurus-theme-classic-lib-theme-DocCategoryGeneratedIndexPage-styles-module{
+[data-theme='dark']  h1[class^='title_']{
   color:#fff;
 }
 [data-theme='dark'] header p{
