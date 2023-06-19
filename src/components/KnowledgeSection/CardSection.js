@@ -22,44 +22,44 @@ export default function CardSection() {
             image: KN2,
             title: 'Networks',
             description: 'Explore Mainnet or Testnet',
-            url:'docs/intro'
+            url:'docs/category/networks'
         },
         {
             image: KN3,
             title: 'Elysium vs Ethereum',
             description: 'Elysium is a fully Ethereum-compatible.',
-            url:'docs/intro'
+            url:'docs/category/elysium-vs-ethereum'
         },
         {
             image: KN4,
             title: 'Account Balances',
-            description: 'Lorem ipsum dolor sit amet consetetur sadipscing',
-            url:'docs/intro'
+            description: 'An account on Elysium is also an entity with a token balance',
+            url:'docs/etherum-vs-elysium/account-balances'
         },
         {
             image: KN4,
-            title: 'Transfers API',
-            description: 'Lorem ipsum dolor sit amet consetetur sadipscing',
-            url:'docs/intro'
+            title: 'RPC Method',
+            description: 'Elysium RPC Methods',
+            url:'docs/etherum-vs-elysium/rpc-methods'
         },
         {
             image: KN6,
             title: 'Transaction Fees',
-            description: 'Lorem ipsum dolor sit amet consetetur sadipscing',
-            url:'docs/intro'
+            description: 'Ethereum and Substrate APIs for sending transfers on Elysium',
+            url:'docs/etherum-vs-elysium/transaction-fee'
         },
         {
             image: KN7,
             title: 'Network Endpoints',
-            description: 'Lorem ipsum dolor sit amet consetetur sadipscing',
-            url:'docs/intro'
+            description: 'Elysium network have HTTPS & WSS endpoints available for users to connect',
+            url:'docs/network-endpoints'
         },
 
         {
             image: KN8,
             title: 'Block Explorer',
-            description: 'Lorem ipsum dolor sit amet consetetur sadipscing',
-            url:'docs/intro'
+            description: 'Too see transaction, new blocks & all details.',
+            url:'docs/block-explorer'
         },
     ]
 
