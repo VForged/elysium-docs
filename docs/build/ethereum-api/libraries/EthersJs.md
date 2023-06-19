@@ -144,7 +144,7 @@ If successful, the balances for the origin and receiving address will be display
 
 You'll only need one file for executing a transaction between accounts. For this example, you'll be transferring 1 DEV
 token from an origin address (from which you hold the private key) to another address. To get started, you can create
-a `transaction.js` file by running:
+a `transaction.pjs` file by running:
 
 ```
 touch transaction.js
