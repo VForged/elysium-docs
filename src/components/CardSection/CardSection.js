@@ -8,11 +8,13 @@ import Refrence from '../../../static/images/card-refrence.png'
 export default function CardSection() {
     const data = [
         {
-            image: Rocket,
-            title: 'Learning About Elysium',
-            description: 'Dive into the Elysium and learn what makes this approach to Ethereum compatability so compelling.',
+            image: Refrence,
+            title: 'Building on Elysium',
+            description: 'Learn how to build a new application or deploy existing Solidity smart contracts to Elysium.',
             list: [
-                "Elysium network overview"
+                "How to get your own API endpoint for Elysium-based networks",
+                "How to use Ethereum tools to send transactions & deploy contracts",
+                "Learn More",
             ]
         },
         {
@@ -20,17 +22,21 @@ export default function CardSection() {
             title: 'Operating a Node',
             description: 'Everything you need to know about running a node on Elysium, how to become a collator, and more.',
             list: [
-                "How to set up a Elysium-based node"
+                "How to set up a Elysium-based node",
+                "Learn about the collator requirements and how to spin up a collator node",
+                "Learn More",
             ]
         },
         {
-            image: Refrence,
-            title: 'Building on Elysium',
-            description: 'Learn how to build a new application or deploy existing Solidity smart contracts to Elysium.',
+            image: Rocket,
+            title: 'Learning About Elysium',
+            description: 'Dive into the Elysium and learn what makes this approach to Ethereum compatability so compelling.',
             list: [
-                "Building with Elysium",
+                "Elysium network overview",
+                "Explore the DApp directory",
+                "Learn More"
             ]
-        }
+        },
     ]
 
     return (
