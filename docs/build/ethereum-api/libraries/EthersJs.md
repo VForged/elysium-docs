@@ -12,10 +12,13 @@ Ethereum-style JSON RPC invocations. Therefore, developers can leverage this com
 to interact with a Moonbeam node as if they were doing so on Ethereum. You can read more about Ethers.js on
 this [blog post](https://medium.com/l4-media/announcing-ethers-js-a-web3-alternative-6f134fdd06f3)
 
-In this guide, you'll learn how to use the Ethers.js library to send a transaction and deploy a contract on Moonbase
-Alpha. This guide can be adapted for [Moonbeam](/builders/get-started/networks/moonbeam/){target=_
-blank}, [Moonriver](/builders/get-started/networks/moonriver/), or
-a [Moonbeam development node](/builders/get-started/networks/moonbeam-dev/)
+[//]: # (In this guide, you'll learn how to use the Ethers.js library to send a transaction and deploy a contract on Moonbase)
+
+[//]: # (Alpha. This guide can be adapted for [Moonbeam]&#40;/builders/get-started/networks/moonbeam/&#41;{target=_)
+
+[//]: # (blank}, [Moonriver]&#40;/builders/get-started/networks/moonriver/&#41;, or)
+
+[//]: # (a [Moonbeam development node]&#40;/builders/get-started/networks/moonbeam-dev/&#41;)
 
 ## Checking Prerequisites
 
