@@ -8,6 +8,7 @@ import KN4 from '../../../static/images/kn-4-card.png'
 import KN6 from '../../../static/images/kn-6-card.png'
 import KN7 from '../../../static/images/kn-7-card.png'
 import KN8 from '../../../static/images/kn-8-card.png'
+import Link from "@docusaurus/core/lib/client/exports/Link";
 
 export default function CardSection() {
     const data = [
@@ -71,7 +72,9 @@ export default function CardSection() {
                             data.map((data, i) => {
                                 return (
                                     <div className="col-3 mb-4">
+                                        <Link to={'docs/intro'}>
                                         <Cards image={data.image} title={data.title} description={data.description}/>
+                                        </Link>
                                     </div>
                                 )
                             })
