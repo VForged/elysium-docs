@@ -1,12 +1,23 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import Logo from '../../../static/images/Footer Group 2.png'
-import {InputGroup,InputGroupText,Input,CardBody,Card,CardSubtitle,CardLink,CardTitle ,CardText} from 'reactstrap'
-export default function MyCard({image,title,description,list, href}){
-    return(
+import {
+    InputGroup,
+    InputGroupText,
+    Input,
+    CardBody,
+    Card,
+    CardSubtitle,
+    CardLink,
+    CardTitle,
+    CardText
+} from 'reactstrap'
+
+export default function MyCard({image, title, description, list, href}) {
+    return (
         <>
 
-            <Card >
+            <Card>
                 <img
                     alt="Card cap"
                     src={image}
@@ -20,15 +31,13 @@ export default function MyCard({image,title,description,list, href}){
                         {description}
                     </CardText>
                     <ul>
-                    {list.map((link,i)=>{
-                        return(
+                        {list.map((link, i) => {
+                            return (
 
-                            <li><Link to={href[i]}> {link}</Link></li>
-
-
+                                <li><Link to={href[i]}> {link}</Link></li>
                             )
 
-                    })}
+                        })}
                     </ul>
                 </CardBody>
             </Card>
