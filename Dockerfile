@@ -13,6 +13,7 @@ RUN npm ci --only=production && npm cache clean --force
 COPY --chown=node:node . .
 
 # Creates a "dist" folder with the production build
+RUN npm run clear
 RUN npm run build
 EXPOSE 3000
 
