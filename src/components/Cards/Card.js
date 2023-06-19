@@ -31,10 +31,10 @@ export default function MyCard({image, title, description, list, href}) {
                         {description}
                     </CardText>
                     <ul>
-                        {list.map((link, i) => {
-                            return (
+                    {list.map((link,i)=>{
+                        return(
 
-                                <li><Link to={href[i]}> {link}</Link></li>
+                            <li className={'mb-3'}><Link to={href[i]}> {link}</Link></li>
                             )
 
                         })}
