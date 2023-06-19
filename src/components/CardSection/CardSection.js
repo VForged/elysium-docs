@@ -14,7 +14,12 @@ export default function CardSection() {
             list: [
                 "How to get your own API endpoint for Elysium-based networks",
                 "How to use Ethereum tools to send transactions & deploy contracts",
-                "Learn More",
+                // "Learn More",
+            ],
+            links: [
+                'docs/networks/elysium-chain',
+                'docs/etherum-vs-elysium/balance-transfer',
+                'docs/intro',
             ]
         },
         {
@@ -24,7 +29,12 @@ export default function CardSection() {
             list: [
                 "How to set up a Elysium-based node",
                 "Learn about the collator requirements and how to spin up a collator node",
-                "Learn More",
+                // "Learn More",
+            ],
+            links: [
+                'docs/validator-node#how-to-become-a-elysium-validator',
+                'docs/validator-node#the-easiest-way-using-docker',
+                'feeeas',
             ]
         },
         {
@@ -33,8 +43,11 @@ export default function CardSection() {
             description: 'Dive into the Elysium and learn what makes this approach to Ethereum compatability so compelling.',
             list: [
                 "Elysium network overview",
-                "Explore the DApp directory",
-                "Learn More"
+                // "Explore the DApp directory",
+                // "Learn More"
+            ],
+            links: [
+                'docs/category/networks',
             ]
         },
     ]
@@ -49,7 +62,7 @@ export default function CardSection() {
                                 return (
                                     <div className="col-4">
                                         <Cards image={data.image} title={data.title} description={data.description}
-                                               list={data.list}/>
+                                               list={data.list} href={data.links}/>
                                     </div>
                                 )
 
