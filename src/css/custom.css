@@ -305,6 +305,17 @@ header .navbar .navbar-collapse ul .nav-item.active {
 [data-theme='dark'] .navbar__inner .navbar__items .navbar__brand .navbar__logo img{
   max-height: 50px!important;
 }
+[data-theme='dark'] main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card{
+  background: #301C50;
+  margin-bottom: 10px;
+  color: #fff;
+}
+main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card{
+  display: inline-grid;
+}
+main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card p{
+  white-space: normal;
+}
 /*Light theme*/
 /* Search Section*/
 [data-theme='light'] .navbar__inner{

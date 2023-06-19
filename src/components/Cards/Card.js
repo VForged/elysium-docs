@@ -24,8 +24,6 @@ export default function MyCard({image,title,description,list}){
                         return(
 
                             <li className={'mb-3'}><Link to={'docs/intro'}> {link}</Link></li>
-
-
                             )
 
                     })}
