@@ -16,41 +16,50 @@ export default function CardSection() {
             image: KN1,
             title: 'Get Started',
             description: 'Elysium is a fully Ethereum-compatible.',
+            url:'docs/intro'
         },
         {
             image: KN2,
             title: 'Networks',
             description: 'Explore Mainnet or Testnet',
+            url:'docs/intro'
         },
         {
             image: KN3,
             title: 'Elysium vs Ethereum',
             description: 'Elysium is a fully Ethereum-compatible.',
+            url:'docs/intro'
         },
         {
             image: KN4,
             title: 'Account Balances',
             description: 'Lorem ipsum dolor sit amet consetetur sadipscing',
+            url:'docs/intro'
         },
         {
             image: KN4,
             title: 'Transfers API',
             description: 'Lorem ipsum dolor sit amet consetetur sadipscing',
+            url:'docs/intro'
         },
         {
             image: KN6,
             title: 'Transaction Fees',
             description: 'Lorem ipsum dolor sit amet consetetur sadipscing',
+            url:'docs/intro'
         },
         {
             image: KN7,
             title: 'Network Endpoints',
             description: 'Lorem ipsum dolor sit amet consetetur sadipscing',
+            url:'docs/intro'
         },
+
         {
             image: KN8,
             title: 'Block Explorer',
             description: 'Lorem ipsum dolor sit amet consetetur sadipscing',
+            url:'docs/intro'
         },
     ]
 
@@ -72,7 +81,7 @@ export default function CardSection() {
                             data.map((data, i) => {
                                 return (
                                     <div className="col-3 mb-4">
-                                        <Link to={'docs/intro'}>
+                                        <Link to={data.url}>
                                         <Cards image={data.image} title={data.title} description={data.description}/>
                                         </Link>
                                     </div>
