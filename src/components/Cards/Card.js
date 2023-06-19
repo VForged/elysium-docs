@@ -23,7 +23,7 @@ export default function MyCard({image,title,description,list}){
                     {list.map((link,i)=>{
                         return(
 
-                            <li><Link to={'docs/intro'}> {link}</Link></li>
+                            <li className={'mb-3'}><Link to={'docs/intro'}> {link}</Link></li>
 
 
                             )

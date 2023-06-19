@@ -715,3 +715,6 @@ header .navbar .navbar-collapse ul .nav-item.active {
 [data-theme='dark'] header p{
   color:#fff;
 }
+[data-theme='dark'] section[class^='list_']{
+  display: none;
+}
