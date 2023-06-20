@@ -54,7 +54,7 @@ export default function Home() {
                     {/*    <HomepageFeatures/>*/}
                     {/*</main>*/}
                 </div>
-                <Footer/>
+                {/*<Footer/>*/}
             </Layout>
         </div>
 
