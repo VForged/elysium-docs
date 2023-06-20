@@ -21,8 +21,8 @@ const config = {
     organizationName: 'Elysium', // Usually your GitHub org/user name.
     projectName: 'elysium-docs', // Usually your repo name.
 
-    // onBrokenLinks: 'throw',
-    // onBrokenMarkdownLinks: 'warn',
+    onBrokenLinks: 'throw',
+    onBrokenMarkdownLinks: 'warn',
 
     // Even if you don't use internalization, you can use this field to set useful
     // metadata like html lang. For example, if your site is Chinese, you may want
@@ -66,17 +66,17 @@ const config = {
                     height: 100,
                     className: 'custom-navbar-logo-class',
                 },
-                items: [
+                items:[
                     {
                         position: 'left',
-                        href: '/',
+                        href:'/',
                         label: 'Home',
                     },
-                    // {
-                    //     position: 'left',
-                    //     href:'/docs/intro',
-                    //     label: 'Getting Started',
-                    // },
+                    {
+                        position: 'left',
+                        href:'/docs/intro',
+                        label: 'Getting Started',
+                    },
                 ]
             },
             colorMode: {
@@ -116,7 +116,6 @@ const config = {
                                                                                 </g>
                                                                             </g>
                                                                         </svg>
-
                                             </a>
                                  <a target="_blank" href="https://twitter.com/Elysium_VF">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">

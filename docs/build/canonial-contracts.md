@@ -1,5 +1,5 @@
 ---
-title: Canonical Contract Addresses on Elysium
+title: Canonical Contract
 description: Overview of the canonical contracts available on Elysium including common-goods contracts and precompiles.
 ---
 
