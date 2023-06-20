@@ -116,7 +116,7 @@ const config = {
                                                                                 </g>
                                                                             </g>
                                                                         </svg>
-                            
+
                                             </a>
                                  <a target="_blank" href="https://twitter.com/Elysium_VF">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
@@ -195,7 +195,7 @@ const config = {
                         items: [
                             {
                                 label: 'Documentation',
-                                to: 'docs/',
+                                to: 'docs/intro',
                             },
                             {
                                 label: 'Faucet',
@@ -235,7 +235,7 @@ const config = {
                             {
                                 label: 'Brand Asset',
                                 to: '/',
-                                class:"comingSoon",
+                                className:"comingSoon",
                             },
                             {
                                 label: 'Blog',
