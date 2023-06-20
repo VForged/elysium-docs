@@ -1,8 +1,8 @@
 {
   "label": "Libraries",
-  "position": 3,
+  "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "descipriotn of etherefe"
+    "description": "Follow this tutorial to learn how to use the Ethereum Library to send transactions and deploy Smart Contract"
   }
 }
