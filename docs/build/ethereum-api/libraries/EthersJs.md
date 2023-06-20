@@ -1,5 +1,6 @@
 ---
 title: Ethers.js
+description: Follow this tutorial to learn how to use the Ethereum EtherJS Library to send transactions and deploy Solidity smart contracts to Elysium.
 ---
 
 # Ethers.js JavaScript Library
@@ -7,31 +8,26 @@ title: Ethers.js
 ## Introduction
 
 The [Ethers.js](https://docs.ethers.io/) library provides a set of tools to interact with Ethereum Nodes
-with JavaScript, similar to Web3.js. Moonbeam has an Ethereum-like API available that is fully compatible with
+with JavaScript, similar to Web3.js. Elysium has an Ethereum-like API available that is fully compatible with
 Ethereum-style JSON RPC invocations. Therefore, developers can leverage this compatibility and use the Ethers.js library
-to interact with a Moonbeam node as if they were doing so on Ethereum. You can read more about Ethers.js on
+to interact with a Elysium node as if they were doing so on Ethereum. You can read more about Ethers.js on
 this [blog post](https://medium.com/l4-media/announcing-ethers-js-a-web3-alternative-6f134fdd06f3)
 
-[//]: # (In this guide, you'll learn how to use the Ethers.js library to send a transaction and deploy a contract on Moonbase)
-
-[//]: # (Alpha. This guide can be adapted for [Moonbeam]&#40;/builders/get-started/networks/moonbeam/&#41;{target=_)
-
-[//]: # (blank}, [Moonriver]&#40;/builders/get-started/networks/moonriver/&#41;, or)
-
-[//]: # (a [Moonbeam development node]&#40;/builders/get-started/networks/moonbeam-dev/&#41;)
+In this guide, you'll learn how to use the Ethers.js library to send a transaction and deploy a contract on Elysium
+Mainnet. This guide can be adapted for [Elysium](/docs/networks/elysium-chain)
 
 ## Checking Prerequisites
 
 For the examples in this guide, you will need to have the following:
 
-- An account with funds.
-  --8<-- 'text/faucet/faucet-list-item.md'
--
+- An account with funds. You can get LAVA for testing on once every 24 hours
+  from [Elysium Faucet](https://faucet.atlantischain.network/ )
+- To test out the examples in this guide on Elysium, you will need to have your own endpoint and API key,
+  which you can get from one of the supported [Endpoint Providers](/docs/network-endpoints).
 
---8<-- 'text/common/endpoint-examples.md'
-
-!!! note
---8<-- 'text/common/assumes-mac-or-ubuntu-env.md'
+> **_NOTE:_**
+> The examples in this guide assumes you have a macOS or Ubuntu 18.04-based environment and will need to be adapted
+> accordingly for Windows.
 
 ## Create a JavaScript Project
 
@@ -54,8 +50,6 @@ Throughout this guide, you'll be creating a bunch of scripts that provide differ
 transaction, deploying a contract, and interacting with a deployed contract. In most of these scripts you'll need to
 create an [Ethers provider](https://docs.ethers.io/v6/api/providers/) to interact with the network.
 
---8<-- 'text/common/endpoint-setup.md'
-
 To create a provider, you can take the following steps:
 
 1. Import the `ethers` library
@@ -72,7 +66,7 @@ To create a provider, you can take the following steps:
       elysium: {
         name: 'elysium',
         rpc: '{{ networks.rpc_url }}', // Insert your RPC URL here
-        chainId: {{ networks.chain_id }}, // {{ networks.elysium.hex_chain_id }} in hex,
+        chainId: {{ networks.chain_id }}, // Insert you
       },
     };
     // 3. Create ethers provider
@@ -147,7 +141,7 @@ If successful, the balances for the origin and receiving address will be display
 
 You'll only need one file for executing a transaction between accounts. For this example, you'll be transferring 1 DEV
 token from an origin address (from which you hold the private key) to another address. To get started, you can create
-a `transaction.pjs` file by running:
+a `transaction.js` file by running:
 
 ```
 touch transaction.js
@@ -219,11 +213,91 @@ The entire workflow would look like this:
 
 ## Deploy a Contract
 
---8<-- 'text/libraries/contract.md'
+The contract you'll be compiling and deploying in the next couple of sections is a simple incrementer contract,
+arbitrarily named Incrementer.sol. You can get started by creating a file for the contract:
+
+```
+touch Incrementer.sol
+ ```
+
+Next you can add the Solidity code to the file:
+
+```solidity
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+contract Incrementer {
+    uint256 public number;
+
+    constructor(uint256 _initialNumber) {
+        number = _initialNumber;
+    }
+
+    function increment(uint256 _value) public {
+        number = number + _value;
+    }
+
+    function reset() public {
+        number = 0;
+    }
+}
+```
+
+The `constructor` function, which runs when the contract is deployed, sets the initial value of the number variable
+stored
+on-chain (default is 0). The `increment` function adds the `_value` provided to the current number, but a transaction
+needs
+to be sent, which modifies the stored data. Lastly, the reset function resets the stored value to zero.
 
 ### Compile Contract Script
 
---8<-- 'text/libraries/compile.md'
+In this section, you'll create a script that uses the Solidity compiler to output the bytecode and interface (ABI) for
+the Incrementer.sol contract. To get started, you can create a compile.js file by running:
+
+```
+touch compile.js
+```
+
+Next, you will create the script for this file and complete the following steps:
+
+1. Import the `fs` and `solc` packages
+2. Using the `fs.readFileSync` function, you'll read and save the file contents of `Incrementer.sol` to `source`
+3. Build the `input` object for the Solidity compiler by specifying the `language`, `sources`, and `settings` to be used
+4. Using the `input` object, you can compile the contract using `solc.compile`
+5. Extract the compiled contract file and export it to be used in the deployment script
+
+```js
+// 1. Import packages
+const fs = require('fs');
+const solc = require('solc');
+
+// 2. Get path and load contract
+const source = fs.readFileSync('Incrementer.sol', 'utf8');
+
+// 3. Create input object
+const input = {
+    language: 'Solidity',
+    sources: {
+        'Incrementer.sol': {
+            content: source,
+        },
+    },
+    settings: {
+        outputSelection: {
+            '*': {
+                '*': ['*'],
+            },
+        },
+    },
+};
+// 4. Compile the contract
+const tempFile = JSON.parse(solc.compile(JSON.stringify(input)));
+const contractFile = tempFile.contracts['Incrementer.sol']['Incrementer'];
+
+// 5. Export contract data
+module.exports = contractFile;
+```
 
 ### Deploy Contract Script
 
@@ -505,5 +579,3 @@ If successful, the transaction hash will be displayed in the terminal. You can u
 the `reset.js` script to make sure that value is changing as expected:
 
 ![Reset Contract Ethers](img/ethers/ethers-4.png)
-
---8<-- 'text/disclaimers/third-party-content.md'  
