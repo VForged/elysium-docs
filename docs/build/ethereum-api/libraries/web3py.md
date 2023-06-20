@@ -1,5 +1,5 @@
 ---
-title: Send Transactions & Deploy Contracts with Web3.py
+title: Web3.py
 description: Follow this tutorial to learn how to use the Ethereum Web3 Python Library to deploy Solidity smart contracts to Elysium.
 ---
 

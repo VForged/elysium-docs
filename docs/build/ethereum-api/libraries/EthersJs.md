@@ -1,5 +1,5 @@
 ---
-title: How to use Ethers.js Ethereum Library
+title: Ethers.js
 description: Follow this tutorial to learn how to use the Ethereum EtherJS Library to send transactions and deploy Solidity smart contracts to Elysium.
 ---
 

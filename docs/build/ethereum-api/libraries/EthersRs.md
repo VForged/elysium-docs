@@ -1,5 +1,5 @@
 ---
-title: How to use Ethers.rs Ethereum Library
+title: Ethers.rs
 description: Learn how to use the Ethereum EthersRS Library to send transactions and deploy Solidity smart contracts to Elysium via the Rust language.
 ---
 
@@ -8,7 +8,7 @@ description: Learn how to use the Ethereum EthersRS Library to send transactions
 ## Introduction
 
 The [Ethers.rs](https://ethers.rs) library provides a set of tools to interact with Ethereum Nodes via
-the Rust programming language that works similar to [Ethers.js](/ethersjs).
+the Rust programming language that works similar to [Ethers.js](/docs/build/ethereum-api/libraries/EthersJs).
 Elysium has an Ethereum-like API available that is fully compatible with Ethereum-style JSON RPC invocations.
 Therefore, developers can leverage this compatibility and use the Ethers.rs library to interact with a Elysium node as
 if they were doing so on Ethereum. You can read more about how to use Ethers.rs on

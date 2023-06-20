@@ -57,7 +57,7 @@ This will create a Hardhat config file (`hardhat.config.js`) in your project dir
 
 Once you have your Hardhat project, you can also install
 the [Ethers plugin](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html). This provides a
-convenient way to use the [Ethers.js](/builders/build/eth-api/libraries/ethersjs/) library to interact
+convenient way to use the [Ethers.js](/docs/build/ethereum-api/libraries/EthersJs) library to interact
 with the network. To install it, run the following command:
 
 ```
@@ -424,7 +424,7 @@ A `patches` directory will be created and now you should be all set to fork Elys
 
 You can fork Elysium from the command line or configure your Hardhat project to always run the fork from
 your `hardhat.config.js` file. To fork Elysium, you will need to have your own endpoint and API key which
-you can get from one of the supported [Endpoint Providers](/builders/get-started/endpoints/).
+you can get from one of the supported [Endpoint Providers](/docs/network-endpoints).
 
 To fork Elysium from the command line, you can run the following command from within your Hardhat project directory:
 

@@ -83,7 +83,7 @@ In the terminal that Sidecar will run, export the environmental variable for the
 export SAS_SUBSTRATE_URL=wss://ws.elysiumchain.tech
 ```
 
-Please reference the [Public Endpoints](/builders/get-started/endpoints/) page for a full list of Elysium network
+Please reference the [Public Endpoints](/docs/network-endpoints) page for a full list of Elysium network
 endpoints.
 
 After setting the environmental variable, you can use the `echo` command to check that the environmental variable has
