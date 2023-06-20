@@ -144,17 +144,17 @@ const config = {
                             {
                                 label: 'About ',
                                 to: '/',
-                                class:"comingSoon",
+                                className:"comingSoon",
                             },
                             {
                                 label: 'How it Works',
                                 to: '/',
-                                class:"comingSoon",
+                                className:"comingSoon",
                             },
                             {
                                 label: 'Support',
                                 to: '/',
-                                class:"comingSoon",
+                                className:"comingSoon",
                             },
                             {
                                 label: 'Disclaimer',
@@ -181,7 +181,7 @@ const config = {
                             {
                                 label: 'Elysium Cloudwallet',
                                 to: '/',
-                                class:"comingSoon",
+                                className:"comingSoon",
                             },
                             {
                                 label: 'Scan',
@@ -207,7 +207,7 @@ const config = {
                             {
                                 label: 'Launch Your Project',
                                 to: '/',
-                                class:"comingSoon",
+                                className:"comingSoon",
                             },
                         ],
                     },
@@ -221,7 +221,7 @@ const config = {
                             {
                                 label: 'Become a Validator',
                                 to: '/',
-                                class:"comingSoon",
+                                className:"comingSoon",
                             },
                             {
                                 label: 'Twitter',
