@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # Validator Node
 
 A blockchain validator is a node on a blockchain network that is responsible for verifying transactions on the network.

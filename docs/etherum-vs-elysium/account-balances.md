@@ -45,21 +45,21 @@ account. In terms of balances, all Elysium account types have five (5) different
   balance
   depends on the action to be executed. For example, voting in democracy will not subtract the allocated balance to the
   vote from free balance, but token holders won’t be able to transfers that balance
-- **Reducible** — refers to the balance that can be used (not locked/frozen) through the Ethereum API on Elysium. For
-  example,
-  this is the balance displayed by MetaMask. It is the real spendable balance, accounting for all democracy locks (
-  displayed as transferable in Polkadot.js Apps)
-- **Reserved** — refers to the balance held due to on-chain requirements, and that can be freed by performing some
-  on-chain
-  action. For example, bonds for creating a proxy account or setting an on-chain identity are shown as reserved balance.
-  These funds are not accessible via the Ethereum API until they are freed
-- **Misc frozen** — represents a balance that the free balance may not drop below when withdrawing funds, except for
-  transaction fee payment. For example, funds being used to vote on a governance proposal are shown as misc frozen.
-  These
-  funds are not accessible via the Ethereum API until they are freed
-- **Fee frozen** — represents a balance that the free balance may not drop below when specifically paying for
-  transaction
-  fees. These funds are not accessible via the Ethereum API until they are freed
+  - **Reducible** — refers to the balance that can be used (not locked/frozen) through the Ethereum API on Elysium. For
+    example,
+    this is the balance displayed by MetaMask. It is the real spendable balance, accounting for all democracy locks (
+    displayed as transferable in Polkadot.js Apps)
+  - **Reserved** — refers to the balance held due to on-chain requirements, and that can be freed by performing some
+    on-chain
+    action. For example, bonds for creating a proxy account or setting an on-chain identity are shown as reserved balance.
+    These funds are not accessible via the Ethereum API until they are freed
+  - **Misc frozen** — represents a balance that the free balance may not drop below when withdrawing funds, except for
+    transaction fee payment. For example, funds being used to vote on a governance proposal are shown as misc frozen.
+    These
+    funds are not accessible via the Ethereum API until they are freed
+  - **Fee frozen** — represents a balance that the free balance may not drop below when specifically paying for
+    transaction
+    fees. These funds are not accessible via the Ethereum API until they are freed
 
 ![Balance](./img/balances-2-1024x447%20(1).png)
 
@@ -71,9 +71,9 @@ connected to the correct network. Then go ahead and select the Developer tab, th
 following steps:
 
 - Select balances from the selected state query dropdown
-- Choose the locks extrinsic
-- Enter your address
-- Click the + button to submit the extrinsic
+  - Choose the locks extrinsic
+  - Enter your address
+  - Click the + button to submit the extrinsic
 
 ![Polkadot.js](./img/balances-4-1024x533.png)
 
