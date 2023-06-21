@@ -1,11 +1,9 @@
 ---
-title: Deploy Smart Contracts with Remix
+title: Remix
 description: Learn how to use one of the most popular Ethereum developer tools, the Remix IDE, to interact with Elysium-based networks.
 ---
 
 # Using Remix to Deploy to Elysium
-
-## Introduction
 
 [Remix](https://remix.ethereum.org/) is one of the commonly used development environments for smart contracts on
 Ethereum. Given Elysium’s Ethereum compatibility features, Remix can be used directly with any of the Elysium

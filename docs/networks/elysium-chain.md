@@ -13,7 +13,7 @@ of our documentation. Otherwise, to get started quickly you can use one of the f
 |----------|--------------------------------|----------------------------|
 | Elysium	 | https://rpc.elysiumchain.tech	 | wss://ws.elysiumchain.tech |
 
-# Quick Started
+## Quick Started
 
 For the Web3.js library, you can create a local Web3 instance and set the provider to connect to Elysium (both HTTP and
 WS are supported):
@@ -38,16 +38,16 @@ const providerURL = 'https://rpc.elysiumchain.tech';
 
 // Define provider
 const provider = new ethers.JsonRpcProvider(providerURL, {
-    chainId: 1338,
+    chainId: 1339,
     name: 'elysium'
 });
 ```
 
-# Chain ID
+## Chain ID
 
 Elysium Chain MainNet chain ID is: 1339.
 
-# Block Explorers
+## Block Explorers
 
 For Elysium, you can use any of the following block explorers:
 
@@ -57,7 +57,7 @@ For Elysium, you can use any of the following block explorers:
 For more information on each of the available block explorers, please head to the Block Explorers section of the
 documentation.
 
-# Get Tokens
+## Get Tokens
 
 To start building on Elysium, you can get DEV tokens from the Elysium Faucet. For specific amounts, you can always reach
 out directly to us via our community channels.

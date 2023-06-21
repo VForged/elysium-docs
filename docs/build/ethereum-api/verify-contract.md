@@ -5,8 +5,6 @@ description: Verify contract using block explorer (Blockscout)
 
 # Verify Smart Contracts using Block Explorers
 
-## Introduction
-
 Verifying smart contracts on a block explorer is a great way of improving the transparency and security of deployed
 smart contracts on Elysium. Users can directly view the source code for verified smart contracts, and for some block
 explorers, can also directly interact with the contract's public methods through the block explorer's interface.

@@ -1,11 +1,9 @@
 ---
-title: Subscribe to Ethereum-style Events on Elysium
+title: Subscribe to Events
 description: Elysium supports events subscription for Ethereum-style events
 ---
 
-# Subscribe to Events
-
-## Introduction
+# Subscribe to Ethereum-style Events on Elysium
 
 Elysium supports events subscription for Ethereum-style events. This allows you to wait for events and handle them
 accordingly instead of polling for them.

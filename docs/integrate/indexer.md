@@ -4,8 +4,6 @@ title: Indexer
 
 # Indexing Elysium with Subsquid
 
-## Introduction
-
 [Subsquid](https://subsquid.io) is a query node framework for Substrate-based blockchains. In very simple terms,
 Subsquid can be thought of as an ETL (extract, transform, and load) tool with a GraphQL server included. It enables
 comprehensive filtering, pagination, and even full-text search capabilities.

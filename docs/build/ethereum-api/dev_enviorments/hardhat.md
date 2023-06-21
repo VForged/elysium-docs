@@ -1,9 +1,8 @@
 ---
-title: Deploy Contracts with Hardhat
+title: Hardhat
 description: Learn how to use Hardhat, an Ethereum development environment, to compile, deploy, and debug Solidity smart contracts on Elysium.
 ---
-
-## Introduction
+# Using Hardhat to Deploy to Elysium
 
 [Hardhat](https://hardhat.org/) is an Ethereum development environment that helps developers manage and
 automate the recurring tasks inherent to building smart contracts and DApps. Hardhat can directly interact with

@@ -5,8 +5,6 @@ description: Learn how to use the Ethereum EthersRS Library to send transactions
 
 # Ethers.rs Rust Library
 
-## Introduction
-
 The [Ethers.rs](https://ethers.rs) library provides a set of tools to interact with Ethereum Nodes via
 the Rust programming language that works similar to [Ethers.js](/docs/build/ethereum-api/libraries/EthersJs).
 Elysium has an Ethereum-like API available that is fully compatible with Ethereum-style JSON RPC invocations.

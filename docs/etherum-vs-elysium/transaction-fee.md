@@ -17,7 +17,7 @@ instance, as well as more details on how to decode Sidecar blocks for Elysium tr
 
 Note that the information on this page assumes you are running latest version of the Substrate Sidecar REST API.
 
-### Substrate API Transaction Fees
+## Substrate API Transaction Fees
 
 All the information around fee data for transactions sent via the Substrate API can be extracted from the following
 block endpoint:
@@ -76,7 +76,7 @@ And then the total transaction fee paid for this extrinsic is mapped to the foll
 extrinsics[extrinsic_number].events[event_number].data[1]
 ```
 
-### Ethereum API Transaction Fees
+## Ethereum API Transaction Fees
 
 To calculate the fee incurred on a Elysium transaction sent via the Ethereum API, the following formula can be used:
 
@@ -103,7 +103,7 @@ Transaction Fee = (GasPrice * TransactionWeight) / 25000
 
 The following sections describe in more detail each of the components needed to calculate the transaction fee.
 
-### Base Fee
+## Base Fee
 
 The BaseFee is the minimum amount charged to send a transaction and is a value set by the network itself. It was
 introduced in EIP-1559. Elysium has its own dynamic fee mechanism for calculating the base fee, which is adjusted based
@@ -150,7 +150,7 @@ RESPONSE JSON Storage Object:
 The relevant data will be stored in the value key of the JSON object. This value is a fixed point data type, hence the
 real value is found by dividing the value by 10^18. This is why the calculation of BaseFee includes such an operation.
 
-### GasPrice, MaxFeePerGas and MaxPriorityFeePerGas
+## GasPrice, MaxFeePerGas and MaxPriorityFeePerGas
 
 The GasPrice is used to specify the gas price of legacy transactions prior to EIP-1559. The MaxFeePerGas and
 MaxPriorityFeePerGas were both introduced in EIP-1559 alongside the BaseFee. The MaxFeePerGas defines the maximum fee
@@ -199,7 +199,7 @@ The paths to the relevant values have also truncated and reproduced below:
 |-----------|----------------------------------------------------------------|
 | GasPrice  | extrinsics[extrinsic_number].args.transaction.eip2930.gasPrice |
 
-### Transaction Weight
+## Transaction Weight
 
 TransactionWeight is a Substrate mechanism used to measure the execution time a given transaction takes to be executed
 within a block. For all transactions types, TransactionWeight can be retrieved under the event of the relevant extrinsic
@@ -215,7 +215,7 @@ And then TransactionWeight is mapped to the following field of the block JSON ob
 extrinsics[extrinsic_number].events[event_number].data[0].weight
 ```
 
-### Key Differences with Ethereum
+## Key Differences with Ethereum
 
 As seen in the sections above, there are some key differences between the transaction fee model on Moonbeam and the one
 on Ethereum that developers should be mindful of when developing on Moonbeam:
@@ -226,14 +226,14 @@ on Ethereum that developers should be mindful of when developing on Moonbeam:
   fee. This fee model means it can potentially be significantly cheaper to send transactions such as basic balance
   transfers via the Ethereum API than the Substrate API
 
-### Fee History Endpoint
+## Fee History Endpoint
 
 Moonbeam networks implement the eth_feeHistory JSON-RPC endpoint as a part of the support for EIP-1559.
 
 `eth_feeHistory` returns a collection of historical gas information from which you can reference and calculate what to
 set for the `MaxFeePerGas` and `MaxPriorityFeePerGas` fields when submitting EIP-1559 transactions.
 
-### Sample Code for Calculating Transaction Fees
+## Sample Code for Calculating Transaction Fees
 
 The following code snippet uses the Axios HTTP client to query the Sidecar endpoint /blocks/head for the latest
 finalized block. It then calculates the transaction fees of all transactions in the block according to the transaction

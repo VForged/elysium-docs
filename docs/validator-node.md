@@ -23,11 +23,11 @@ subkey generate-node-key
 
 This line prints Peer ID and Node Key. Please share Peer ID with Elysium team & use Node Key in validator.
 
-#### Peer ID
+### Peer ID
 
 ```12xx3KxxXXeu6XXXxkgxjXCLyMu7bpdXXXXXXXXVYMY7H75MxXXa```
 
-#### Node Key
+### Node Key
 
 ```    00a9254b8f0a732cc50920000000adbae0079a986529cc00a080a3e86f954b5e    ```
 

@@ -14,14 +14,14 @@ API. All EVM-based transactions are accessible via the Ethereum API wheras the S
 Substrate-native functions. The Substrate API also includes information about the
 EVM-based transactions, but only limited information is shown.
 
-#### Atlantis (Testnet)
+### Atlantis (Testnet)
 
 | Block Explorer	 | URL                                      |
 |-----------------|------------------------------------------|
 | Elysium	        | https://explorer.atlantischain.network   |
 | Blockscout      | https://blockscout.atlantischain.network | 
 
-#### Elysium
+### Elysium
 
 | Block Explorer	 | URL                                  |
 |-----------------|--------------------------------------|

@@ -1,11 +1,9 @@
 ---
-title: How to use the Polkadot.js API
+title: Polkadot.js
 description: Learn how to use the Polkadot.js API to interact with a Elysium node to get chain data and send transactions (extrinsics) via the Substrate side of Elysium.
 ---
 
-# Polkadot.js API Library
-
-## Introduction
+# How to use the Polkadot.js API
 
 The [Polkadot.js API](https://polkadot.js.org/docs/api/) library allows application developers to query a Elysium node
 and interact with the node's Polkadot or Substrate interfaces using JavaScript. Here you will find an overview of the

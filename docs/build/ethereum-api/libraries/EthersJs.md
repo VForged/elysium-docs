@@ -5,8 +5,6 @@ description: Follow this tutorial to learn how to use the Ethereum EtherJS Libra
 
 # Ethers.js JavaScript Library
 
-## Introduction
-
 The [Ethers.js](https://docs.ethers.io/) library provides a set of tools to interact with Ethereum Nodes
 with JavaScript, similar to Web3.js. Elysium has an Ethereum-like API available that is fully compatible with
 Ethereum-style JSON RPC invocations. Therefore, developers can leverage this compatibility and use the Ethers.js library
@@ -126,9 +124,6 @@ const balances = async () => {
 balances();
 ```
 
-You can view
-the [complete script on GitHub](https://raw.githubusercontent.com/PureStake/moonbeam-docs/master/.snippets/code/ethers-tx-local/balances.js)
-
 To run the script and fetch the account balances, you can run the following command:
 
 ```
@@ -194,9 +189,6 @@ const send = async () => {
 // 7. Call the send function
 send();
 ```
-
-You can view
-the [complete script on GitHub](https://raw.githubusercontent.com/PureStake/moonbeam-docs/master/.snippets/code/ethers-tx-local/transaction.js)
 
 To run the script, you can run the following command in your terminal:
 
@@ -362,9 +354,6 @@ const deploy = async () => {
 deploy();
 ```
 
-You can view
-the [complete script on GitHub](https://raw.githubusercontent.com/PureStake/moonbeam-docs/master/.snippets/code/ethers-contract-local/deploy.js)
-
 To run the script, you can enter the following command into your terminal:
 
 ```
@@ -425,9 +414,6 @@ const get = async () => {
 // 7. Call get function
 get();
 ```
-
-You can view
-the [complete script on GitHub](https://raw.githubusercontent.com/PureStake/moonbeam-docs/master/.snippets/code/ethers-contract-local/get.js)
 
 To run the script, you can enter the following command in your terminal:
 
@@ -501,9 +487,6 @@ const increment = async () => {
 increment();
 ```
 
-You can view
-the [complete script on GitHub](https://raw.githubusercontent.com/PureStake/moonbeam-docs/master/.snippets/code/ethers-contract-local/increment.js)
-
 To run the script, you can enter the following command in your terminal:
 
 ```
@@ -565,9 +548,6 @@ const reset = async () => {
 // 8. Call the reset function
 reset();
 ```
-
-You can view
-the [complete script on GitHub](https://raw.githubusercontent.com/PureStake/moonbeam-docs/master/.snippets/code/ethers-contract-local/reset.js)
 
 To run the script, you can enter the following command in your terminal:
 

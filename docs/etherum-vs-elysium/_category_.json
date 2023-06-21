@@ -3,6 +3,6 @@
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "descipriotn of etherefe"
+    "description": "Elysium strives to be compatible with Ethereum’s Web3 API and EVM, there are some important Elysium differences that developers should know and understand in terms of account balances."
   }
 }
