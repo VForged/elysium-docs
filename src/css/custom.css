@@ -125,6 +125,9 @@ h2 {
 [data-theme='dark'] .navbar-sidebar{
   background: #140533;
 }
+.navbar--fixed-top{
+    position: sticky!important;
+}
 .navbar__items .navbar__toggle{
   margin-left: 10px;
 }
@@ -682,10 +685,7 @@ main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card p{
 
 
 .myDropDown {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    z-index: 201;
+  position: relative;
 }
 
 
@@ -876,7 +876,7 @@ font-weight: 500;
 }
 .comingSoon:after{
     position: absolute;
-    right: -73px;
+    right: -82px;
     top: 0px;
     content: "Coming Soon";
     padding: 2px;
@@ -887,8 +887,6 @@ font-weight: 500;
     border-radius: 5px;
     font-size: 10px;
 }
-
-
 
 /*footer dark*/
 [data-theme="dark"] .footer--dark{
@@ -926,7 +924,7 @@ font-weight: 500;
 }
 .comingSoon:after{
 position: absolute;
-    right: -73px;
+    right: -83px;
     top: 0px;
     content: "Coming Soon";
     padding: 2px;

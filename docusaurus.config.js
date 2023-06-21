@@ -77,7 +77,42 @@ const config = {
                         href:'/docs/intro',
                         label: 'Getting Started',
                     },
+                    {
+                        type: 'dropdown',
+                        position: 'right',
+                        className:'mydropdown',
+                        customIcon: 'img/my-icon.svg',
+                        html: `
+                              <svg id="more" xmlns="http://www.w3.org/2000/svg" width="14.001" height="14.001" viewBox="0 0 14.001 14.001">
+                          <circle id="Ellipse_964" data-name="Ellipse 964" cx="2.555" cy="2.555" r="2.555" transform="translate(0 0)" fill="#ada7b7"/>
+                          <circle id="Ellipse_965" data-name="Ellipse 965" cx="2.555" cy="2.555" r="2.555" transform="translate(0 8.891)" fill="#ada7b7"/>
+                          <circle id="Ellipse_966" data-name="Ellipse 966" cx="2.555" cy="2.555" r="2.555" transform="translate(8.891 0)" fill="#ada7b7"/>
+                          <circle id="Ellipse_967" data-name="Ellipse 967" cx="2.555" cy="2.555" r="2.555" transform="translate(8.891 8.891)" fill="#ada7b7"/>
+                      </svg>
+                            `,
+
+                        items: [],
+                    },
                 ]
+            },
+
+            async fetchDropdownData() {
+                try {
+                    const response = await fetch('https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium-apps-icons/apps.json');
+                    const data = await response.json();
+
+                    const items = data.map(item => ({
+                        to: `/custom-page/${item.url}`,
+                        label: item.title,
+                    }));
+
+
+                    const navbar = document.querySelector('.navbar__inner');
+                    const dropdownIndex = navbar.childNodes.length - 1; // Assuming the dropdown is the last item in the navbar
+                    navbar.childNodes[dropdownIndex].items = items;
+                } catch (error) {
+                    console.error('Error fetching dropdown data:', error);
+                }
             },
             colorMode: {
                 defaultMode: 'light',
