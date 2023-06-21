@@ -5,8 +5,6 @@ description: Follow this tutorial to learn how to use the Ethereum Web3 Python L
 
 # Web3.py Python Library
 
-## Introduction
-
 [Web3.py](https://web3py.readthedocs.io/) is a set of libraries that allow developers to interact with Ethereum nodes
 using HTTP, IPC, or WebSocket protocols with Python. Elysium has an Ethereum-like API available that is fully
 compatible with Ethereum-style JSON RPC invocations. Therefore, developers can leverage this compatibility and use the

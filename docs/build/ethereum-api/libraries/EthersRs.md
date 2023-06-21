@@ -5,8 +5,6 @@ description: Learn how to use the Ethereum EthersRS Library to send transactions
 
 # Ethers.rs Rust Library
 
-## Introduction
-
 The [Ethers.rs](https://ethers.rs) library provides a set of tools to interact with Ethereum Nodes via
 the Rust programming language that works similar to [Ethers.js](/docs/build/ethereum-api/libraries/EthersJs).
 Elysium has an Ethereum-like API available that is fully compatible with Ethereum-style JSON RPC invocations.
@@ -20,8 +18,6 @@ In this guide, you'll learn how to use the Ethers.rs library to send a transacti
 ## Checking Prerequisites
 
 For the examples in this guide, you will need to have the following:
-
-- An account with funds.
 
 - An account with funds. You can get LAVA for testing on once every 24 hours
   from [Elysium Faucet](https://faucet.atlantischain.network/ )

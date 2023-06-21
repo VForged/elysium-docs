@@ -23,35 +23,34 @@ subkey generate-node-key
 
 This line prints Peer ID and Node Key. Please share Peer ID with Elysium team & use Node Key in validator.
 
-#### Peer ID
+### Peer ID
 
 ```12xx3KxxXXeu6XXXxkgxjXCLyMu7bpdXXXXXXXXVYMY7H75MxXXa```
 
-#### Node Key
+### Node Key
 
 ```    00a9254b8f0a732cc50920000000adbae0079a986529cc00a080a3e86f954b5e    ```
 
 - Run the docker image following these codes.
 
-```angular2html
+```dockerfile
 version: '2'
-
-services:
-elysium_testnet:
-container_name: elysium_testnet
-image: vaival/elysium:latest
-ports:
-- 30333:30333 # p2p port
-- 9933:9933 # rpc port
-- 9944:9944 # ws port
-volumes:
-- /my/local/folder:/data
-command: [
-"--name", "ElysiumDocker",
-"--ws-external",
-"--rpc-external",
-"--rpc-cors", "all"
-]
+    services:
+        elysium_testnet:
+        container_name: elysium_testnet
+        image: vaival/elysium:latest
+    ports:
+        - 30333:30333 # p2p port
+        - 9933:9933 # rpc port
+        - 9944:9944 # ws port
+    volumes:
+        - /my/local/folder:/data
+    command: [
+        "--name", "ElysiumDocker",
+        "--ws-external",
+        "--rpc-external",
+        "--rpc-cors", "all"
+    ]
 ```
 
 - Generate wallet for funds `subkey generate` & This line output:
@@ -103,7 +102,7 @@ connect to rpc port 9933, then must add Polkadot startup parameter: `--rpc-exter
 docker run -d -p 30333:30333 -p 9933:9933 -v /my/local/folder:/polkadot parity/polkadot:latest --chain westend --rpc-external --rpc-cors all
 ```
 
-Additionally if you want to have custom node name you can add the `--name "YourName"` at the end
+Additionally, if you want to have custom node name you can add the `--name "YourName"` at the end
 
 ```bash
 docker run -d -p 30333:30333 -p 9933:9933 -v /my/local/folder:/polkadot parity/polkadot:latest --chain westend --rpc-external --rpc-cors all --name "PolkaDocker"
@@ -119,7 +118,7 @@ docker run -d -p 30333:30333 -p 9933:9933 -p 9944:9944 -v /my/local/folder:/polk
 
 You can use the following docker-compose.yml file:
 
-```bash
+```dockerfile
 version: '2'
 
 services:
@@ -143,7 +142,7 @@ services:
 With following docker-compose.yml you can set up a node and use polkadot-js-apps as the front end on port 80. After
 starting the node use a browser and enter your Docker host IP in the URL field: __
 
-```bash
+```dockerfile
 version: '2'
 
 services:

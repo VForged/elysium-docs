@@ -1,11 +1,9 @@
 ---
-title: Add MetaMask to a DApp
+title: MetaMask
 description: This tutorial shows you how to integrate MetaMask into a DApp and automatically connect users to Elysium with the click of a button.
 ---
 
 # Integrate MetaMask into a DApp
-
-## Introduction
 
 With the release of
 MetaMask's [Custom Networks API](https://consensys.net/blog/metamask/connect-users-to-layer-2-networks-with-the-metamask-custom-networks-api/)

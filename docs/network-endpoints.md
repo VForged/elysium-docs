@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Network Endpoints
 
-### Public Endpoints
+## Public Endpoints
 
 Ethereum-based networks have two endpoints available for users to connect to: one for HTTPS and one for WSS.
 
@@ -13,7 +13,7 @@ The endpoints in this section are for development purposes only and are not mean
 If you are looking for an API provider suitable for production use, you can check out the Endpoint Providers section of
 this guide.
 
-#### Atlantis (Testnet)
+### Atlantis (Testnet)
 
 | Variable  | Value                             |
 |-----------|-----------------------------------|
@@ -21,7 +21,7 @@ this guide.
 | RPC URL   | https://rpc.atlantischain.network | 
 | WSS URL	  | wss://ws.atlantischain.network    | 
 
-#### Mainnet
+### Mainnet
 
 | Variable  | Value                         |
 |-----------|-------------------------------|

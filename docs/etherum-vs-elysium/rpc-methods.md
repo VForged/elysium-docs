@@ -14,7 +14,7 @@ Nevertheless, not all of the Ethereum JSON RPC methods are supported, and some o
 values (those related to Ethereum’s PoA consensus mechanism in particular). This guide will outline some of these main
 differences around Ethereum RPC support and what to expect when using Elysium for the first time.
 
-### Basic Ethereum JSON RPC Methods
+## Basic Ethereum JSON RPC Methods
 
 - **eth_protocolVersion** — returns 1 by default
 - **eth_syncing** — returns an object with data about the sync status or false
@@ -71,7 +71,7 @@ differences around Ethereum RPC support and what to expect when using Elysium fo
 - **eth_submitWork** — not supported on Elysium
 - **eth_submitHashrate** — not supported on Elysium
 
-### Filter-related Ethereum JSON RPC Methods
+## Filter-related Ethereum JSON RPC Methods
 
 At the time of writing, the filter-related JSON RPC methods from the Ethereum API supported by Elysium are:
 
@@ -84,14 +84,14 @@ At the time of writing, the filter-related JSON RPC methods from the Ethereum AP
 - **eth_uninstallFilter** — uninstall a filter with a given ID. Should be used when polling is no longer needed. Filters
   timeout when they are not requested using eth_getFilterChanges after a period of time
 
-### Filter-related Ethereum JSON RPC Methods
+## Filter-related Ethereum JSON RPC Methods
 
 At the time of writing, the event subscription JSON RPC methods from the Ethereum API supported by Elysium are:
 
 - **eth_subscribe** — creates a subscription for a given subscription name. If successful, returns the subscription ID
 - **eth_unsubscribe** — cancels the subscription given by its ID
 
-### Supported Subscription Parameters
+## Supported Subscription Parameters
 
 At the time of writing, the supported subscriptions are:
 

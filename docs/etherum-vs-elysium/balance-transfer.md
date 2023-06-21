@@ -18,7 +18,7 @@ these assets are only done via the Ethereum APIs since these are smart contract 
 This guide will outline some of these main differences around both APIs for base layer network token balance transfers
 and what to expect when using Elysium for the first time.
 
-### Ethereum Transfers
+## Ethereum Transfers
 
 A simple balance transfer using the Ethereum API relies on the `eth_sendRawTransaction` JSON RPC. This can be directly
 from one account to another or via a smart contract.
@@ -26,7 +26,7 @@ from one account to another or via a smart contract.
 There are different strategies to listen for transfers or balance changes on Ethereum, which are not covered in this
 documentation. But they are all focused on different strategies using the Ethereum JSON RPC.
 
-### Elysium Transfers
+## Elysium Transfers
 
 As stated before, Elysium enables token holders to execute base layer network token transfers via both the Ethereum and
 Substrate API. There are multiple scenarios to trigger token transfer on Elysium. Consequently, to monitor all
@@ -74,7 +74,7 @@ to a balances.Transfer event. If so, it will extract the from, to, amount, and t
 it on the console. Note that the amount is shown in the smallest unit (Wei). You can find all the available information
 about Polkadot.js and the Substrate JSON RPC in their official documentation site.
 
-```
+```typescript
 import { typesBundlePre900 } from "moonbeam-types-bundle";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 

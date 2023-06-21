@@ -1,11 +1,9 @@
 ---
-title: Add WalletConnect to a DApp
+title: WalletConnect
 description: Learn how to integrate WalletConnect into a dApp built on any of the Elysium networks, specifically so users can connect with their mobile wallets.
 ---
 
 # Integrate WalletConnect into a DApp
-
-## Introduction
 
 [WalletConnect](https://walletconnect.com/) is an open protocol to communicate securely between wallets and DApps.
 

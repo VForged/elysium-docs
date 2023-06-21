@@ -21,7 +21,7 @@ what magnitude.
 This guide will outline some of these main differences around consensus and finality, and what to expect when using
 Elysium for the first time.
 
-### Ethereum Consensus and Finality
+## Ethereum Consensus and Finality
 
 As stated before, Ethereum is currently using a PoS consensus protocol, in which validators stake ETH in the network and
 are responsible for producing blocks and checking the validity of new blocks. The timing of block production is fixed
@@ -36,7 +36,7 @@ two-thirds of the validators agree, the block is finalized. Block finality can b
 economic incentives in place so validators do not attempt to collude to revert a block. You can find out more
 information in Vitalik’s On Settlement Finality blog, under the Finality in Casper section.
 
-### Elysium Consensus and Finality
+## Elysium Consensus and Finality
 
 In Polkadot, there are collators and validators. Collators maintain parachains (in this case, Elysium) by collecting
 transactions from users and producing state transition proofs for the relay chain validators. The collator set (nodes
@@ -46,7 +46,7 @@ For finality, Polkadot and Kusama rely on GRANDPA. GRANDPA provides deterministi
 block). In other words, when a block or transaction is marked as final, it can’t be reverted except via on-chain
 governance or forking. Elysium follows this deterministic finality.
 
-### Main Differences Between PoS and DPoS
+## Main Differences Between PoS and DPoS
 
 In terms of consensus, Elysium is based on Delegated Proof-of-Stake, while Ethereum relies on a standard Proof-of-Stake
 system, which is slightly different. Although both mechanisms rely on the use of stake to validate and create new
@@ -76,7 +76,7 @@ scenario, the vote would apply to all of the blocks leading up to the one that i
 finalization process. After a block has been included in the relay chain, a block can be finalized within one block on
 Elysium.
 
-### Strategy to Check Transaction Finality
+## Strategy to Check Transaction Finality
 
 Although the finality gadgets differ, you can use the same, fairly simple strategy to check for transaction finality on
 both Ethereum and Elysium:

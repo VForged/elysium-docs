@@ -19,7 +19,7 @@ API.
 
 This guide will outline some of these main differences and what to expect when using Elysium for the first time.
 
-### Ethereum Account Balances
+## Ethereum Account Balances
 
 An account on Ethereum is an entity with a token balance (Ether or ETH in this case). Account-holders can send Ether
 transactions on Ethereum and accounts can be controlled by either users (with the private key for signing) or smart
@@ -31,7 +31,7 @@ of ETH (1 x 10^18 Wei per ETH).
 
 ![Balance](./img/balances-1-1024x271.png)
 
-### Elysium Account Balances
+## Elysium Account Balances
 
 An account on Elysium is also an entity with a token balance (the token will depend on the network). Like on Ethereum,
 account holders can send token transactions on the Elysium Network they are connected to. In addition, accounts can be
@@ -77,7 +77,7 @@ following steps:
 
 ![Polkadot.js](./img/balances-4-1024x533.png)
 
-### Main Differences
+## Main Differences
 
 The main difference between account balances on Ethereum and Elysium lies in the concept of locked and reserved balance
 on Elysium. These are tokens that are still owned by that account, but they are not spendable (yet).
