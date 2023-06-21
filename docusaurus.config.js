@@ -1,6 +1,5 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
@@ -27,6 +26,7 @@ const config = {
     // Even if you don't use internalization, you can use this field to set useful
     // metadata like html lang. For example, if your site is Chinese, you may want
     // to replace "en" with "zh-Hans".
+
     i18n: {
         defaultLocale: 'en',
         locales: ['en'],
@@ -80,7 +80,7 @@ const config = {
                     {
                         type: 'dropdown',
                         position: 'right',
-                        className:'mydropdown',
+                        className:'docuDropdown',
                         customIcon: 'img/my-icon.svg',
                         html: `
                               <svg id="more" xmlns="http://www.w3.org/2000/svg" width="14.001" height="14.001" viewBox="0 0 14.001 14.001">
@@ -90,29 +90,59 @@ const config = {
                           <circle id="Ellipse_967" data-name="Ellipse 967" cx="2.555" cy="2.555" r="2.555" transform="translate(8.891 8.891)" fill="#ada7b7"/>
                       </svg>
                             `,
-
-                        items: [],
+                        items: [
+                            {
+                                to: 'https://elysiumchain.tech/',
+                                html: `
+                                      <img className={'icon'} src="https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium-apps-icons/globe.png" alt="apps-icon"/>
+                                       <span>Website</span>
+                                  `,
+                            },{
+                                to: 'https://swap.elysiumchain.tech/',
+                                html: `
+                                      <img className={'icon'} src="https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium-apps-icons/swap.png" alt="apps-icon"/>
+                                       <span>Swap</span>
+                                  `,
+                            },{
+                                to: 'https://bridge.elysiumchain.tech/',
+                                html: `
+                                      <img className={'icon'} src="https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium-apps-icons/bridges.png" alt="apps-icon"/>
+                                       <span>Bridges</span>
+                                  `,
+                            },{
+                                to: 'https://market-dev.elysiumchain.tech/',
+                                html: `
+                                      <img className={'icon'} src="https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium-apps-icons/store.png" alt="apps-icon"/>
+                                       <span>MarketPlace</span>
+                                  `,
+                            },{
+                                to: 'http://explorer.elysiumchain.tech/',
+                                html: `
+                                      <img className={'icon'} src="https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium-apps-icons/barcode-scanner.png" alt="apps-icon"/>
+                                       <span>Scan</span>
+                                  `,
+                            },{
+                                to: 'https://wallet.elysiumchain.tech/',
+                                html: `
+                                      <img className={'icon'} src="https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium-apps-icons/cloud-wallet.png" alt="apps-icon"/>
+                                       <span>CloudWallet</span>
+                                  `,
+                            },{
+                                to: 'https://elysium-launchpad-investorpanel-nft-dev.vulcanforged.com/',
+                                html: `
+                                      <img className={'icon'} src="https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium-apps-icons/shuttle.png" alt="apps-icon"/>
+                                       <span>LaunchPad</span>
+                                  `,
+                            },{
+                                to: 'https://faucet.atlantischain.network/',
+                                html: `
+                                      <img className={'icon'} src="https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium-apps-icons/faucet.png" alt="apps-icon"/>
+                                       <span>Faucet</span>
+                                  `,
+                            },
+                        ],
                     },
                 ]
-            },
-
-            async fetchDropdownData() {
-                try {
-                    const response = await fetch('https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium-apps-icons/apps.json');
-                    const data = await response.json();
-
-                    const items = data.map(item => ({
-                        to: `/custom-page/${item.url}`,
-                        label: item.title,
-                    }));
-
-
-                    const navbar = document.querySelector('.navbar__inner');
-                    const dropdownIndex = navbar.childNodes.length - 1; // Assuming the dropdown is the last item in the navbar
-                    navbar.childNodes[dropdownIndex].items = items;
-                } catch (error) {
-                    console.error('Error fetching dropdown data:', error);
-                }
             },
             colorMode: {
                 defaultMode: 'light',

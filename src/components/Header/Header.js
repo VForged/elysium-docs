@@ -45,6 +45,12 @@ export default function Header(){
 
     return(
         <>
+            {/*{appData.map((app,i)=>{*/}
+            {/*    return(*/}
+            {/*<a className="dropdown-item" href={app?.url} className="dropdown-item">*/}
+            {/*    <img src={app?.icon} alt={'image'} className="dropdown-item-image" />*/}
+            {/*    <span>{app?.title}</span>*/}
+            {/*</a>)})}*/}
           <div className="myDropDown">
               <div ref={dropdownRef} className={`dropdown ${isOpen ? 'show' : ''}`}>
                   <button
