@@ -19,7 +19,6 @@ on Elysium Mainnet. This guide can also be adapted for Elysium Testnet
 The examples in this guide are based on an Ubuntu 18.04 environment. You will also need the following:
 
 - Have MetaMask installed
-- Have an account with funds.
 - An account with funds. You can get LAVA for testing on once every 24 hours
   from [Elysium Faucet](https://faucet.atlantischain.network/ )
 - Deploy your own ERC-20 token on Elysium. You can do

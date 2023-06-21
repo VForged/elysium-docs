@@ -19,8 +19,6 @@ In this guide, you'll learn how to use the Ethers.rs library to send a transacti
 
 For the examples in this guide, you will need to have the following:
 
-- An account with funds.
-
 - An account with funds. You can get LAVA for testing on once every 24 hours
   from [Elysium Faucet](https://faucet.atlantischain.network/ )
 - To test out the examples in this guide on Elysium, you will need to have your own endpoint and API key,
