@@ -74,7 +74,7 @@ to a balances.Transfer event. If so, it will extract the from, to, amount, and t
 it on the console. Note that the amount is shown in the smallest unit (Wei). You can find all the available information
 about Polkadot.js and the Substrate JSON RPC in their official documentation site.
 
-```
+```typescript
 import { typesBundlePre900 } from "moonbeam-types-bundle";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 
