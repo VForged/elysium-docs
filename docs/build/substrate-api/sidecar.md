@@ -1,7 +1,6 @@
 ---
 title: Sidecar
-description: Substrate API Sidecar allows applications to access blocks, account balance, and other information of
-Substrate-based blockchains through a REST API.
+description: Substrate API Sidecar allows applications to access blocks, account balance, and other information of Substrate-based blockchains through a REST API.
 ---
 
 # Using Substrate API Sidecar with Elysium

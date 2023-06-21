@@ -1,7 +1,6 @@
 ---
 title: Web3.js
-description: Follow this tutorial to learn how to use the Ethereum Web3 JavaScript Library to deploy Solidity smart
-contracts to Elysium.
+description: Follow this tutorial to learn how to use the Ethereum Web3 JavaScript Library to deploy Solidity smart contracts to Elysium.
 ---
 
 # Web3.js Javascript Library
