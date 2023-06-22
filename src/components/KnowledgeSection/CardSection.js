@@ -5,6 +5,7 @@ import KN1 from '../../../static/images/kn-1-card.png'
 import KN2 from '../../../static/images/kn-2-card.png'
 import KN3 from '../../../static/images/kn-3-card.png'
 import KN4 from '../../../static/images/kn-4-card.png'
+import KN5 from '../../../static/images/kn-5-card.png'
 import KN6 from '../../../static/images/kn-6-card.png'
 import KN7 from '../../../static/images/kn-7-card.png'
 import KN8 from '../../../static/images/kn-8-card.png'
@@ -37,7 +38,7 @@ export default function CardSection() {
             url:'docs/etherum-vs-elysium/account-balances'
         },
         {
-            image: KN4,
+            image: KN5,
             title: 'RPC Method',
             description: 'Elysium RPC Methods',
             url:'docs/etherum-vs-elysium/rpc-methods'
