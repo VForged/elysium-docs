@@ -46,7 +46,7 @@ export default function Home() {
             >
                 {/*<HomepageHeader/>*/}
                 <div className={"header-layout"}>
-                    <Header />
+                    {/*<Header />*/}
                     <SearchSection />
                     <CardSection/>
                     <KnowledgeSection/>

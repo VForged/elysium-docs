@@ -125,6 +125,9 @@ h2 {
 [data-theme='dark'] .navbar-sidebar{
   background: #140533;
 }
+.navbar--fixed-top{
+    position: sticky!important;
+}
 .navbar__items .navbar__toggle{
   margin-left: 10px;
 }
@@ -449,6 +452,7 @@ main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card p{
 [data-theme='light'] .cardsection .card ul li a {
     list-style: none;
     color: #9FC131;
+    text-decoration: underline!important;
 }
 
 /*Knowledge Section*/
@@ -605,6 +609,7 @@ main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card p{
     min-height: 60px;
 }[data-theme='dark'] .cardsection .card ul li a {
     color: #9FC131;
+    text-decoration: underline!important;
 }
 
 [data-theme='dark'] .KnowledgeSection {
@@ -682,10 +687,7 @@ main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card p{
 
 
 .myDropDown {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    z-index: 201;
+  position: relative;
 }
 
 
@@ -876,7 +878,7 @@ font-weight: 500;
 }
 .comingSoon:after{
     position: absolute;
-    right: -73px;
+    right: -82px;
     top: 0px;
     content: "Coming Soon";
     padding: 2px;
@@ -887,8 +889,6 @@ font-weight: 500;
     border-radius: 5px;
     font-size: 10px;
 }
-
-
 
 /*footer dark*/
 [data-theme="dark"] .footer--dark{
@@ -923,10 +923,11 @@ font-weight: 500;
 .comingSoon{
     position: relative;
     color: #9ea5b4;
+    cursor: not-allowed;
 }
 .comingSoon:after{
 position: absolute;
-    right: -73px;
+    right: -83px;
     top: 0px;
     content: "Coming Soon";
     padding: 2px;
@@ -936,4 +937,42 @@ position: absolute;
    border: 1px solid #9fc131;
     border-radius: 5px;
     font-size: 10px;
+}
+.dropdown--hoverable{
+    position: absolute!important;
+    right: 58px!important;
+}
+.docuDropdown:after{
+    display: none!important;
+}
+.docuDropdown ~.dropdown__menu{
+    background: #1E0E3E!important;
+    min-width: 310px!important;
+    display: flex;
+    max-width: 378px;
+    flex-wrap: wrap;
+    padding: 10px!important;
+}
+.docuDropdown ~.dropdown__menu li{
+    width: 96px;
+    height: 90px;
+    display: inline-flex;
+}
+.docuDropdown ~.dropdown__menu li a{
+    width: 100%;
+    color: #ADA7B7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    align-items: center;
+}
+.docuDropdown ~.dropdown__menu li a .icon{
+    width: 28px;
+    height: 28px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    background-repeat: no-repeat;
+    object-fit: contain;
 }
