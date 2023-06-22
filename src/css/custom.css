@@ -353,12 +353,27 @@ main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card{
 main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card p{
   white-space: normal;
 }
-[data-theme='light'] main[class^='docMainContainer_'] h1,h2,h3,h4,h5,h6 {
+[data-theme='light'] main[class^='docMainContainer_'] .anchor{
   color: #1E0E3E!important;
 }
-[data-theme='dark'] main[class^='docMainContainer_'] h1,h2,h3,h4,h5,h6 {
-  color: #fff!important;
+[data-theme='light'] main[class^='docMainContainer_'] h1{
+  color: #1E0E3E!important;
 }
+/*[data-theme='light'] main[class^='docMainContainer_'] .markdown h1,h2,h3,h4,h5,h6 {*/
+/*  color: #1E0E3E!important;*/
+/*}*/
+/*[data-theme='dark'] .markdown h1,h2,h3,h4,h5,h6{*/
+/*    color: #fff!important;*/
+/*}*/
+/*.markdown h1,h2,h3,h4,h5,h6{*/
+/*    color: #1E0E3E;*/
+/*}*/
+/*[data-theme='dark'] main[class^='docMainContainer_'] h1,h2,h3,h4,h5,h6 {*/
+/*  color: #fff!important;*/
+/*}*/
+/*[data-theme='dark'] main[class^='docMainContainer_'] .markdown h1,h2,h3,h4,h5,h6 {*/
+/*  color: #fff!important;*/
+/*}*/
 
 [data-theme='dark'] .navbar__inner div[class^='searchBox_'] .DocSearch-Button {
     background: transparent !important;
@@ -470,6 +485,7 @@ main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card p{
 
 [data-theme='light'] .KnowledgeSection {
     margin-top: 120px;
+    margin-bottom: 120px;
 }
 
 [data-theme='light'] .KnowledgeSection h2 {
@@ -624,6 +640,7 @@ main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card p{
 
 [data-theme='dark'] .KnowledgeSection {
     margin-top: 120px;
+    margin-bottom: 120px;
 }
 
 [data-theme='dark'] .KnowledgeSection .card {
@@ -1038,6 +1055,14 @@ position: absolute;
 }
 [data-theme='light'] .menu__list-item-collapsible--active{
     background: #9fc13130!important;
+    color: #1E0E3E!important;
+}
+/*[data-theme='light'] .menu__list-item-collapsible{*/
+/*    background: #9fc13130!important;*/
+/*    color: #1E0E3E!important;*/
+/*}*/
+[data-theme='light'] .menu__list-item-collapsible--active .menu__link--active{
+    background: none!important;
     color: #1E0E3E!important;
 }
 /*right sideBar in document*/
