@@ -44,17 +44,17 @@ npm install @metamask/detect-provider
 You'll start off by adding a button that will be used to connect MetaMask to Elysium Mainnet. You want to start with the
 button so when you create the logic in the next step you can test the code as you make your way through the guide.
 
-The function you will create in the next section of the guide will be called `configureElysium Alpha`. So the button on
-click should call `configureElysium Alpha`.
+The function you will create in the next section of the guide will be called `configure Elysium`. So the button on
+click should call `configure Elysium`.
 
 ```html
 
-<button onClick={configureElysium Alpha()}>Connect to Elysium Mainnet</button>
+<button onClick={configureElysium()}>Connect to Elysium Mainnet</button>
 ```
 
 ## Add Logic
 
-Now that you have created the button, you need to add the `configureElysium Alpha` function that will be used on click.
+Now that you have created the button, you need to add the `configureElysium` function that will be used on click.
 
 1. Detect the provider at `window.ethereum` and check if it's MetaMask. If you want a simple solution you can directly
    access `window.ethereum`. Or you can use MetaMask's `detect-provider` package and it will detect the provider for
@@ -62,7 +62,7 @@ Now that you have created the button, you need to add the `configureElysium Alph
 
     ```javascript
     import detectEthereumProvider from '@metamask/detect-provider';
-    const configureElysium Alpha = async () => {
+    const configureElysium = async () => {
         const provider = await detectEthereumProvider({ mustBeMetaMask: true });
         if (provider) {
             // Logic will go here    
@@ -80,7 +80,7 @@ Now that you have created the button, you need to add the `configureElysium Alph
 
     ```javascript
     import detectEthereumProvider from '@metamask/detect-provider';
-    const configureElysium Alpha = async () => {
+    const configureElysium = async () => {
         const provider = await detectEthereumProvider({ mustBeMetaMask: true });
         if (provider) {
             try {
@@ -102,7 +102,7 @@ Now that you have created the button, you need to add the `configureElysium Alph
 
     ```javascript
     import detectEthereumProvider from '@metamask/detect-provider';
-    const configureElysium Alpha = async () => {
+    const configureElysium = async () => {
         const provider = await detectEthereumProvider({ mustBeMetaMask: true });
         if (provider) {
             try {

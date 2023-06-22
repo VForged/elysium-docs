@@ -26,27 +26,25 @@ differences around Ethereum RPC support and what to expect when using Elysium fo
 - **eth_accounts** — returns a list of addresses owned by the client
 - **eth_blockNumber** — returns the highest available block number
 - **eth_getBalance** — returns the balance of the given address
-- **eth_getStorageAt** — returns content of the storage at a given address
-- **eth_getBlockByHash** — returns information about the block of the given hash including baseFeePerGas on post-London
-  blocks
-- **eth_getBlockByNumber** — returns information about the block specified by block number including baseFeePerGas on
-  post-London blocks
+- **eth_getStorageAt** — returns the content of the storage at a given address
+- **eth_getBlockByHash** — returns information about the block of the given hash including baseFeePerGas
+- **eth_getBlockByNumber** — returns information about the block specified by block number including baseFeePerGas
 - **eth_getTransactionCount** — returns the number of transactions sent from the given address (nonce)
 - **eth_getBlockTransactionCountByHash** — returns the number of transactions in a block with a given block hash
 - **eth_getBlockTransactionCountByNumber** — returns the number of transactions in a block with a given block number
 - **eth_getUncleCountByBlockHash** — returns "0x0" by default
 - **eth_getUncleCountByBlockNumber** — returns "0x0" by default
-- **eth_getCode** — returns the code at given address at given block number
-- **eth_sendTransaction** — creates new message call transaction or a contract creation, if the data field contains
+- **eth_getCode** — returns the code at the given address at a given block number
+- **eth_sendTransaction** — creates a new message call transaction or a contract creation, if the data field contains
   code.
   Returns the transaction hash, or the zero hash if the transaction is not yet available
-- **eth_sendRawTransaction** — creates new message call transaction or a contract creation for signed transactions.
+- **eth_sendRawTransaction** — creates a new message call transaction or a contract creation for signed transactions.
   Returns
   the transaction hash, or the zero hash if the transaction is not yet available
-- **eth_call** — executes a new message call immediately without creating a transaction on the block chain, returning
+- **eth_call** — executes a new message call immediately without creating a transaction on the blockchain, returning
   the
   value of the executed call
-- **eth_estimateGas** — returns an estimate amount of how much gas is necessary for a given transaction to succeed. You
+- **eth_estimateGas** — returns an estimated amount of how much gas is necessary for a given transaction to succeed. You
   can
   optionally specify a gasPrice or maxFeePerGas and maxPriorityFeePerGas
 - eth_feeHistory — returns baseFeePerGas, gasUsedRatio, oldestBlock, and reward for a specified range of up to 1024
@@ -60,10 +58,7 @@ differences around Ethereum RPC support and what to expect when using Elysium fo
 - **eth_getTransactionByBlockNumberAndIndex** — returns information about a transaction at a given block number, and a
   given
   index position. EIP-1559 transactions have maxPriorityFeePerGas and maxFeePerGas fields
-- **eth_getTransactionReceipt** — returns the transaction receipt of a given transaction hash. After London support was
-  added
-  in runtime 1200, a new field named effectiveGasPrice has been added to the receipt, specifying the gas price of the
-  transaction
+- **eth_getTransactionReceipt** — returns the transaction receipt of a given transaction hash.
 - **eth_getUncleByBlockHashAndIndex** — returns null by default
 - **eth_getUncleByBlockNumberAndIndex** — returns null by default
 - **eth_getLogs** — returns an array of all logs matching a given filter object

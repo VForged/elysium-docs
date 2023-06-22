@@ -108,7 +108,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     // Do not include '0x' at the start of the private key
     let wallet: LocalWallet = "YOUR_PRIVATE_KEY"
         .parse::<LocalWallet>()?
-        .with_chain_id(Chain::Moonbeam);
+        .with_chain_id(Chain::Elysium);
 
     // 6. Wrap the provider and wallet together to create a signer client
     let client = SignerMiddleware::new(provider.clone(), wallet.clone());

@@ -31,7 +31,7 @@ For the examples in this guide, you will need to have the following:
 
 To get started, you can create a directory to store all the files you'll be creating throughout this guide:
 
-```
+```sh
 mkdir ethers-examples && cd ethers-examples
 ```
 

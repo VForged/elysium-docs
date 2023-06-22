@@ -186,7 +186,7 @@ in Remix ready to be compiled. You can generate an [ERC-20 contract here](https:
 an ERC-20 Token to Elysium using the Elysium Remix plugin, you can take the following steps:
 
 1. Press **Connect** to connect MetaMask to Remix
-2. Ensure you're on the correct network. For this example, you should be on Elysium Alpha
+2. Ensure you're on the correct network. For this example, you should be on Elysium
 3. Press **Compile** or choose **Auto-Compile** if you prefer
 4. Press **Deploy** and **Confirm** the transaction in MetaMask
 

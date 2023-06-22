@@ -71,7 +71,7 @@ touch balances.js
 
 Next, you will create the script for this file and complete the following steps:
 
-1. [Set up the Web3 provider](#setup-web3-with-moonbeam)
+1. [Set up the Web3 provider](#setup-web3js-with-elysium)
 2. Define the `addressFrom` and `addressTo` variables
 3. Create the asynchronous `balances` function which wraps the `web3.eth.getBalance` method
 4. Use the `web3.eth.getBalance` function to fetch the balances for the `addressFrom` and `addressTo` addresses. You can
@@ -120,7 +120,7 @@ touch transaction.js
 
 Next, you will create the script for this file and complete the following steps:
 
-1. [Set up the Web3 provider](#setup-web3-with-moonbeam)
+1. [Set up the Web3 provider](#setup-web3js-with-elysium)
 2. Define the `addressFrom`, including the `privateKey`, and the `addressTo` variables. The private key is required to
    create a wallet instance. **Note: This is for example purposes only. Never store your private keys in a JavaScript
    file**
@@ -165,10 +165,6 @@ const send = async () => {
 // 6. Call send function
 send();
 ```
-
-You can view
-the [complete script on GitHub](https://raw.githubusercontent.com/PureStake/moonbeam-docs/master/.snippets/code/web3-tx-local/transaction.js)
-.
 
 To run the script, you can run the following command in your terminal:
 
@@ -283,7 +279,7 @@ touch deploy.js
 Next, you will create the script for this file and complete the following steps:
 
 1. Import the contract file from `compile.js`
-2. [Set up the Web3 provider](#setup-web3-with-moonbeam)
+2. [Set up the Web3 provider](#setup-web3js-with-elysium)
 3. Define the `addressFrom`, including the `privateKey`, and the `addressTo` variables. The private key is required to
    create a wallet instance. **Note: This is for example purposes only. Never store your private keys in a JavaScript
    file**
@@ -370,7 +366,7 @@ touch get.js
 Then you can take the following steps to create the script:
 
 1. Import the `abi` from the `compile.js` file
-2. [Set up the Web3 provider](#setup-web3-with-moonbeam)
+2. [Set up the Web3 provider](#setup-web3js-with-elysium)
 3. Create the `contractAddress` variable using the address of the deployed contract
 4. Create an instance of the contract using the `web3.eth.Contract` function and passing in the `abi`
    and  `contractAddress`
@@ -428,7 +424,7 @@ touch increment.js reset.js
 Open the `increment.js` file and take the following steps to create the script:
 
 1. Import the `abi` from the `compile.js` file
-2. [Set up the Web3 provider](#setup-web3-with-moonbeam)
+2. [Set up the Web3 provider](#setup-web3js-with-elysium)
 3. Define the `privateKey` for the origin account, the `contractAddress` of the deployed contract, and the `_value` to
    increment by. The private key is required to create a wallet instance. **Note: This is for example purposes only.
    Never store your private keys in a JavaScript file**
@@ -503,7 +499,7 @@ the `increment.js` script to make sure that value is changing as expected:
 Next you can open the `reset.js` file and take the following steps to create the script:
 
 1. Import the `abi` from the `compile.js` file
-2. [Set up the Web3 provider](#setup-web3-with-moonbeam)
+2. [Set up the Web3 provider](#setup-web3js-with-elysium)
 3. Define the `privateKey` for the origin account and the `contractAddress` of the deployed contract. The private key is
    required to create a wallet instance. **Note: This is for example purposes only. Never store your private keys in a
    JavaScript file**

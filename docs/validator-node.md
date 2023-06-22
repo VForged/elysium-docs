@@ -29,7 +29,7 @@ This line prints Peer ID and Node Key. Please share Peer ID with Elysium team & 
 
 ### Node Key
 
-```    00a9254b8f0a732cc50920000000adbae0079a986529cc00a080a3e86f954b5e    ```
+```00a9254b8f0a732cc50920000000adbae0079a986529cc00a080a3e86f954b5e ```
 
 - Run the docker image following these codes.
 

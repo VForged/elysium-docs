@@ -15,6 +15,6 @@ pre-funded accounts.
 
 > **_NOTE:_**
 >
-> This tutorial was created using the v0.31.1 tag of Moonbase Alpha. The Moonbeam platform and the Frontier components
+> This tutorial was created using the v0.31.1 tag of Elysium. The Elysium platform and the Frontier components
 > it relies on for Substrate-based Ethereum compatibility are still under very active development. The examples in this
 > guide assume you have a MacOS or Ubuntu 18.04-based environment and will need to be adapted accordingly for Windows.

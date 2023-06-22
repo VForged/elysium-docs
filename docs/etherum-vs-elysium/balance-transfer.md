@@ -75,16 +75,16 @@ it on the console. Note that the amount is shown in the smallest unit (Wei). You
 about Polkadot.js and the Substrate JSON RPC in their official documentation site.
 
 ```typescript
-import { typesBundlePre900 } from "moonbeam-types-bundle";
+import { typesBundlePre900 } from "elysium-types-bundle";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 
 // This script will listen to all LAVA transfers (Substrate & Ethereum) and extract the tx hash
 // It can be adapted for Elysium
 
 const main = async () => {
-  // Define the provider for Moonbeam
+  // Define the provider for Elysium
   const wsProvider = new WsProvider("wss://ws:faucet.atlantischain.network");
-  // Create the provider using Moonbeam types
+  // Create the provider using Elysium types
   const polkadotApi = await ApiPromise.create({
     provider: wsProvider,
     typesBundle: typesBundlePre900 as any,

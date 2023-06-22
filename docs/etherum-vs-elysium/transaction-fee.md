@@ -107,7 +107,7 @@ The following sections describe in more detail each of the components needed to 
 
 The BaseFee is the minimum amount charged to send a transaction and is a value set by the network itself. It was
 introduced in EIP-1559. Elysium has its own dynamic fee mechanism for calculating the base fee, which is adjusted based
-on block congestion. As of runtime 2300, the dynamic fee mechanism has been rolled out to all of the Elysium-based
+on block congestion. As of now, the dynamic fee mechanism has been rolled out to all of the Elysium-based
 networks.
 
 The minimum gas price for each network is as follows:
@@ -217,18 +217,18 @@ extrinsics[extrinsic_number].events[event_number].data[0].weight
 
 ## Key Differences with Ethereum
 
-As seen in the sections above, there are some key differences between the transaction fee model on Moonbeam and the one
-on Ethereum that developers should be mindful of when developing on Moonbeam:
+As seen in the sections above, there are some key differences between the transaction fee model on Elysium and the one
+on Ethereum that developers should be mindful of when developing on Elysium:
 
 - The dynamic fee mechanism resembles that of EIP-1559 but the implementation is different
-- The amount of gas used in Moonbeam's transaction fee model is mapped from the transaction's Substrate extrinsic weight
-  value via a fixed factor of 25000. This value is then multiplied with the unit gas price to calculate the transaction
+- The amount of gas used in Elysium's transaction fee model is mapped from the transaction's Substrate extrinsic weight
+  value via a fixed factor of 25000. This value is then multiplied by the unit gas price to calculate the transaction
   fee. This fee model means it can potentially be significantly cheaper to send transactions such as basic balance
   transfers via the Ethereum API than the Substrate API
 
 ## Fee History Endpoint
 
-Moonbeam networks implement the eth_feeHistory JSON-RPC endpoint as a part of the support for EIP-1559.
+Elysium networks implement the eth_feeHistory JSON-RPC endpoint as a part of the support for EIP-1559.
 
 `eth_feeHistory` returns a collection of historical gas information from which you can reference and calculate what to
 set for the `MaxFeePerGas` and `MaxPriorityFeePerGas` fields when submitting EIP-1559 transactions.
@@ -243,7 +243,7 @@ transaction fees in the block.
 The following code sample is for demo purposes only and should not be used without modification and further testing in a
 production environment.
 
-You can use the following snippet for any Moonbeam-based network, but you'll need to modify the baseFee accordingly. You
+You can use the following snippet for any Elysium-based network, but you'll need to modify the baseFee accordingly. You
 can refer back to the Base Fee section to get the calculation for each network.
 
 ```js
@@ -264,9 +264,7 @@ const endpointNodeVersion = 'http://127.0.0.1:8080/node/version';
 
 // Define the minimum base fee for each network
 const baseFee = {
-    moonbeam: 125000000000n,
-    moonriver: 1250000000n,
-    moonbase: 125000000n
+    elysium: 100000000000n
 }
 
 async function main() {
@@ -274,7 +272,7 @@ async function main() {
         // Create a variable to sum the transaction fees in the whole block
         let totalFees = 0n;
 
-        // Find which Moonbeam network the Sidecar is pointing to
+        // Find which Elysium network the Sidecar is pointing to
         const response_client = await axios.get(endpointNodeVersion);
         const network = response_client.data.clientImplName;
 
@@ -337,7 +335,7 @@ async function main() {
                     );
                     // Update based on the network you're getting tx fees for
                     transactionData['baseFee'] =
-                        (BigInt(response_pallet.data.value) * baseFee.moonbeam) /
+                        (BigInt(response_pallet.data.value) * baseFee.elysium) /
                         BigInt('1000000000000000000');
 
                     // Gas price dependes on the MaxFeePerGas and MaxPriorityFeePerGas set

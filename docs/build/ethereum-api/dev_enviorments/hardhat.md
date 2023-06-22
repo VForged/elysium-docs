@@ -106,7 +106,7 @@ contract Box {
 
 ## Hardhat Configuration File
 
-Before you can deploy the contract to Moonbase Alpha, you'll need to modify the Hardhat configuration file and create a
+Before you can deploy the contract to Elysium, you'll need to modify the Hardhat configuration file and create a
 secure file to store your private key in.
 
 You can create a `secrets.json` file to store your private key by running:
@@ -135,13 +135,13 @@ Next you can take the following steps to modify the `hardhat.config.js` file and
    installing it yourself
 2. Import the secrets.json file
 3. Inside the `module.exports`, you need to provide the Solidity version
-4. Add the Elysium Alpha network configuration
+4. Add the Elysium network configuration
 
 ```js
 // 1. Import the Ethers plugin required to interact with the contract
 require('@nomiclabs/hardhat-ethers');
 
-// 2. Import your private key from your pre-funded Moonbase Alpha testing account
+// 2. Import your private key from your pre-funded Elysium testing account
 const {privateKey} = require('./secrets.json');
 
 module.exports = {
@@ -149,9 +149,9 @@ module.exports = {
     solidity: '0.8.1',
 
     networks: {
-        // 4. Add the Moonbase Alpha network specification
-        moonbase: {
-            url: 'https://rpc.api.moonbase.elysium.network',
+        // 4. Add the Elysium Alpha network specification
+        elysium: {
+            url: 'https://rpc.elysiumchain.tech',
             chainId: 1287, // 0x507 in hex,
             accounts: [privateKey]
         }
@@ -230,10 +230,10 @@ main()
     });
 ```
 
-You can now deploy the `Box.sol` contract using the `run` command and specifying `moonbase` as the network:
+You can now deploy the `Box.sol` contract using the `run` command and specifying `elysium` as the network:
 
 ```
-npx hardhat run --network moonbase scripts/deploy.js
+npx hardhat run --network elysium scripts/deploy.js
 ```
 
 If you're using another Elysium network, make sure that you specify the correct network. The network name needs to
@@ -248,10 +248,10 @@ the next step.
 
 ## Interacting with the Contract
 
-To interact with your newly deployed contract on Moonbase Alpha, you can launch the Hardhat `console` by running:
+To interact with your newly deployed contract on Elysium, you can launch the Hardhat `console` by running:
 
 ```
-npx hardhat console --network moonbase
+npx hardhat console --network elysium
 ```
 
 Next you can take the following steps, entering in one line at a time:
@@ -269,7 +269,7 @@ Next you can take the following steps, entering in one line at a time:
     await box.store(5)
     ```
 
-The transaction will be signed by your Moonbase account and be broadcasted to the network. The output should look
+The transaction will be signed by your Elysium account and be broadcasted to the network. The output should look
 similar to:
 
 ![Transaction output](img/dev-env/hardhat/hardhat-4.png)
