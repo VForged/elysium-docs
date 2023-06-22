@@ -54,7 +54,6 @@ export default function CardSection() {
             description: 'Elysium network have HTTPS & WSS endpoints available for users to connect',
             url:'docs/network-endpoints'
         },
-
         {
             image: KN8,
             title: 'Block Explorer',
@@ -62,7 +61,6 @@ export default function CardSection() {
             url:'docs/block-explorer'
         },
     ]
-
     return (
         <>
             <section className="KnowledgeSection">
@@ -76,7 +74,6 @@ export default function CardSection() {
                                 </div>
                             </div>
                         </div>
-
                         {
                             data.map((data, i) => {
                                 return (
@@ -88,7 +85,6 @@ export default function CardSection() {
                                 )
                             })
                         }
-
                     </div>
                 </div>
             </section>
