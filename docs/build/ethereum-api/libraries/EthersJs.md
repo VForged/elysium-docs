@@ -12,7 +12,7 @@ to interact with a Elysium node as if they were doing so on Ethereum. You can re
 this [blog post](https://medium.com/l4-media/announcing-ethers-js-a-web3-alternative-6f134fdd06f3)
 
 In this guide, you'll learn how to use the Ethers.js library to send a transaction and deploy a contract on Elysium
-Mainnet. This guide can be adapted for [Elysium](/backup/networks/elysium-chain)
+Mainnet. This guide can be adapted for [Elysium](/docs/elysium-chain)
 
 ## Checking Prerequisites
 

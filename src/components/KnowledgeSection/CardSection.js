@@ -23,7 +23,7 @@ export default function CardSection() {
             image: KN2,
             title: 'Networks',
             description: 'Explore Mainnet or Testnet',
-            url:'docs/category/networks'
+            url:'docs/intro'
         },
         {
             image: KN3,

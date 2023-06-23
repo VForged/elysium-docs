@@ -14,7 +14,7 @@ This page will outline the steps for verifying smart contracts on Elysium networ
 ## Deploying the Contract
 
 In order to verify a smart contract on a block explorer, the contract must be first deployed on the target network
-first. This tutorial will be deploying the smart contract to [Elysium](/backup/networks/elysium-chain).
+first. This tutorial will be deploying the smart contract to [Elysium](/docs/elysium-chain).
 
 You can check this page for a tutorial on [deploying smart contracts](/docs/category/libraries) using Ethereum libraries
 on Elysium. You may also use a developer tool such as [Remix](/docs/build/ethereum-api/dev_enviorments/remix),  

@@ -16,7 +16,7 @@ node using the Remix IDE. This guide can be adapted for Elysium
 
 For the purposes of this guide, you'll need to have the following:
 
-- A locally running [Elysium development node](/backup/networks/elysium-chain-testnet/)
+- A locally running [Elysium development node](/docs/node-operator/validator-node)
 
 If you followed the guides above, you should have a local Elysium node which will begin to author blocks as
 transactions arrive.

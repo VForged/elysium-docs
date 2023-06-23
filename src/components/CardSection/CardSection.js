@@ -17,9 +17,9 @@ export default function CardSection() {
                 // "Learn More",
             ],
             links: [
-                'docs/networks/elysium-chain',
-                'docs/etherum-vs-elysium/balance-transfer',
-                'docs/intro',
+                'docs/elysium-chain',
+                // 'docs/etherum-vs-elysium/balance-transfer',
+                // 'docs/intro',
             ]
         },
         {
@@ -32,9 +32,9 @@ export default function CardSection() {
                 // "Learn More",
             ],
             links: [
-                'docs/validator-node#how-to-become-a-elysium-validator',
-                'docs/validator-node#the-easiest-way-using-docker',
-                'feeeas',
+                'docs/node-operator/validator-node',
+                // 'docs/validator-node#the-easiest-way-using-docker',
+                // 'feeeas',
             ]
         },
         {
@@ -47,7 +47,7 @@ export default function CardSection() {
                 // "Learn More"
             ],
             links: [
-                'docs/category/networks',
+                'docs/intro',
             ]
         },
     ]
