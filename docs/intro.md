@@ -63,17 +63,17 @@ via the Ethereum API. For more information on each explorer, please check out th
 
 ## Funding Accounts
 
-To get started developing on Atlantis (Testnet), you’ll need to fund your account with DEV LAVA tokens to send
+To get started developing on Atlantis (Testnet), you’ll need to fund your account with LAVA tokens to send
 transactions.
-Please note that DEV LAVA tokens have no real value and are for testing purposes only.
+Please note that LAVA tokens have no real value and are for testing purposes only.
 
-MainNet tokens are only available for those people who are using Bridge & have moved their assets from other chains to
+Mainnet tokens are only available for those people who are using Bridge & have moved their assets from other chains to
 Elysium using Elysium Bridge (https://bridge.elysiumchain.tech/).
 
-| Network  | URL	                                                                                              | 
-|----------|---------------------------------------------------------------------------------------------------|
-| Atlantis | The https://faucet.atlantischain.network/ website. The faucet dispenses 1 DEV LAVA every 24 hours | 
-| Elysium  | The https://faucet.elysiumchain.tech/ website. The faucet dispenses 3 LAVA                        |
+| Network  | URL	                                                                                          | 
+|----------|-----------------------------------------------------------------------------------------------|
+| Atlantis | The https://faucet.atlantischain.network/ website. The faucet dispenses 1 LAVA every 24 hours | 
+| Elysium  | The https://faucet.elysiumchain.tech/ website. The faucet dispenses 3 LAVA                    |
 
 ## Development Tools
 
