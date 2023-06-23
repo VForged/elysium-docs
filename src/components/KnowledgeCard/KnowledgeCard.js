@@ -1,11 +1,21 @@
 import React from 'react';
 import Logo from '../../../static/images/Footer Group 2.png'
-import {InputGroup,InputGroupText,Input,CardBody,Card,CardSubtitle,CardLink,CardTitle ,CardText} from 'reactstrap'
-export default function KnowledgeCard({image,title,description}){
-    console.log(image)
-    return(
+import {
+    InputGroup,
+    InputGroupText,
+    Input,
+    CardBody,
+    Card,
+    CardSubtitle,
+    CardLink,
+    CardTitle,
+    CardText
+} from 'reactstrap'
+
+export default function KnowledgeCard({image, title, description}) {
+    return (
         <>
-            <Card >
+            <Card>
                 <img
                     alt="Card cap"
                     src={image}
@@ -15,9 +25,9 @@ export default function KnowledgeCard({image,title,description}){
                     <CardTitle tag="h5">
                         {title}
                     </CardTitle>
-                    <CardText>
-                        {description}
-                    </CardText>
+                    {/*<CardText>*/}
+                    {/*    {description}*/}
+                    {/*</CardText>*/}
                 </CardBody>
             </Card>
         </>

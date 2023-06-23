@@ -12,8 +12,8 @@ export default function CardSection() {
             title: 'Building on Elysium',
             description: 'Learn how to build a new application or deploy existing Solidity smart contracts to Elysium.',
             list: [
-                "How to get your own API endpoint for Elysium-based networks",
-                "How to use Ethereum tools to send transactions & deploy contracts",
+                "How to get API endpoint for Elysium",
+                // "How to use Ethereum tools to send transactions & deploy contracts",
                 // "Learn More",
             ],
             links: [
@@ -27,8 +27,8 @@ export default function CardSection() {
             title: 'Operating a Node',
             description: 'Everything you need to know about running a node on Elysium, how to become a collator, and more.',
             list: [
-                "How to set up a Elysium-based node",
-                "Learn about the collator requirements and how to spin up a collator node",
+                "How to set up a Elysium Node",
+                // "Learn about the collator requirements and how to spin up a collator node",
                 // "Learn More",
             ],
             links: [
@@ -42,7 +42,7 @@ export default function CardSection() {
             title: 'Learning About Elysium',
             description: 'Dive into the Elysium and learn what makes this approach to Ethereum compatability so compelling.',
             list: [
-                "Elysium network overview",
+                "Learn More",
                 // "Explore the DApp directory",
                 // "Learn More"
             ],

@@ -11,7 +11,7 @@ compatible with Ethereum-style JSON RPC invocations. Therefore, developers can l
 Web3.js library to interact with a Elysium node as if they were doing so on Ethereum.
 
 In this guide, you'll learn how to use the Web3.js library to send a transaction and deploy a contract on Elysium. This
-guide can be adapted for [Elysium](/docs/networks/elysium-chain)
+guide can be adapted for [Elysium](/backup/networks/elysium-chain)
 
 ## Checking Prerequisites
 

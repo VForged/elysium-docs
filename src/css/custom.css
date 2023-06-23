@@ -637,7 +637,6 @@ main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card p{
 [data-theme='dark'] .cardsection .card ul li {
     list-style: none;
     color: #9FC131;
-    min-height: 60px;
 }[data-theme='dark'] .cardsection .card ul li a {
     color: #9FC131;
     text-decoration: underline!important;
