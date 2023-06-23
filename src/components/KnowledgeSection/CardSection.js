@@ -69,7 +69,7 @@ export default function CardSection() {
                     <div className="row">
                         <div className="col-12">
                             <div className="row">
-                                <div className="col-6 mx-auto">
+                                <div className="col-12 col-md-6 mx-auto">
                                     <h2 className={'RadialGradient top-minus text-capitalize  text-center Fsize_48 ArchivoLight pb-3 text-shadow'}>Knowledge <span
                                         className={"ArchivoBold"}>Base</span></h2>
                                 </div>
@@ -78,7 +78,7 @@ export default function CardSection() {
                         {
                             data.map((data, i) => {
                                 return (
-                                    <div className="col-3 mb-4">
+                                    <div className=" col-12  col-md-6 col-xl-3 mb-4">
                                         <Link to={data.url}>
                                         <Cards image={data.image} title={data.title} description={data.description}/>
                                         </Link>

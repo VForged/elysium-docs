@@ -60,7 +60,7 @@ export default function CardSection() {
                         {
                             data.map((data, i) => {
                                 return (
-                                    <div className="col-4">
+                                    <div className="col-12 col-md-6 col-lg-4 mb-3">
                                         <Cards image={data.image} title={data.title} description={data.description}
                                                list={data.list} href={data.links}/>
                                     </div>
