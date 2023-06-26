@@ -24,7 +24,7 @@ For the examples in this guide, you will need to have the following:
 - To test out the examples in this guide on Elysium, you will need to have your own endpoint and API key,
   which you can get from one of the supported [Endpoint Providers](/docs/network-endpoints).
 - Have [Rust installed](https://www.rust-lang.org/tools/install) on your device
-- Have [solc installed](https://docs.soliditylang.org/en/v0.8.20/installing-solidity.html) on your device. Using
+- Have [solc installed](https://docs.soliditylang.org/en/v0.8.1/installing-solidity.html) on your device. Using
   [solc-select](https://github.com/crytic/solc-select) is recommended by the Ethers.rs package
 
 > **_NOTE:_**
@@ -65,7 +65,7 @@ If this is your first time using `solc-select`, you'll need to install and confi
 following commands:
 
 ```
-solc-select install 0.8.17 && solc-select use 0.8.17
+solc-select install 0.8.1 && solc-select use 0.8.1
 ```
 
 ## Setting up the Ethers Provider and Client

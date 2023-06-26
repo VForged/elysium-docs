@@ -39,7 +39,7 @@ For this guide, you'll need to install the Ethers.js library and the Solidity co
 you can run the following command:
 
 ```
-npm install ethers solc@0.8.20
+npm install ethers solc@0.8.1
 ```
 
 ## Setting up the Ethers Provider

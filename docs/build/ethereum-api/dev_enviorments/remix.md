@@ -9,7 +9,7 @@ description: Learn how to use one of the most popular Ethereum developer tools, 
 Ethereum. Given Elysium’s Ethereum compatibility features, Remix can be used directly with any of the Elysium
 networks.
 
-This guide walks through the process of creating and deploying a Solidity-based smart contract to a Elysium development
+This guide walks through the process of creating and deploying a Solidity-based smart contract to a Atlantis development
 node using the Remix IDE. This guide can be adapted for Elysium
 
 ## Checking Prerequisites
@@ -21,10 +21,8 @@ For the purposes of this guide, you'll need to have the following:
 If you followed the guides above, you should have a local Elysium node which will begin to author blocks as
 transactions arrive.
 
-![Local Elysium node producing blocks](img/dev-env/remix/using-remix-1.png)
-
-Your development node comes with 10 pre-funded accounts. You should have MetaMask connected to your Elysium development
-node and have imported at least one of the pre-funded accounts.
+Your development node comes with 12 pre-funded accounts. You should have MetaMask connected to your Elysium development
+node and have transferred some funds to metamask account.
 
 ![MetaMask installation with a balance](img/dev-env/remix/using-remix-2.png)
 

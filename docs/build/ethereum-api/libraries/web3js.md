@@ -38,7 +38,7 @@ For this guide, you'll need to install the Web3.js library and the Solidity comp
 can run the following command:
 
 ```
-npm install web3 solc@0.8.20
+npm install web3 solc@0.8.1
 ```
 
 ## Setup Web3.js with Elysium
