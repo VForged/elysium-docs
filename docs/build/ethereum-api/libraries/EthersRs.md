@@ -12,7 +12,7 @@ Therefore, developers can leverage this compatibility and use the Ethers.rs libr
 if they were doing so on Ethereum. You can read more about how to use Ethers.rs on
 their [official crate documentation](https://docs.rs/crate/ethers/latest).
 
-In this guide, you'll learn how to use the Ethers.rs library to send a transaction and deploy a contract on Elysium
+In this guide, you'll learn how to use the Ethers.rs library to send a transaction and deploy a contract on Atlantis
 . This guide can be adapted for [Elysium](/docs/elysium-chain).
 
 ## Checking Prerequisites
@@ -24,7 +24,7 @@ For the examples in this guide, you will need to have the following:
 - To test out the examples in this guide on Elysium, you will need to have your own endpoint and API key,
   which you can get from one of the supported [Endpoint Providers](/docs/network-endpoints).
 - Have [Rust installed](https://www.rust-lang.org/tools/install) on your device
-- Have [solc installed](https://docs.soliditylang.org/en/v0.8.9/installing-solidity.html) on your device. Using
+- Have [solc installed](https://docs.soliditylang.org/en/v0.8.20/installing-solidity.html) on your device. Using
   [solc-select](https://github.com/crytic/solc-select) is recommended by the Ethers.rs package
 
 > **_NOTE:_**
@@ -191,7 +191,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 ### Send Transaction Script
 
-For this example, you'll be transferring 1 DEV from an origin address (of which you hold the private key) to another
+For this example, you'll be transferring 1 LAVA from an origin address (of which you hold the private key) to another
 address.
 
 1. Create a new asynchronous function named `send_transaction` that takes a client object's reference and the sending
@@ -247,8 +247,6 @@ cargo run
 
 If the transaction was succesful, in your terminal you'll see the transaction details printed out along with the balance
 of your address.
-
-![Terminal logs from sending a transaction](img/ethersrs/ethersrs-1.png)
 
 ## Deploy a Contract
 
@@ -484,8 +482,6 @@ cargo run
 If successful, you'll see the deployed contract's address and initial value set, which should be `5`, displayed in the
 terminal.
 
-![Terminal logs from deploy the contract](img/ethersrs/ethersrs-2.png)
-
 ### Interact with Contract (Send Methods)
 
 Send methods are the type of interaction that modify the contract's storage (change variables), meaning a transaction
@@ -552,8 +548,6 @@ If successful, the transaction receipt will be displayed in the terminal. You ca
 the `main` function to make sure that value is changing as expected. If you're using the `read_number` function after
 incrementing, you'll also see the incremented number, which should be `10`.
 
-![Terminal logs from incrementing the number](img/ethersrs/ethersrs-3.png)
-
 Next you can interact with the `reset` function:
 
 1. Ensure that the abigen macro is called for the `Incrementer_ABI.json` somewhere in the `main.rs` file (if it is
@@ -604,5 +598,3 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 If successful, the transaction receipt will be displayed in the terminal. You can use the `read_number` function in
 the `main` function to make sure that value is changing as expected. If you're using the `read_number` function after
 resetting the number, you should see `0` printed to the terminal.
-
-![Terminal logs from resetting the number](img/ethersrs/ethersrs-4.png)

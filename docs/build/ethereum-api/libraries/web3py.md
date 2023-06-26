@@ -10,7 +10,8 @@ using HTTP, IPC, or WebSocket protocols with Python. Elysium has an Ethereum-lik
 compatible with Ethereum-style JSON RPC invocations. Therefore, developers can leverage this compatibility and use the
 Web3.py library to interact with  Elysium python3 as if they were doing so on Ethereum.
 
-In this guide, you'll learn how to use the Web3.js library to send a transaction and deploy a contract on Elysium. This guide can be adapted for [Elysium](/docs/elysium-chain)
+In this guide, you'll learn how to use the Web3.js library to send a transaction and deploy a contract on Atlantis. 
+This guide can be adapted for [Elysium](/docs/elysium-chain)
 
 ## Checking Prerequisites
 
@@ -188,9 +189,6 @@ python3 transaction.py
 If the transaction was succesful, in your terminal you'll see the transaction hash has been printed out.
 
 You can also use the `balances.py` script to check that the balances for the origin and receiving accounts have changed.
-The entire workflow would look like this:
-
-![Send Tx Web3py](img/web3py/web3py-1.png)
 
 ## Deploy a Contract
 
@@ -349,8 +347,6 @@ python3 deploy.py
 
 If successful, the contract's address will be displayed in the terminal.
 
-![Deploy Contract Web3py](img/web3py/web3py-2.png)
-
 ### Read Contract Data (Call Methods)
 
 Call methods are the type of interaction that don't modify the contract's storage (change variables), meaning no
@@ -485,9 +481,7 @@ python3 increment.py
 ```
 
 If successful, the transaction hash will be displayed in the terminal. You can use the `get.py` script alongside
-the `increment.py` script to make sure that value is changing as expected:
-
-![Increment Contract Web3py](img/web3py/web3py-3.png)
+the `increment.py` script to make sure that value is changing as expected.
 
 Next you can open the `reset.py` file and take the following steps to create the script:
 
@@ -555,6 +549,4 @@ python3 reset.py
 ```
 
 If successful, the transaction hash will be displayed in the terminal. You can use the `get.py` script alongside
-the `reset.py` script to make sure that value is changing as expected:
-
-![Reset Contract Web3py](img/web3py/web3py-4.png)
+the `reset.py` script to make sure that value is changing as expected.

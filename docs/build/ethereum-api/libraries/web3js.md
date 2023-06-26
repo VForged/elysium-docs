@@ -10,7 +10,7 @@ using HTTP, IPC, or WebSocket protocols with JavaScript. Elysium has an Ethereum
 compatible with Ethereum-style JSON RPC invocations. Therefore, developers can leverage this compatibility and use the
 Web3.js library to interact with a Elysium node as if they were doing so on Ethereum.
 
-In this guide, you'll learn how to use the Web3.js library to send a transaction and deploy a contract on Elysium. This
+In this guide, you'll learn how to use the Web3.js library to send a transaction and deploy a contract on Atlantis. This
 guide can be adapted for [Elysium](/docs/elysium-chain)
 
 ## Checking Prerequisites
@@ -38,7 +38,7 @@ For this guide, you'll need to install the Web3.js library and the Solidity comp
 can run the following command:
 
 ```
-npm install web3 solc@0.8.0
+npm install web3 solc@0.8.20
 ```
 
 ## Setup Web3.js with Elysium
@@ -175,9 +175,6 @@ node transaction.js
 If the transaction was succesful, in your terminal you'll see the transaction hash has been printed out.
 
 You can also use the `balances.js` script to check that the balances for the origin and receiving accounts have changed.
-The entire workflow would look like this:
-
-![Send Tx Web3js](img/web3js/web3js-1.png)
 
 ## Deploy a Contract
 
@@ -350,7 +347,6 @@ node deploy.js
 
 If successful, the contract's address will be displayed in the terminal.
 
-![Deploy Contract Web3js](img/web3js/web3js-2.png)
 
 ### Read Contract Data (Call Methods)
 
@@ -492,9 +488,7 @@ node increment.js
 ```
 
 If successful, the transaction hash will be displayed in the terminal. You can use the `get.js` script alongside
-the `increment.js` script to make sure that value is changing as expected:
-
-![Increment Contract Web3js](img/web3js/web3js-3.png)
+the `increment.js` script to make sure that value is changing as expected.
 
 Next you can open the `reset.js` file and take the following steps to create the script:
 
@@ -563,6 +557,4 @@ node reset.js
 ```
 
 If successful, the transaction hash will be displayed in the terminal. You can use the `get.js` script alongside
-the `reset.js` script to make sure that value is changing as expected:
-
-![Reset Contract Web3js](img/web3js/web3js-4.png)
+the `reset.js` script to make sure that value is changing as expected.

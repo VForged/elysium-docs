@@ -11,8 +11,8 @@ Ethereum-style JSON RPC invocations. Therefore, developers can leverage this com
 to interact with a Elysium node as if they were doing so on Ethereum. You can read more about Ethers.js on
 this [blog post](https://medium.com/l4-media/announcing-ethers-js-a-web3-alternative-6f134fdd06f3)
 
-In this guide, you'll learn how to use the Ethers.js library to send a transaction and deploy a contract on Elysium
-Mainnet. This guide can be adapted for [Elysium](/docs/elysium-chain)
+In this guide, you'll learn how to use the Ethers.js library to send a transaction and deploy a contract on Atlantis
+Testnet. This guide can be adapted for [Elysium](/docs/elysium-chain)
 
 ## Checking Prerequisites
 
@@ -20,7 +20,7 @@ For the examples in this guide, you will need to have the following:
 
 - An account with funds. You can get LAVA for testing on once every 24 hours
   from [Elysium Faucet](https://faucet.atlantischain.network/ )
-- To test out the examples in this guide on Elysium, you will need to have your own endpoint and API key,
+- To test out the examples in this guide on Atlantis, you will need to have your own endpoint and API key,
   which you can get from one of the supported [Endpoint Providers](/docs/network-endpoints).
 
 > **_NOTE:_**
@@ -39,7 +39,7 @@ For this guide, you'll need to install the Ethers.js library and the Solidity co
 you can run the following command:
 
 ```
-npm install ethers solc@0.8.0
+npm install ethers solc@0.8.20
 ```
 
 ## Setting up the Ethers Provider
@@ -62,9 +62,9 @@ To create a provider, you can take the following steps:
     // 2. Define network configurations
     const providerRPC = {
       elysium: {
-        name: 'elysium',
+        name: 'atlantis',
         rpc: '{{ networks.rpc_url }}', // Insert your RPC URL here
-        chainId: {{ networks.chain_id }}, // Insert you
+        chainId: {{networks.chain_id}}, // Insert you
       },
     };
     // 3. Create ethers provider
@@ -134,8 +134,8 @@ If successful, the balances for the origin and receiving address will be display
 
 ### Send Transaction Script
 
-You'll only need one file for executing a transaction between accounts. For this example, you'll be transferring 1 DEV
-token from an origin address (from which you hold the private key) to another address. To get started, you can create
+You'll only need one file for executing a transaction between accounts. For this example, you'll be transferring 1 LAVA
+from an origin address (from which you hold the private key) to another address. To get started, you can create
 a `transaction.js` file by running:
 
 ```
@@ -196,12 +196,9 @@ To run the script, you can run the following command in your terminal:
 node transaction.js
 ```
 
-If the transaction was succesful, in your terminal you'll see the transaction hash has been printed out.
+If the transaction was successful, in your terminal you'll see the transaction hash has been printed out.
 
 You can also use the `balances.js` script to check that the balances for the origin and receiving accounts have changed.
-The entire workflow would look like this:
-
-![Send Tx Ether's](img/ethers/ethers-1.png)
 
 ## Deploy a Contract
 
@@ -362,8 +359,6 @@ node deploy.js
 
 If successful, the contract's address will be displayed in the terminal.
 
-![Deploy Contract Etherjs](img/ethers/ethers-2.png)
-
 ### Read Contract Data (Call Methods)
 
 Call methods are the type of interaction that don't modify the contract's storage (change variables), meaning no
@@ -494,9 +489,7 @@ node increment.js
 ```
 
 If successful, the transaction hash will be displayed in the terminal. You can use the `get.js` script alongside
-the `increment.js` script to make sure that value is changing as expected:
-
-![Increment Contract Ethers](img/ethers/ethers-3.png)
+the `increment.js` script to make sure that value is changing as expected.
 
 Next you can open the `reset.js` file and take the following steps to create the script:
 
@@ -556,6 +549,4 @@ node reset.js
 ```
 
 If successful, the transaction hash will be displayed in the terminal. You can use the `get.js` script alongside
-the `reset.js` script to make sure that value is changing as expected:
-
-![Reset Contract Ethers](img/ethers/ethers-4.png)
+the `reset.js` script to make sure that value is changing as expected.
