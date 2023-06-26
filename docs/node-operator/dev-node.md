@@ -1,5 +1,6 @@
 ---
 title: Run Dev Node
+sidebar_position: 1
 ---
 
 # Run a Node on Elysium
@@ -14,12 +15,12 @@ There are two types of deployments of Elysium, including the Atlantis (Testnet).
 The minimum specs recommended to run a node are shown in the following table. For our MainNet
 deployments, disk requirements will be higher as the network grows.
 
-| Component | Requirement                                                                                |
-|-----------|--------------------------------------------------------------------------------------------|
-| CPU       | 8 Cores (Fastest per core speed)                                                           | 
-| RAM       | 16 GB                                                                                      |
-| SSD       | 1 TB (recommended)                                                                         |
-| Firewall  | P2P port must be open to incoming traffic: - Source: Any   - Destination: 30333, 30334 TCP |
+| Component | Requirement                                                                              |
+|-----------|------------------------------------------------------------------------------------------|
+| CPU       | 8 Cores (Fastest per core speed)                                                         | 
+| RAM       | 16 GB                                                                                    |
+| SSD       | 1 TB (recommended)                                                                       |
+| Firewall  | P2P port must be open to incoming traffic: - Source: Any   - Destination: 30334 TCP |
 
 ## Running Ports
 
