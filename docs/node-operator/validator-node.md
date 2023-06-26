@@ -15,7 +15,7 @@ reliability
 ```
   wget https://github.com/BloxBytes/elysium-docs/blob/316e863d2c73161716fab5318917c40f44a51a1b/subkey/subkey
   ```
-- Once you have setup the subkey go to the downloaded folder and Run the command line to generate peer id and account keys.
+- Once you have setup the subkey go to the downloaded folder and Run the command from command line to generate peer id and account keys.
 
 ```
 subkey generate-node-key
@@ -28,16 +28,13 @@ In most cases, you run this command with a command-line option to save the priva
 d1f036e7b462067f87f39342f4e3cfa5dbea4eac1fe5cbad269aa14abaf418c4
 ```
 ### Peer ID
-
-```
+`
 12D3KooWGdw55Xcg5N2jcFzA5eAscjKmpopyntsk8MdgiGCXpodK
-```
-
+`
 ### Node Key
-
-```
+`
 d1f036e7b462067f87f39342f4e3cfa5dbea4eac1fe5cbad269aa14abaf418c4
-```
+`
 
 ## Generate a new account key
 To generate a new key pair that uses the sr25519 signature scheme, run the following command:
@@ -113,5 +110,5 @@ services:
     ]
 ```
 
-As Elysium is a private node, you need to contact with elysium team to allow your 
+As Elysium is a private chain, you need to contact with elysium team to allow your 
 node to participate as validator and to earn reward.
