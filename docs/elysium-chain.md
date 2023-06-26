@@ -6,12 +6,13 @@ sidebar_position: 2
 
 Elysium has two types of endpoints available for users to connect to: one for HTTPS and one for WSS.
 
-If you’re looking for your own endpoints suitable for production use, you can check out the Endpoint Providers section
-of our documentation. Otherwise, to get started quickly you can use one of the following public HTTPS or WSS endpoints.
+If you are looking for an API provider suitable for production use, you can check out the Node Operator section of
+this guide to setup your own node.
 
-| Provider | RPC URL                       | WebSocket                  |
-|----------|-------------------------------|----------------------------|
-| Elysium  | https://rpc.elysiumchain.tech | wss://ws.elysiumchain.tech |
+| Provider | RPC URL                          | WebSocket                  |
+|----------|----------------------------------|----------------------------|
+| Elysium  | https://rpc.elysiumchain.tech    | wss://ws.elysiumchain.tech |
+| Atlantis | http://rpc.atlantischain.network | wss://ws.atlantischain.network |
 
 ## Quick Started
 

@@ -20,7 +20,7 @@ deployments, disk requirements will be higher as the network grows.
 | CPU       | 8 Cores (Fastest per core speed)                                                         | 
 | RAM       | 16 GB                                                                                    |
 | SSD       | 1 TB (recommended)                                                                       |
-| Firewall  | P2P port must be open to incoming traffic: - Source: Any   - Destination: 30334 TCP |
+| Firewall  | P2P port must be open to incoming traffic |
 
 ## Running Ports
 
@@ -31,7 +31,7 @@ ports opened.
 
 | Description | Port        |
 |-------------|-------------|
-| P2P         | 30334 (TCP) | 
+| P2P         | 30333 (TCP) | 
 | RPC         | 9933        |
 | WS          | 9944        |
 | Prometheus  | 9616        |
@@ -39,8 +39,8 @@ ports opened.
 ## Installation with Docker
 
 Elysium node can be spun up quickly using Docker. For more information on installing Docker, please visit this page.
-At the time of writing, the Docker version used was 19.03.6. When connecting to Elysium, it will take a few days to
-completely sync the embedded chain. Make sure that your system meets the requirements.
+At the time of writing, the Docker version used was 24.0.1. When connecting to Elysium, it will take a few hours to
+completely sync the chain data. Make sure that your system meets the requirements.
 
 Create a local directory to store the chain data:
 
@@ -73,51 +73,46 @@ chown DOCKER_USER /var/lib/elysium-testnet-data
 sudo chown -R $(id -u):$(id -g) /var/lib/elysium-testnet-data
 ```
 
-Now, execute the docker run command. If you are setting up a collator node, make sure to follow the code snippets for
-Validator. Note that you have to:
+Now, execute the docker run command. If you are setting up a validator node, make sure to follow the code snippets for
+Validator.
 
-- Replace YOUR-NODE-NAME in two different places
-- Replace `<50% RAM in MB> ` for 50% of the actual RAM your server has. For example, for 32 GB RAM, the value must be
-  set
-  to `16000`. The minimum value is `2000`, but it is below the recommended specs
+### Dev Node Setup
+Create a file name as docker-compose.yml and add below code:
+```docker compose file
+version: '3'
 
-### Full Node
+services:
+  elysium-dev-node:
+    container_name: elysium-dev-node
+    image: vaival/elysium-testnet:3.0.0
+    ports:
+      - 30333:30333 # p2p port
+      - 9933:9933 # rpc port
+      - 9944:9944 # ws port
+      - 9615:9615 # promethus port
+    volumes:
+      - ./elysium-testnet-data:/data
+    command: [
+      "--name", "elysium-dev-node",
+      "--dev"
+      "--ws-external",
+      "--rpc-external",
+      "--rpc-cors", "all"
+    ]
+```
+After saving the file run the below code:
+```
+docker compose up
+```
+Docker engine will start the node, you can connect it locally by using below urls:
 
-#### Elysium
-
-```dockerfile
-docker run --network="host" -v "/var/lib/elysium-data:/data" \
--u $(id -u ${USER}):$(id -g ${USER}) \
-elysium/node:v0.0.10 \
---base-path=/data \
---chain moonbeam \
---name="YOUR-NODE-NAME" \
---execution wasm \
---wasm-execution compiled \
---state-pruning archive \
---trie-cache-size 0 \
---db-cache <50% RAM in MB> \
--- \
---execution wasm \
---name="YOUR-NODE-NAME (Embedded Relay)"
+### Local RPC Access:
+```
+https://127.0.0.1:9933
+```
+### Local Websocket Access:
+```
+ws://127.0.0.1:9944
 ```
 
-#### Atlantis (Testnet)
-
-```dockerfile
-docker run --network="host" -v "/var/lib/elysium-data:/data" \
--u $(id -u ${USER}):$(id -g ${USER}) \
-elysium/node:v0.0.10 \
---base-path=/data \
---chain moonbeam \
---name="YOUR-NODE-NAME" \
---execution wasm \
---wasm-execution compiled \
---state-pruning archive \
---trie-cache-size 0 \
---db-cache <50% RAM in MB> \
--- dev
--- \
---execution wasm \
---name="YOUR-NODE-NAME (Embedded Relay)"
-```
+Polkadot provides a UI to connect and view your local node. You can access this by this [link](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9945#/explorer)

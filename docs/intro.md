@@ -44,7 +44,7 @@ network. To do so, you can use the following information:
 
 ## Block Explorers
 
-Elysium provides EVM-based explorer which ones used query the Ethereum API. All EVM-based transactions are accessible
+Elysium provides EVM-based explorer which used to query the Ethereum API. All EVM-based transactions are accessible
 via the Ethereum API. For more information on each explorer, please check out the Block Explorers page.
 
 #### Atlantis (Testnet)
@@ -65,24 +65,24 @@ via the Ethereum API. For more information on each explorer, please check out th
 
 To get started developing on Atlantis (Testnet), you’ll need to fund your account with LAVA tokens to send
 transactions.
-Please note that LAVA tokens have no real value and are for testing purposes only.
+Please note that Testnet LAVA tokens have no real value and are for testing purposes only.
 
-Mainnet tokens are only available for those people who are using Bridge & have moved their assets from other chains to
-Elysium using Elysium Bridge (https://bridge.elysiumchain.tech/).
+Mainnet tokens are only available for those people who are bridging their assets from Polygon to
+Elysium using Bridge (https://bridge.elysiumchain.tech/).
 
 | Network  | URL	                                                                                          | 
 |----------|-----------------------------------------------------------------------------------------------|
 | Atlantis | The https://faucet.atlantischain.network/ website. The faucet dispenses 1 LAVA every 24 hours | 
-| Elysium  | The https://faucet.elysiumchain.tech/ website. The faucet dispenses 3 LAVA                    |
+| Elysium  | The https://faucet.elysiumchain.tech/ website. The faucet dispenses 3 LAVA for one time.      |
 
 ## Development Tools
 
 As Elysium is a Substrate-based chain that is fully Ethereum-compatible, you can use Substrate-based tools and
-Ethereum-based tools.
+Ethereum-based tools to interact with chain.
 
 #### Javascript Tools
 
 | Chain Base | Tool                                                  | Type    |
 |------------|-------------------------------------------------------|---------|
-| Ethereum   | [Web3.js ](https://web3js.readthedocs.io/en/v1.10.0/) | Library |
+| Ethereum   | [Web3.js ](https://web3js.readthedocs.io/en/v1.8.0/) | Library |
 | Substrate  | [Polkadot.js API](https://polkadot.js.org/docs/api/)  | Library |
