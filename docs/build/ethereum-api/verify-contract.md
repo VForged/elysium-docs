@@ -9,7 +9,7 @@ Verifying smart contracts on a block explorer is a great way of improving the tr
 smart contracts on Elysium. Users can directly view the source code for verified smart contracts, and for some block
 explorers, can also directly interact with the contract's public methods through the block explorer's interface.
 
-This page will outline the steps for verifying smart contracts on Elysium networks through block explorers.
+This page will outline the steps for verifying smart contracts on Elysium networks through block explorer.
 
 ## Deploying the Contract
 
