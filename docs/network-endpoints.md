@@ -6,7 +6,7 @@ sidebar_position: 3
 
 ## Public Endpoints
 
-Ethereum-based networks have two endpoints available for users to connect to: one for HTTPS and one for WSS.
+Elysium has two endpoints available for users to connect to: one for RPC and one for Websocket connection.
 
 The endpoints in this section are for development purposes only and are not meant to be used in production applications.
 

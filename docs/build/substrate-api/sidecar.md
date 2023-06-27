@@ -101,10 +101,6 @@ With the network endpoint environmental variable set, and from the installation 
 node_modules/.bin/substrate-api-sidecar 
 ```
 
-If the installation and configuration are successful, you should see this output in the console:
-
-![Successful Output](img/sidecar/sidecar-1.png)
-
 ## Substrate API Sidecar Endpoints
 
 Some of the commonly used Substrate API Sidecar endpoints include:
