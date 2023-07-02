@@ -6,18 +6,18 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'Elysium Documentation',
-    tagline: `Dive into some of the key differences between Elysium, an Ethereum compatibile blockchain, and Ethereum itself..`,
+    tagline: `Elysium | The Green Blockchain for AI, Metaverse and web3 Game Projects`,
     favicon: 'https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium-icon-512x512.png',
 
     // Set the production url of your site here
-    url: 'http://blog.elysiumchain.tech',
+    url: 'https://docs.elysiumchain.tech',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/',
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: 'Elysium', // Usually your GitHub org/user name.
+    organizationName: 'BloxBytes', // Usually your GitHub org/user name.
     projectName: 'elysium-docs', // Usually your repo name.
 
     onBrokenLinks: 'throw',
@@ -46,13 +46,17 @@ const config = {
                     theme: {
                         customCss: require.resolve('./src/css/custom.css'),
                     },
+                    googleAnalytics: {
+                        trackingID: 'G-X8EQYCWFZE',
+                        anonymizeIP: true
+                    },
                 }
             )
         ],
     ],
     // themes: ['@docusaurus/theme-search-algolia'],
     themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+        /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             // Replace with your project's social card
             image: 'img/docusaurus-social-card.jpg',
@@ -66,21 +70,21 @@ const config = {
                     height: 100,
                     className: 'custom-navbar-logo-class',
                 },
-                items:[
+                items: [
                     {
                         position: 'left',
-                        href:'/',
+                        href: '/',
                         label: 'Home',
                     },
                     {
                         position: 'left',
-                        href:'/docs/intro',
+                        href: '/docs/intro',
                         label: 'Getting Started',
                     },
                     {
                         type: 'dropdown',
                         position: 'right',
-                        className:'docuDropdown',
+                        className: 'docuDropdown',
                         customIcon: 'img/my-icon.svg',
                         html: `
                               <svg  id="more" xmlns="http://www.w3.org/2000/svg" width="14.001" height="14.001" viewBox="0 0 14.001 14.001">
@@ -92,8 +96,8 @@ const config = {
                             `,
                         items: [
                             {
-                                type:'html',
-                                value:`<a href='https://elysiumchain.tech'>
+                                type: 'html',
+                                value: `<a href='https://elysiumchain.tech'>
                                         <svg class="mb-3" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
                                           <g id="Icon" transform="translate(-1.25 -1.25)">
                                             <path id="Path_49352" data-name="Path 49352" d="M19.76,26.422a12.038,12.038,0,1,1,6.685-6.717.976.976,0,0,0,1.814.723,13.99,13.99,0,1,0-7.767,7.806.977.977,0,0,0-.732-1.812Z" transform="translate(0 0)" fill="#fff" fill-rule="evenodd"/>
@@ -292,17 +296,17 @@ const config = {
                             {
                                 label: 'About ',
                                 to: '/',
-                                className:"comingSoon",
+                                className: "comingSoon",
                             },
                             {
                                 label: 'How it Works',
                                 to: '/',
-                                className:"comingSoon",
+                                className: "comingSoon",
                             },
                             {
                                 label: 'Support',
                                 to: '/',
-                                className:"comingSoon",
+                                className: "comingSoon",
                             },
                             {
                                 label: 'Disclaimer',
@@ -324,12 +328,12 @@ const config = {
                             {
                                 label: 'Agora Marketplace',
                                 to: '/',
-                                class:"comingSoon",
+                                class: "comingSoon",
                             },
                             {
                                 label: 'Elysium Cloudwallet',
                                 to: '/',
-                                className:"comingSoon",
+                                className: "comingSoon",
                             },
                             {
                                 label: 'Scan',
@@ -355,7 +359,7 @@ const config = {
                             {
                                 label: 'Launch Your Project',
                                 to: '/',
-                                className:"comingSoon",
+                                className: "comingSoon",
                             },
                         ],
                     },
@@ -369,7 +373,7 @@ const config = {
                             {
                                 label: 'Become a Validator',
                                 to: '/',
-                                className:"comingSoon",
+                                className: "comingSoon",
                             },
                             {
                                 label: 'Twitter',
@@ -382,7 +386,7 @@ const config = {
                             {
                                 label: 'Brand Asset',
                                 to: '/',
-                                className:"comingSoon",
+                                className: "comingSoon",
                             },
                             {
                                 label: 'Blog',
