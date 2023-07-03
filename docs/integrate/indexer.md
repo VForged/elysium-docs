@@ -19,8 +19,6 @@ index EVM data, it is recommended to use the EVM Archive and Processor.
 This guide will show you how to create Substrate and EVM projects with Subsquid and configure it to index data on
 Elysium.
 
---8<-- 'text/disclaimers/third-party-content-intro.md'
-
 ## Checking Prerequisites
 
 To get started with Subsquid, you'll need to have the following:
