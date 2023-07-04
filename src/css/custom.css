@@ -347,18 +347,37 @@ header .navbar .navbar-collapse ul .nav-item.active {
   margin-bottom: 10px;
   min-width: 100%;
 }
+
+[data-theme='light'] main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card:hover{
+    border: 1px solid #9fc131;
+}
 main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card{
   display: inline-grid;
 }
 main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card p{
   white-space: normal;
 }
-[data-theme='light'] main[class^='docMainContainer_'] h1,h2,h3,h4,h5,h6 {
+[data-theme='light'] main[class^='docMainContainer_'] .anchor{
   color: #1E0E3E!important;
 }
-[data-theme='dark'] main[class^='docMainContainer_'] h1,h2,h3,h4,h5,h6 {
-  color: #fff!important;
+[data-theme='light'] main[class^='docMainContainer_'] h1{
+  color: #1E0E3E!important;
 }
+/*[data-theme='light'] main[class^='docMainContainer_'] .markdown h1,h2,h3,h4,h5,h6 {*/
+/*  color: #1E0E3E!important;*/
+/*}*/
+/*[data-theme='dark'] .markdown h1,h2,h3,h4,h5,h6{*/
+/*    color: #fff!important;*/
+/*}*/
+/*.markdown h1,h2,h3,h4,h5,h6{*/
+/*    color: #1E0E3E;*/
+/*}*/
+/*[data-theme='dark'] main[class^='docMainContainer_'] h1,h2,h3,h4,h5,h6 {*/
+/*  color: #fff!important;*/
+/*}*/
+/*[data-theme='dark'] main[class^='docMainContainer_'] .markdown h1,h2,h3,h4,h5,h6 {*/
+/*  color: #fff!important;*/
+/*}*/
 
 [data-theme='dark'] .navbar__inner div[class^='searchBox_'] .DocSearch-Button {
     background: transparent !important;
@@ -470,6 +489,7 @@ main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card p{
 
 [data-theme='light'] .KnowledgeSection {
     margin-top: 120px;
+    margin-bottom: 120px;
 }
 
 [data-theme='light'] .KnowledgeSection h2 {
@@ -513,6 +533,7 @@ main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card p{
     justify-content: center;
     width: 70px;
     object-fit: contain;
+    max-height: 70px;
 }
 
 [data-theme='light'] .KnowledgeSection .card .card-title {
@@ -616,7 +637,6 @@ main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card p{
 [data-theme='dark'] .cardsection .card ul li {
     list-style: none;
     color: #9FC131;
-    min-height: 60px;
 }[data-theme='dark'] .cardsection .card ul li a {
     color: #9FC131;
     text-decoration: underline!important;
@@ -624,6 +644,7 @@ main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card p{
 
 [data-theme='dark'] .KnowledgeSection {
     margin-top: 120px;
+    margin-bottom: 120px;
 }
 
 [data-theme='dark'] .KnowledgeSection .card {
@@ -663,6 +684,7 @@ main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card p{
     justify-content: center;
     width: 70px;
     object-fit: contain;
+    max-height: 70px;
 }
 
 [data-theme='dark'] .KnowledgeSection .card .card-title {
@@ -689,7 +711,13 @@ main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card p{
     text-decoration: none;
 }
 
-.DocSearch-Button {
+.searchSectoin .DocSearch-Button {
+    min-width: 300px;
+    border-radius: 8px !important;
+    border: 1px solid #574380 !important;
+}
+
+nav .DocSearch-Button {
     min-width: 300px;
     border-radius: 8px !important;
     border: 1px solid #574380 !important;
@@ -1040,6 +1068,14 @@ position: absolute;
     background: #9fc13130!important;
     color: #1E0E3E!important;
 }
+/*[data-theme='light'] .menu__list-item-collapsible{*/
+/*    background: #9fc13130!important;*/
+/*    color: #1E0E3E!important;*/
+/*}*/
+[data-theme='light'] .menu__list-item-collapsible--active .menu__link--active{
+    background: none!important;
+    color: #1E0E3E!important;
+}
 /*right sideBar in document*/
 
 [data-theme='light'] .table-of-contents .table-of-contents__link--active{
@@ -1077,4 +1113,72 @@ position: absolute;
 }
 [data-theme='dark'] .pagination-nav .pagination-nav__label{
     color: #9fc131;
+}
+[data-theme='light'] .pagination-nav .pagination-nav__link:hover{
+    border:1px solid #9fc131;
+}
+
+
+@media (max-width: 576px){
+    .comingSoon:after{
+        display: none;
+    }
+    [data-theme='light'] .navbar__inner div[class^='searchBox_'] .DocSearch-Button{
+        max-width: 200px!important;
+    }
+    .searchSectoin h2{
+        font-size: 2rem;
+    }
+    .searchSectoin p{
+        font-size: 18px;
+    }
+    .searchSectoin .DocSearch-Button{
+        max-width: 100%!important;
+        min-width: 150px;
+        width: 100%;
+    }
+    nav .DocSearch-Button{
+      min-width: auto;
+        border-radius:50px ;
+    }
+    .searchSectoin .my-searchBtn{
+        width: 100%;
+        margin: 0;
+    }
+    .KnowledgeSection h2{
+        font-size: 2rem;
+    }
+    .navbar-sidebar .navbar__logo{
+        max-width: 100%;
+    }
+    .navbar-sidebar .navbar__logo img{
+        max-width: 100%;
+        width: 146px;
+    }
+    .docuDropdown ~.menu__list {
+      display: flex;
+    }
+    .docuDropdown ~.menu__list a span{
+                 margin-bottom: 1rem;
+                 padding-left: 10px;
+        color: #1E0E3E;
+    }
+    .docuDropdown ~.menu__list li{
+        display: flex!important;
+    }
+    [data-theme='light'] .docuDropdown ~.menu__list a{
+        display: flex;
+    }[data-theme='dark'] .docuDropdown ~.menu__list a{
+        display: flex;
+    }
+    [data-theme='light'] .docuDropdown ~.menu__list a svg{
+        margin-bottom: 0!important;
+    } [data-theme='dark'] .docuDropdown ~.menu__list a svg{
+        margin-bottom: 0!important;
+    }
+    [data-theme='dark'] .docuDropdown ~.menu__list a span{
+                 margin-bottom: 1rem;
+                 padding-left: 10px;
+        color: #fff;
+    }
 }

@@ -6,18 +6,18 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'Elysium Documentation',
-    tagline: `Dive into some of the key differences between Elysium, an Ethereum compatibile blockchain, and Ethereum itself..`,
+    tagline: `Elysium | The Green Blockchain for AI, Metaverse and web3 Game Projects`,
     favicon: 'https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium-icon-512x512.png',
 
     // Set the production url of your site here
-    url: 'http://blog.elysiumchain.tech',
+    url: 'https://docs.elysiumchain.tech',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/',
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: 'Elysium', // Usually your GitHub org/user name.
+    organizationName: 'BloxBytes', // Usually your GitHub org/user name.
     projectName: 'elysium-docs', // Usually your repo name.
 
     onBrokenLinks: 'throw',
@@ -46,13 +46,17 @@ const config = {
                     theme: {
                         customCss: require.resolve('./src/css/custom.css'),
                     },
+                    gtag: {
+                        trackingID: 'G-G8FFF89XLR',
+                        anonymizeIP: true
+                    }
                 }
             )
         ],
     ],
     // themes: ['@docusaurus/theme-search-algolia'],
     themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+        /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             metadata: [
                 {

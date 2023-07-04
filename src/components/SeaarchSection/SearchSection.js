@@ -17,7 +17,7 @@ export default function SearchSection() {
             <section className={'searchSectoin clients'}>
                 <div className="container">
                     <div className="row">
-                        <div className="col-6 mx-auto d-flex flex-column">
+                        <div className="col-12 col-md-8 col-xxl-6 mx-auto d-flex flex-column">
                             <h2 className={'RadialGradient top-minus text-capitalize  text-center Fsize_48 ArchivoLight pb-3 text-shadow'}>Elysium <span
                                 className={"ArchivoBold"}>Documentation</span></h2>
                             <p className={'pb-3 ArchivoExtraLight'}>Elysium documentation includes conceptual, procedural, and reference
