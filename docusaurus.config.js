@@ -54,8 +54,9 @@ const config = {
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
+            metadata: [{name: 'keywords', content: 'Elysium documentation, Elysium blogs, Elysium validator node, Elysium'}],
             // Replace with your project's social card
-            image: 'img/docusaurus-social-card.jpg',
+            image: 'img/elysium-docs-meta-image.png',
             navbar: {
                 logo: {
                     alt: 'Elysium Logo',
