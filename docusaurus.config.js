@@ -54,7 +54,60 @@ const config = {
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
-            metadata: [{name: 'keywords', content: 'Elysium documentation, Elysium blogs, Elysium validator node, Elysium'}],
+            metadata: [
+                {
+                    name: 'keywords',
+                    content: 'Elysium documentation, Elysium blogs, Elysium validator node, Elysium docs, Elysium quick start guide, Elysium developer'
+                },
+                {
+                    name: 'name',
+                    content: 'Elysium Documentation'
+                },
+                {
+                    name: 'description',
+                    content: 'Everything you need to know to get started developing, deploying, and interacting with smart contracts on Elysium.'
+                },
+                {
+                    name: 'image',
+                    content: 'https://docs.elysiumchain.tech/img/elysium-docs-meta-image.png'
+                },
+                {
+                    name: 'og:url',
+                    content: 'https://docs.elysiumchain.tech'
+                },
+                {
+                    name: 'og:type',
+                    content: 'website'
+                },
+                {
+                    name: 'og:title',
+                    content: 'Elysium Documentation',
+                },
+                {
+                    name: 'og:description',
+                    content: 'Everything you need to know to get started developing, deploying, and interacting with smart contracts on Elysium.'
+                },
+                {
+                    name: 'og:image',
+                    content: 'https://docs.elysiumchain.tech/img/elysium-docs-meta-image.png'
+                },
+                {
+                    name: 'twitter:title',
+                    content: 'Elysium Documentation',
+                },
+                {
+                    name: 'twitter:card',
+                    content: 'summary_large_image',
+                },
+                {
+                    name: 'twitter:description',
+                    content: 'Everything you need to know to get started developing, deploying, and interacting with smart contracts on Elysium.'
+                },
+                {
+                    name: 'twitter:image',
+                    content: 'https://docs.elysiumchain.tech/img/elysium-docs-meta-image.png'
+                },
+            ],
             // Replace with your project's social card
             image: 'img/elysium-docs-meta-image.png',
             navbar: {
@@ -67,21 +120,21 @@ const config = {
                     height: 100,
                     className: 'custom-navbar-logo-class',
                 },
-                items:[
+                items: [
                     {
                         position: 'left',
-                        href:'/',
+                        href: '/',
                         label: 'Home',
                     },
                     {
                         position: 'left',
-                        href:'/docs/intro',
+                        href: '/docs/intro',
                         label: 'Getting Started',
                     },
                     {
                         type: 'dropdown',
                         position: 'right',
-                        className:'docuDropdown',
+                        className: 'docuDropdown',
                         customIcon: 'img/my-icon.svg',
                         html: `
                               <svg  id="more" xmlns="http://www.w3.org/2000/svg" width="14.001" height="14.001" viewBox="0 0 14.001 14.001">
@@ -93,8 +146,8 @@ const config = {
                             `,
                         items: [
                             {
-                                type:'html',
-                                value:`<a href='https://elysiumchain.tech'>
+                                type: 'html',
+                                value: `<a href='https://elysiumchain.tech'>
                                         <svg class="mb-3" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
                                           <g id="Icon" transform="translate(-1.25 -1.25)">
                                             <path id="Path_49352" data-name="Path 49352" d="M19.76,26.422a12.038,12.038,0,1,1,6.685-6.717.976.976,0,0,0,1.814.723,13.99,13.99,0,1,0-7.767,7.806.977.977,0,0,0-.732-1.812Z" transform="translate(0 0)" fill="#fff" fill-rule="evenodd"/>
@@ -293,17 +346,17 @@ const config = {
                             {
                                 label: 'About ',
                                 to: '/',
-                                className:"comingSoon",
+                                className: "comingSoon",
                             },
                             {
                                 label: 'How it Works',
                                 to: '/',
-                                className:"comingSoon",
+                                className: "comingSoon",
                             },
                             {
                                 label: 'Support',
                                 to: '/',
-                                className:"comingSoon",
+                                className: "comingSoon",
                             },
                             {
                                 label: 'Disclaimer',
@@ -324,17 +377,11 @@ const config = {
                             },
                             {
                                 label: 'Agora Marketplace',
-                                to: '/',
-                                class:"comingSoon",
+                                to: 'https://agora.elysiumchain.tech/',
                             },
                             {
-                                label: 'Elysium Cloudwallet',
-                                to: '/',
-                                className:"comingSoon",
-                            },
-                            {
-                                label: 'Scan',
-                                to: 'https://explorer.elysiumchain.tech/',
+                                label: 'Elysium CloudWallet',
+                                to: 'https://wallet.elysiumchain.tech/',
                             },
                         ],
                     },
@@ -356,7 +403,7 @@ const config = {
                             {
                                 label: 'Launch Your Project',
                                 to: '/',
-                                className:"comingSoon",
+                                className: "comingSoon",
                             },
                         ],
                     },
@@ -369,8 +416,7 @@ const config = {
                             },
                             {
                                 label: 'Become a Validator',
-                                to: '/',
-                                className:"comingSoon",
+                                to: 'https://elysiumchain.tech/validator.html',
                             },
                             {
                                 label: 'Twitter',
@@ -383,7 +429,7 @@ const config = {
                             {
                                 label: 'Brand Asset',
                                 to: '/',
-                                className:"comingSoon",
+                                className: "comingSoon",
                             },
                             {
                                 label: 'Blog',
