@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Introduction
+# Elysium Launchpad
 
 Elysium launchpad is blockchain ecosystem that empowers innovators and project developers. It offers a variety of services to help blockchain projects succeed, including:
 
