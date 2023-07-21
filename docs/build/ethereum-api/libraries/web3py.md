@@ -11,7 +11,7 @@ compatible with Ethereum-style JSON RPC invocations. Therefore, developers can l
 Web3.py library to interact with  Elysium python3 as if they were doing so on Ethereum.
 
 In this guide, you'll learn how to use the Web3.js library to send a transaction and deploy a contract on Atlantis. 
-This guide can be adapted for [Elysium](/docs/elysium-chain)
+This guide can be adapted for [Elysium](/docs/network-endpoints)
 
 ## Checking Prerequisites
 

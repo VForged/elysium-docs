@@ -13,7 +13,7 @@ if they were doing so on Ethereum. You can read more about how to use Ethers.rs 
 their [official crate documentation](https://docs.rs/crate/ethers/latest).
 
 In this guide, you'll learn how to use the Ethers.rs library to send a transaction and deploy a contract on Atlantis
-. This guide can be adapted for [Elysium](/docs/elysium-chain).
+. This guide can be adapted for [Elysium](/docs/network-endpoints).
 
 ## Checking Prerequisites
 
