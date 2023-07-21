@@ -17,7 +17,7 @@ export default function CardSection() {
                 // "Learn More",
             ],
             links: [
-                'docs/elysium-chain',
+                'docs/network-endpoints',
                 // 'docs/etherum-vs-elysium/balance-transfer',
                 // 'docs/intro',
             ]
