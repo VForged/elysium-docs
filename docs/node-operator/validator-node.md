@@ -10,12 +10,8 @@ reliability
 
 ## How To Become a Elysium Validator
 - Please make sure your machine meets the minimum requirements.
-- [Subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) is a utility provided by substrate to generate new accounts and network keys. 
-- You can build it on your machine or can download it for available OS from this [link](https://github.com/BloxBytes/elysium-docs/blob/316e863d2c73161716fab5318917c40f44a51a1b/subkey/subkey).
-```
-  wget https://github.com/BloxBytes/elysium-docs/blob/316e863d2c73161716fab5318917c40f44a51a1b/subkey/subkey
-  ```
-- Once you have setup the subkey go to the downloaded folder and Run the command from command line to generate peer id and account keys.
+- [Subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) is a utility provided by the substrate to generate new accounts and network keys. 
+- Once you have set up the subkey open the terminal and run the command to generate peer ID and account keys.
 
 ```
 subkey generate-node-key
@@ -64,14 +60,13 @@ the latest official release of the elysium binary, pulled from our package repos
 docker run --rm -it intellicoworks/elysium:latest --dev --name "elysium-dev-node"
 ```
 
-## Examples
+## Create the Data Directory
 
-Once you are done experimenting and picking the best node name :) you can start Elysium node. Make sure that you set the ownership of your local
-directory to the current user.
+Create a folder to persist the chain data.
 ```bash
 mkdir ~/elysium-data
 ```
-
+Make sure that you set the ownership of your created directory to the current user.
 ```bash
 # chown to current user
 sudo chown -R $(id -u):$(id -g) ~/elysium-data
@@ -79,7 +74,7 @@ sudo chown -R $(id -u):$(id -g) ~/elysium-data
 
 ## Using Docker compose
 
-You can use the following docker-compose.yml file:
+Now run the node using docker-compose. You can use the following docker-compose.yml file as a reference:
 
 ```dockerfile
 version: '3'
@@ -201,11 +196,10 @@ You can use the following options inside the docker-compose command.
 | `--sync <sync-mode>` | Specifies the blockchain syncing mode Valid values are `Full` to download and validate the full blockchain history, `Fast` to download blocks and the latest state only, or `FastUnsafe`to download the latest state but skip downloading state proofs. The default is `Full`.
 | `--telemetry-url <url verbosity>...` | Specifies the URL of the telemetry server to connect to. You can pass this flag multiple times to specify multiple telemetry endpoints. Verbosity levels range from 0-9, with 0 denoting the least verbose. Use the following format to specify the URL followed the verbosity option is `--telemetry-url 'wss://foo/bar 0'`.
 | `--tracing-receiver <receiver>` | Specifies the receiver to process tracing messages. The default is Log.
-| `--tracing-targets <targets>` | Sets a custom profiling filter. Syntax is the same as for logging: `<target>=<level>`.
+| `--tracing-targets <targets>` | Sets a custom profiling filter. The syntax is the same as for logging: `<target>=<level>`.
 | `--wasm-execution <method>` | Specifies the method for executing Wasm runtime code. Valid values are `interpreted`, or `compiled`. The default is `Compiled`.
 | `--wasm-runtime-overrides <path>` | Specifies the path where local WASM runtimes are stored. These runtimes override on-chain runtimes when the version matches.
 | `--ws-max-connections <count>` | Specifies the maximum number of WS RPC server connections.
 | `--rpc-port <port>` | Specifies the TCP port to use for the WebSockets RPC server.
 
-As Elysium is a private chain, you need to contact with elysium team to allow your 
-node to participate as a validator and earn a reward.
+As Elysium is a private chain, you need to contact with Elysium team to allow your Node's PeerID to participate as a validator and earn rewards. 
