@@ -61,12 +61,12 @@ The easiest/faster option to run elysium in Docker is to use the latest release 
 the latest official release of the elysium binary, pulled from our package repository.
 
 ```bash
-docker run --rm -it vaival/elysium:latest --chain local --name "elysium"
+docker run --rm -it intellicoworks/elysium:latest --dev --name "elysium-dev-node"
 ```
 
 ## Examples
 
-Once you are done experimenting and picking the best node name :) you can start elysium node. Make sure that you set the ownership of your local
+Once you are done experimenting and picking the best node name :) you can start Elysium node. Make sure that you set the ownership of your local
 directory to the current user.
 ```bash
 # chown to a specific user
@@ -86,7 +86,7 @@ version: '3'
 services:
   elysium-node:
     container_name: elysium-node
-    image: vaival/elysium:latest
+    image: intellicoworks/elysium:latest
     ports:
       - 30333:30333 # p2p port
       - 9933:9933 # rpc port
@@ -100,15 +100,14 @@ services:
       "--rpc-external",
       "--rpc-cors", "all",
       "--unsafe-rpc-external",
-      "--rpc-methods=Unsafe",
+      "--rpc-methods=Safe",
       "--unsafe-ws-external",
       "--prometheus-external",
-      "--node-key", "d1f036e7b462067f87f39342f4e3cfa5dbea4eac1fe5cbad269aa14abaf418c4",
-      "--validator",
+      "--node-key", "your node key",
       "--chain", "./elysiumSpecRaw.json"
-      "--bootnodes", "/ip4/{boot-node-ip}/tcp/30333/p2p/12D3KooWGRwF66g11uFWzRHHcfj5gehnFj1oXRHdwnJ1dGa2Nai3"
+      "--bootnodes", "/ip4/{boot-node-ip}/tcp/30333/p2p/PEER-ID"
     ]
 ```
 
 As Elysium is a private chain, you need to contact with elysium team to allow your 
-node to participate as validator and to earn reward.
+node to participate as a validator and earn a reward.
