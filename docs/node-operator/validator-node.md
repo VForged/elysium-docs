@@ -69,11 +69,12 @@ docker run --rm -it intellicoworks/elysium:latest --dev --name "elysium-dev-node
 Once you are done experimenting and picking the best node name :) you can start Elysium node. Make sure that you set the ownership of your local
 directory to the current user.
 ```bash
-# chown to a specific user
-chown DOCKER_USER /var/lib/elysium-data
+mkdir ~/elysium-data
+```
 
+```bash
 # chown to current user
-sudo chown -R $(id -u):$(id -g) /var/lib/elysium-data
+sudo chown -R $(id -u):$(id -g) ~/elysium-data
 ```
 
 ## Using Docker compose
@@ -93,19 +94,19 @@ services:
       - 9944:9944 # ws port
       - 9615:9615 # promethus port
     volumes:
-      - ./elysium-data:/data
+      - ~/elysium-data:/data
     command: [
       "--name", "elysium-node",
-      "--ws-external",
-      "--rpc-external",
       "--rpc-cors", "all",
       "--unsafe-rpc-external",
       "--rpc-methods=Safe",
       "--unsafe-ws-external",
       "--prometheus-external",
-      "--node-key", "your node key",
-      "--chain", "./elysiumSpecRaw.json"
-      "--bootnodes", "/ip4/{boot-node-ip}/tcp/30333/p2p/PEER-ID"
+      "--node-key", "your node key from subkey",
+      "--chain", "/usr/local/bin/elysiumSpecRaw.json",
+      "--bootnodes", "/ip4/149.56.24.141/tcp/30333/p2p/12D3KooWGRwF66g11uFWzRHHcfj5gehnFj1oXRHdwnJ1dGa2Nai3",
+      "--offchain-worker","always",
+      "--validator"
     ]
 ```
 
