@@ -84,7 +84,7 @@ version: '3'
 services:
   elysium-dev-node:
     container_name: elysium-dev-node
-    image: vaival/elysium-testnet:3.0.0
+    image: intellicoworks/elysium-testnet:latest
     ports:
       - 30333:30333 # p2p port
       - 9933:9933 # rpc port
