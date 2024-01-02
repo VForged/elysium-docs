@@ -57,7 +57,7 @@ The easiest/faster option to run elysium in Docker is to use the latest release 
 the latest official release of the elysium binary, pulled from our package repository.
 
 ```bash
-docker run --rm -it intellicoworks/elysium:latest --dev --name "elysium-dev-node"
+docker run --rm -it vaival/elysium:latest --dev --name "elysium-dev-node"
 ```
 
 ## Create the Data Directory
@@ -82,7 +82,7 @@ version: '3'
 services:
   elysium-node:
     container_name: elysium-node
-    image: intellicoworks/elysium:latest
+    image: vaival/elysium:latest
     ports:
       - 30333:30333 # p2p port
       - 9933:9933 # rpc port
