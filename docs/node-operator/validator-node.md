@@ -16,6 +16,11 @@ reliability
 ```
 subkey generate-node-key
 ```
+- If you do not want to install the subkey, you can use the docker command to generate the node keys by running the following command.
+
+```bash
+docker run --rm parity/subkey:latest generate-node-key | xargs printf "%s\n"
+```
 This command is used to generate random public and private keys for peer-to-peer (`libp2p`) communication between Elysium nodes.
 The public key is the peer identifier that is used in chain specification files or as a command-line argument to identify a node participating in the blockchain network.
 In most cases, you run this command with a command-line option to save the private key to a file. The generated output will be like:
