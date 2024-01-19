@@ -4,13 +4,13 @@ FROM node:16-alpine
 WORKDIR /usr/src/app
 
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
-COPY --chown=node:node package*.json ./
+COPY package*.json ./
 
 # Install app dependencies
 RUN npm ci --only=production && npm cache clean --force
 
 # Bundle app source
-COPY --chown=node:node . .
+COPY . .
 
 # Creates a "dist" folder with the production build
 RUN npm run clear
