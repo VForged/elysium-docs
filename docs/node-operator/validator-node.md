@@ -16,7 +16,8 @@ reliability
 ```
 subkey generate-node-key
 ```
-- If you do not want to install the subkey, you can use the docker command to generate the node keys by running the following command.
+If you do not want to install the subkey, you can use the docker command to generate the 
+node keys by running the following command:
 
 ```bash
 docker run --rm parity/subkey:latest generate-node-key | xargs printf "%s\n"
@@ -38,10 +39,15 @@ d1f036e7b462067f87f39342f4e3cfa5dbea4eac1fe5cbad269aa14abaf418c4
 `
 
 ## Generate a new account key
-To generate a new key pair that uses the sr25519 signature scheme, run the following command:
+You need to generate an account that uses the sr25519 signature scheme, run the following command:
 ```bash
 subkey generate
 ```
+or use docker command to generate:
+```bash
+docker run --rm parity/subkey:latest generate
+```
+
 The command generates keys and displays output similar to the following:
 ```text
 Secret phrase:       bread tongue spell stadium clean grief coin rent spend total practice document
@@ -54,7 +60,6 @@ Secret phrase:       bread tongue spell stadium clean grief coin rent spend tota
 
 You now have the Sr25519 key for producing blocks using aura for one node. 
 In this example, the Sr25519 public key for the account is `5GCCgshTQCfGkXy6kAkFDW1TZXAdsbCNZJ9Uz2c7ViBnwcVg`.
-
 
 ## The easiest way using Docker
 
@@ -105,10 +110,50 @@ services:
       "--node-key", "your node key from subkey",
       "--chain", "/usr/local/bin/elysiumSpecRaw.json",
       "--bootnodes", "/ip4/3.92.218.203/tcp/30333/p2p/12D3KooWSSytVX7K7f7qLwUSFhNhTLR15FSojdv1DY3nc8uMkeaF",
-      "--offchain-worker","always",
       "--validator"
     ]
 ```
+Now complete the process on [Elysium Cloud Wallet](https://wallet.elysiumchain.tech/) and wait for approval.
+Once your node request will be approved from Elysium Team you will be able to see node syncing the blocks.
+
+## Generate the Session Keys
+
+Run the curl command to get a rendom session key which contains AURA and GRADPA keys.
+```bash
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933
+```
+The command generates keys and displays output similar to the following:
+
+```text
+{"jsonrpc":"2.0","result":"0xcefa6e374a77942c12c68c12aa7f246bcd240b8523e152a57748f388347fa77c9e9d3a5786a526e1f5609ad1a5f6a7337353a646b39e24c8b45435f86b29cf3c","id":1}
+```
+Please make sure to set the correct RPC url of running node. In our example we used http://localhost:9933  
+
+## Connecting to the Node
+
+Open [Polkadot-JS UI](https://polkadot.js.org/apps) and click the logo in the top left to switch the
+node. Activate the "Development" toggle and input your node's address - either the domain or the IP
+address. Remember to prefix with `wss://`, and if you're using the 443 port, append `:443` like so:
+`wss://example.com:443`.
+
+![A sync-in-progress chain connected to Polkadot-JS UI](img/polkadot-app.png)
+
+For more details you can explore the [polkadot wiki](https://wiki.polkadot.network/docs/maintain-rpc).
+
+## Set the Session Keys
+
+We need to use the substrings of the string obtained in Step Generate the Session Keys. 
+First remove the 0x from the beginning. Then divide that string into equal parts of 32 bytes each. 
+Prefix 0x to each of these smaller strings, 
+and then enter them in the input fields for each of the keys (aura, grandpa, imonline). Put 0x in the proof input.
+
+![A sync-in-progress chain connected to Polkadot-JS UI](img/set-keys.png)
+
+Please make sure to select newly generated substrate Account from [Previous Section](#generate-a-new-account-key)  
+For sending Transaction your newly generated account must have some lava to pay for gas fee. 
+
+Once you have completed all steps you need to send request to Elysium Team to approve your node as validator node. 
+
 ## Flags
 
 You can use the following optional flags inside the docker-compose command.
