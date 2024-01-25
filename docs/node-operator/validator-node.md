@@ -109,7 +109,7 @@ services:
       "--prometheus-external",
       "--node-key", "your node key from subkey",
       "--chain", "/usr/local/bin/elysiumSpecRaw.json",
-      "--bootnodes", "/ip4/3.92.218.203/tcp/30333/p2p/12D3KooWSSytVX7K7f7qLwUSFhNhTLR15FSojdv1DY3nc8uMkeaF",
+      "--bootnodes", "/ip4/149.56.24.141/tcp/30333/p2p/12D3KooWGRwF66g11uFWzRHHcfj5gehnFj1oXRHdwnJ1dGa2Nai3",
       "--validator"
     ]
 ```
