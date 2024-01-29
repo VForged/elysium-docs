@@ -79,7 +79,7 @@ mkdir ~/elysium-data
 Make sure that you set the ownership of your created directory to the current user.
 ```bash
 # chown to current user
-sudo chown -R $(id -u):$(id -g) ~/elysium-data
+sudo chown -R $(whoami) ~/elysium-data
 ```
 
 ## Using Docker compose
