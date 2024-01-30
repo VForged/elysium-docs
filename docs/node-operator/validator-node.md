@@ -104,7 +104,7 @@ services:
       "--name", "elysium-node",
       "--rpc-cors", "all",
       "--unsafe-rpc-external",
-      "--rpc-methods=Safe",
+      "--rpc-methods=unsafe",
       "--unsafe-ws-external",
       "--prometheus-external",
       "--node-key", "your node key from subkey",
@@ -151,6 +151,11 @@ and then enter them in the input fields for each of the keys (aura, grandpa, imo
 
 Please make sure to select newly generated substrate Account from [Previous Section](#generate-a-new-account-key)  
 For sending Transaction your newly generated account must have some lava to pay for gas fee. 
+
+You can use the below docker command to add session keys directly:
+```bash
+docker run -it --entrypoint /bin/bash jacogr/polkadot-js-tools:latest -c "polkadot-js-api --ws ws://127.0.0.1:9944/ --seed "{your generated substrate account private seed}" tx.session.setKeys {private key returned from rotate keys} 0x"
+```
 
 Once you have completed all steps you need to send request to Elysium Team to approve your node as validator node. 
 
