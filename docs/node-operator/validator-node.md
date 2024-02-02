@@ -92,7 +92,8 @@ version: '3'
 services:
   elysium-node:
     container_name: elysium-node
-    image: vaival/elysium:latest
+    image: vaival/elysium:5.0.0
+    restart: always
     ports:
       - 30333:30333 # p2p port
       - 9933:9933 # rpc port
