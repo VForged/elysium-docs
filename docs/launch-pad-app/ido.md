@@ -11,6 +11,34 @@ In an IDO, a project or startup issues and sells its tokens directly to investor
 
 ## User Flow
 
-Users can purchase IDO tokens using EUSD. Only whitelisted users can see the buy button. Every tier has minimum allocation and maximum allocation. The users can not purchase less than the minimum allocation for 1st time and more than the max allocation in their allocated tier. Once they have purchased the minimum allocation amount of tokens then they can buy for a less amount than the minimum allocation but not more than their remaining amount from max allocation.
+**Purchase Process:**
 
-Once the users invested in any IDO that ido will be shown on their profile page. If the IDO’s time is not ended it will be shown in the In-Progress IDOs section. When IDO session time ends it is moved into the Claims Available section and the Users can Claim the number of tokens equal to their investment amount. Claim Process is One Time only. After Claiming Tokens the IDO is moved to Claimed IDOs for the users record to show them all the IDOs they have participated in.
+Users can purchase IDO tokens using EUSD.
+Only whitelisted users have access to the buy button for IDO tokens.
+
+**Allocation Limits:**
+
+Each tier has a minimum and maximum allocation for purchasing IDO tokens.
+Users cannot purchase less than the minimum allocation for their tier initially.
+Users cannot purchase more than the maximum allocation for their tier.
+
+**Subsequent Purchases:**
+
+Once users have purchased the minimum allocation amount of tokens, they can make subsequent purchases for amounts less than the minimum allocation.
+Users cannot purchase more than their remaining allocation from the maximum allocation.
+
+**Display on Profile Page:**
+
+After investing in an IDO, it is displayed on the user's profile page.
+If the IDO session is ongoing, it is shown in the In-Progress IDOs section.
+
+**Claiming Process:**
+
+When the IDO session ends, it is moved to the Claims Available section.
+Users can claim a number of tokens equal to their investment amount.
+The claim process is one-time only.
+
+**Claimed IDOs Section:**
+
+After claiming tokens, the IDO is moved to the Claimed IDOs section on the user's profile.
+This section serves as a record of all the IDOs the user has participated in.
