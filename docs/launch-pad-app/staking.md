@@ -9,11 +9,35 @@ Once an individual successfully completes the staking process, they are granted 
 
 ## User Flow
 
-The user has to add a profile and submit a KYC verification request by clicking on the KYC button in his Profile Section. The User will be KYC verified within 24 hours by the administrator.
-After KYC verification the user can stake his PYR on the IDO Launchpad platform.
-For Whitelisting process the user staked PYR should have been for 24 hours or more in any pool equal to or more than the minimum amount required to fall in any tier. (1-9 tiers minimum amount to fall in the tier can be seen on tiers page )
-By default, the user Stake in 7 Day staking pool. If a user stakes more Amount before his staking pool time ends, the user's new staking time starts again from that time.
-Users can only stake in One pool at a time. He has to withdraw from the already staked pool and Unstake only can be done after completing the time duration of the staking pool. (If the user has 2 days left in staking time and then stakes more, he will then be at the start time of its staking. This will provide him a disadvantage as whitelist staking time should be more than 24 hours and before 24 hours any IDO goes live, users will not be whitelisted in it.)
-If the User Staking pool time ends and he tries to stake more in the same pool he has to first unstake the previous staking amount and then stake more amount.
+**Profile Setup and KYC Verification:**
 
-If the user has staked for 24 hours or more he will be whitelisted in IDO / INO before its start time.
+Users must create a profile and initiate KYC verification by clicking the KYC button in their Profile Section.
+KYC verification is typically completed within 24 hours by the administrator.
+
+**Staking on IDO Launchpad:**
+
+Upon successful KYC verification, users gain access to stake their PYR tokens on the IDO Launchpad platform.
+
+**Whitelisting Criteria:**
+
+To be eligible for whitelisting, users must stake their PYR tokens for 24 hours or more in any pool, meeting or exceeding the minimum amount required for any tier (tier requirements listed on the Tiers Page).
+
+Default Staking Pool and Single Pool Staking:
+
+By default, users stake in the 7 Day staking pool upon initiating staking.
+Users are restricted to staking in only one pool at a time.
+
+**Staking Duration and Re-staking Process:**
+
+Users must maintain their staked tokens for a minimum of 24 hours to be eligible for whitelisting.
+Users cannot stake additional tokens until they have unstaked their current staked amount.
+Unstaking can only be performed after the completion of the staking time duration.
+
+**Unstaking Process:**
+
+Users can only unstake their tokens after completing the time duration of the staking pool.
+If a user's staking pool time ends and they wish to stake more in the same pool, they must first unstake the previous staked amount.
+
+**Whitelisting Confirmation:**
+
+Once a user has staked for 24 hours or more, they will be automatically whitelisted for IDO or INO participation before the respective start time.
