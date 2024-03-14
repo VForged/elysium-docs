@@ -7,7 +7,7 @@ sidebar_position: 4
 
 It is great that you have decided to join the revolution of Web3 gaming and other Web3 projects with Elysium!
 
-![guide_image.webp](guide_image.webp)
+![guide_image.webp](guide_image3.jpg)
 
 Before you begin, it would be beneficial for you to understand the entire process of joining IDOs (Initial Dex
 Offerings) at Elysium Launchpad.
