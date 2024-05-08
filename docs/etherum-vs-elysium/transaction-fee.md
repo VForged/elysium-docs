@@ -114,15 +114,15 @@ The minimum gas price for each network is as follows:
 
 | Network            | Value    |
 |--------------------|----------|
-| Elysium            | 100 Gwei |
+| Elysium            | 125 Gwei |
 | Atlantis (Testnet) | 0.1 Gwei |
 
 To calculate the dynamic base fee, the following calculation is used:
 
 | Network            | Value                                              |
 |--------------------|----------------------------------------------------|
-| Elysium            | BaseFee = NextFeeMultiplier * 100000000000 / 10^18 |
-| Atlantis (Testnet) | BaseFee = NextFeeMultiplier * 100000000 / 10^18    |
+| Elysium            | BaseFee = NextFeeMultiplier * 125000000000 / 10^18 |
+| Atlantis (Testnet) | BaseFee = NextFeeMultiplier * 125000000 / 10^18    |
 
 The value of NextFeeMultiplier can be retrieved from the Substrate Sidecar API, via the following endpoint:
 
