@@ -58,14 +58,14 @@ npm -v
 To install the Substrate API Sidecar service locally in the current directory, run this from the command line:
 
 ```
-npm install @substrate/api-sidecar@\{ networks.elysium.substrate_api_sidecar.stable_version \}
+npm install @substrate/api-sidecar@{{ networks.elysium.substrate_api_sidecar.stable_version }}
 ```
 
 > **_NOTE:_**
 > If the current folder does not already have a Node.js project structure, you need to manually created
 > the `node_modules` directory by typing `mkdir node_modules`.
 
-Substrate API Sidecar v\{ networks.elysium.substrate_api_sidecar.stable_version \} is the current stable version that
+Substrate API Sidecar v\{\{ networks.elysium.substrate_api_sidecar.stable_version \}\} is the current stable version that
 has been tested to work with Elysium networks. You can verify the installation was successful by typing from the
 installation directory root:
 
