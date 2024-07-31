@@ -65,7 +65,7 @@ npm install @substrate/api-sidecar@{{ networks.elysium.substrate_api_sidecar.sta
 > If the current folder does not already have a Node.js project structure, you need to manually created
 > the `node_modules` directory by typing `mkdir node_modules`.
 
-Substrate API Sidecar v{{ networks.elysium.substrate_api_sidecar.stable_version }} is the current stable version that
+Substrate API Sidecar v\{\{ networks.elysium.substrate_api_sidecar.stable_version \}\} is the current stable version that
 has been tested to work with Elysium networks. You can verify the installation was successful by typing from the
 installation directory root:
 
@@ -109,8 +109,8 @@ Some of the commonly used Substrate API Sidecar endpoints include:
   to `false` to the get the newest known block, which may not be finalized.
 - **GET /blocks/head/header** — Get the most recently finalized block header. The optional parameter `finalized` can be
   set to `false` to the get the newest known block header, which may not be finalized.
-- **GET /blocks/{blockId}** — Get a block by its height or hash.
-- **GET /accounts/{accountId}/balance-info** — Get balance information for an account.
+- **GET /blocks/\{blockId\}** — Get a block by its height or hash.
+- **GET /accounts/\{accountId\}/balance-info** — Get balance information for an account.
 - **GET /node/version** — Get information about the Substrates node's implementation and versioning.
 - **GET /runtime/metadata** — Get the runtime metadata in decoded, JSON form.
 
