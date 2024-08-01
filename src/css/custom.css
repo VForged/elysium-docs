@@ -337,6 +337,11 @@ header .navbar .navbar-collapse ul .nav-item.active {
 [data-theme='dark'] .navbar__inner div[class^='searchBox_'] .DocSearch-Button .DocSearch-Button-Keys {
     display: none !important;
 }
+
+[data-theme='dark'] main[class^='docMainContainer_'] {
+    background-color: #1f143e;
+}
+
 [data-theme='dark'] main[class^='docMainContainer_']  div[class^='generatedIndexPage_'] .card{
   background: #301C50;
   margin-bottom: 10px;
