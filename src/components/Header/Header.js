@@ -29,7 +29,7 @@ export default function Header(){
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium-apps-icons/apps.json');
+                const response = await axios.get('https://cdn.elysiumchain.tech/elysium-apps-icons/apps.json');
                 setAppData(response.data?.data);
             } catch (error) {
                 console.error(error);

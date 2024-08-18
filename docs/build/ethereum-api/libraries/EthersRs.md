@@ -486,8 +486,7 @@ terminal.
 
 Send methods are the type of interaction that modify the contract's storage (change variables), meaning a transaction
 needs to be signed and sent. In this section, you'll create two functions: one to increment and one to reset the
-incrementer. This section will also require the `Incrementer_ABI.json` file initialized
-when [reading from the smart contract](#read-contract-data).
+incrementer. This section will also require the `Incrementer_ABI.json` file initialized.
 
 Take the following steps to create the function to increment:
 

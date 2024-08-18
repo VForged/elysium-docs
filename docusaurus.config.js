@@ -10,7 +10,7 @@ const darkCodeTheme = themes.dracula;
 const config = {
     title: 'Elysium Documentation',
     tagline: `Elysium | The Green Blockchain for AI, Metaverse and web3 Game Projects`,
-    favicon: 'https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium-icon-512x512.png',
+    favicon: 'https://cdn.elysiumchain.tech/elysium-icon-512x512.png',
 
     // Set the production url of your site here
     url: 'https://docs.elysiumchain.tech',
@@ -120,8 +120,8 @@ const config = {
             navbar: {
                 logo: {
                     alt: 'Elysium Logo',
-                    src: 'https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium/Elysium-Docs-light.svg',
-                    srcDark: 'https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium/Elysium-Docs-dark.svg',
+                    src: 'https://cdn.elysiumchain.tech/elysium/Elysium-Docs-light.svg',
+                    srcDark: 'https://cdn.elysiumchain.tech/elysium/Elysium-Docs-dark.svg',
                     target: '_self',
                     width: 250,
                     height: 100,
@@ -302,11 +302,6 @@ const config = {
             },
             footer: {
                 style: 'dark',
-                // logo: {
-                //     alt: 'Your Brand Logo',
-                //     src: 'https://s3.amazonaws.com/cdn.elysiumchain.tech/elysium/Elysium-Docs-light.svg',
-                //     width: '200px'
-                // },
                 links: [
                     {
                         items: [
