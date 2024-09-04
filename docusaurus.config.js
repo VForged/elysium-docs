@@ -298,7 +298,7 @@ const config = {
                 ]
             },
             colorMode: {
-                defaultMode: 'light',
+                defaultMode: 'dark',
             },
             footer: {
                 style: 'dark',
