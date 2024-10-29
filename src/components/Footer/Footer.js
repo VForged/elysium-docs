@@ -1,7 +1,6 @@
 import React from 'react';
 import Logo from '../../../static/images/Footer Group 2.png'
 import LightLogo from '../../../static/images/lightLogo.png'
-import {ReactComponent as Eventicon} from '../../../static/images/icon-events.svg'
 import ThemedImage from '@theme/ThemedImage';
 export default function Footer(){
 
@@ -20,25 +19,8 @@ export default function Footer(){
                                                 light:LightLogo ,
                                             }}
                                         />
-                                        {/*<img src={Logo} alt="Logo"*/}
-                                        {/*     className="img-fluid d-block mb-2 mb-md-4"/>*/}
                                     </a>
                                     <div>
-                                        {/*<a target="_blank" href="https://www.facebook.com/ElysiumBlockchain/">*/}
-                                        {/*    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">*/}
-                                        {/*        <g id="icon-facebook" transform="translate(-1.244 -73.989)">*/}
-                                        {/*            <rect id="Rectangle_8889" data-name="Rectangle 8889" width="48" height="48"*/}
-                                        {/*                  transform="translate(1.244 73.989)" fill="none"/>*/}
-                                        {/*            <g id="Group_20409" data-name="Group 20409">*/}
-                                        {/*                <g id="Group_20408" data-name="Group 20408">*/}
-                                        {/*                    <path id="Path_44107" data-name="Path 44107"*/}
-                                        {/*                          d="M28.473,113.46h-7.15V100.525H16.646V93.78h4.677V90.425a8.151,8.151,0,0,1,2.107-5.857A7.688,7.688,0,0,1,29,82.519a20.946,20.946,0,0,1,2.927.18c.758.1,1.184.16,1.274.168l.628.056.016.63V88.8h-3A2.089,2.089,0,0,0,28.473,91V93.78h5.251l-1.016,6.745H28.473ZM22.7,112.085h4.4V99.15h4.427l.6-4H27.1V91a3.6,3.6,0,0,1,.857-2.41,3.525,3.525,0,0,1,2.868-1.164h1.645V84.16l-.733-.1A19.682,19.682,0,0,0,29,83.894a6.278,6.278,0,0,0-4.6,1.654,6.84,6.84,0,0,0-1.7,4.888v4.719H18.021v4H22.7Z"*/}
-                                        {/*                          fill="#fff"/>*/}
-                                        {/*                </g>*/}
-                                        {/*            </g>*/}
-                                        {/*        </g>*/}
-                                        {/*    </svg>*/}
-                                        {/*</a>*/}
                                         <a target="_blank" href="https://twitter.com/Elysium_VF">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                                 <g id="icon-twitter" transform="translate(0 -81.182)">

@@ -1,7 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';import Logo from '../../../static/images/logo.png'
-import {ReactComponent as Eventicon} from '../../../static/images/icon-events.svg'
-import FooterLogo from '../../../static/images/Footer Group 2.png'
-import { Dropdown,DropdownToggle,DropdownMenu } from 'reactstrap';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 export default function Header(){
     const [isOpen, setIsOpen] = useState(false);
@@ -39,18 +36,8 @@ export default function Header(){
         fetchData();
     }, []);
 
-
-
-
-
     return(
         <>
-            {/*{appData.map((app,i)=>{*/}
-            {/*    return(*/}
-            {/*<a className="dropdown-item" href={app?.url} className="dropdown-item">*/}
-            {/*    <img src={app?.icon} alt={'image'} className="dropdown-item-image" />*/}
-            {/*    <span>{app?.title}</span>*/}
-            {/*</a>)})}*/}
           <div className="myDropDown">
               <div ref={dropdownRef} className={`dropdown ${isOpen ? 'show' : ''}`}>
                   <button
@@ -69,9 +56,9 @@ export default function Header(){
                   </button>
                   <div className={`dropdown-menu dark-bg-dropdown ${isOpen ? 'show' : ''}`} aria-labelledby="dropdownMenuButton">
                       <ul>
-                          {appData.map((app,i)=>{
+                          {appData.map((app)=>{
                               return(
-                                  <li>
+                                  <li key={app.title}>
                                       <a className="dropdown-item" href={app?.url}
                                          target="_blank">
                                           <>

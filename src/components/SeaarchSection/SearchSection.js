@@ -1,7 +1,5 @@
-import React,{useState} from 'react';
+import React from 'react';
 import { useThemeConfig } from '@docusaurus/theme-common';
-import algoliasearch from 'algoliasearch/lite';
-import { InstantSearch, SearchBox } from 'react-instantsearch-hooks-web';
 import { DocSearch } from '@docsearch/react';
 
 
@@ -9,7 +7,6 @@ import { DocSearch } from '@docsearch/react';
 export default function SearchSection() {
     const { algolia } = useThemeConfig();
     const { appId, apiKey, indexName } = algolia;
-    const searchClient = algoliasearch(appId, apiKey);
     return (
         <>
 
