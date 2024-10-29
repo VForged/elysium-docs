@@ -1,5 +1,4 @@
 import React from 'react';
-import Logo from '../../../static/images/Footer Group 2.png'
 import Cards from '../Cards/Card'
 import Rocket from '../../../static/images/card-rocket.png'
 import Community from '../../../static/images/card-community.png'
@@ -58,9 +57,9 @@ export default function CardSection() {
                 <div className="container">
                     <div className="row">
                         {
-                            data.map((data, i) => {
+                            data.map((data) => {
                                 return (
-                                    <div className="col-12 col-md-6 col-lg-4 mb-3">
+                                    <div  key={data.title} className="col-12 col-md-6 col-lg-4 mb-3">
                                         <Cards image={data.image} title={data.title} description={data.description}
                                                list={data.list} href={data.links}/>
                                     </div>
